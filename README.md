@@ -1,8 +1,10 @@
-# Analyze-SMC
+# SMC-Blind-Spot
 
 Code and pre-computed results for:
 
 > Ahn, J.; Hwang, T. G.; Jung, M.-R. **"The SMC Blind Spot: A Failure Mode Analysis of State-of-the-Art Beat Tracking."** Submitted to ISMIR 2026. [arXiv:2605.12287](https://arxiv.org/abs/2605.12287)
+
+**Repository:** [github.com/zaiisao/SMC-Blind-Spot](https://github.com/zaiisao/SMC-Blind-Spot)
 
 The paper asks why deep beat trackers that score >0.9 F-measure on mainstream datasets collapse on the [SMC dataset](https://zenodo.org/record/3553592), and traces the failures back to (i) activation-level breakdowns rooted in training-data distribution mismatch and (ii) a DBN tempo prior that is wrong for ~20% of SMC.
 
@@ -11,7 +13,7 @@ The companion artifact is a single Jupyter notebook, [SMC_Beat_Tracking_Analysis
 ## Repository contents
 
 ```
-Analyze-SMC/
+SMC-Blind-Spot/
 ├── SMC_Beat_Tracking_Analysis.ipynb  # paper-companion notebook (all results + figures)
 ├── data/                             # 12 CSVs the notebook reads / writes — see "Data files"
 ├── smc_metadata/                     # non-audio portion of the SMC dataset (tags + corrected
@@ -35,8 +37,8 @@ setup. The SMC difficulty descriptors and ground-truth beat annotations *are* in
 The committed CSVs already contain every per-track result. Open the notebook and run cells from Section 2 onward — they only read the CSVs and produce the paper's tables and figures.
 
 ```bash
-git clone --recurse-submodules <this-repo-url>
-cd Analyze-SMC
+git clone --recurse-submodules https://github.com/zaiisao/SMC-Blind-Spot.git
+cd SMC-Blind-Spot
 pip install pandas numpy scipy matplotlib mir_eval madmom jupyter
 jupyter notebook SMC_Beat_Tracking_Analysis.ipynb
 ```
@@ -97,7 +99,27 @@ All CSVs live in [data/](data/) and are loaded via `DATA_DIR = ROOT / "data"` in
 
 **Note on lost producer scripts.** `transition_lambda_sweep_results.csv` and `ibi_variability.csv` were produced by scripts that are no longer in `scripts/`. The CSVs are committed as the canonical record of those experiments; reproducing them from scratch would require rewriting the producer scripts.
 
-## Citation
+## Citing this work
+
+If you build on this analysis, please cite the preprint:
+
+```bibtex
+@misc{ahn2026smcblindspot,
+  title         = {The {SMC} Blind Spot: A Failure Mode Analysis of State-of-the-Art Beat Tracking},
+  author        = {Ahn, Jaehoon and Hwang, Tae Gum and Jung, Moon-Ryul},
+  year          = {2026},
+  eprint        = {2605.12287},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.SD},
+  url           = {https://arxiv.org/abs/2605.12287},
+  note          = {Submitted to ISMIR 2026}
+}
+```
+
+Plain text:
+> Ahn, J.; Hwang, T. G.; Jung, M.-R. "The SMC Blind Spot: A Failure Mode Analysis of State-of-the-Art Beat Tracking." arXiv preprint arXiv:2605.12287, 2026.
+
+## Citing related work
 
 If you use the SMC dataset:
 > Holzapfel, A.; Davies, M. E. P.; Zapata, J. R.; Oliveira, J. L.; Gouyon, F. "Selective Sampling for Beat Tracking Evaluation," *IEEE Trans. Audio, Speech, Lang. Proc.*, 20(9), 2012.
