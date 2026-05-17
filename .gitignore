@@ -1,0 +1,38 @@
+# Datasets (download separately — see README)
+SMC_MIREX/
+SMC_MIREX.zip
+__MACOSX/
+
+# Pretrained model checkpoints (auto-downloaded; or place manually — see README)
+pretrained_models/
+
+# Inference caches & per-track output dirs (regenerable by scripts/the notebook)
+beat_this_activations_cache/
+beat_this_output/
+beat_this_output_dbn/
+beat_this_output_tcn_constrained/
+bt_transformer_cache/
+bt_transformer_cache_original/
+bt_transformer_beats/
+madmom_output/
+madmom_tcn_output/
+madmom_tcn_tempo/
+
+# Notebook-regenerated CSVs (the notebook writes these as it runs)
+axis_analysis_summary.csv
+bt_transformer_aggregate_summary.csv
+
+# Notebook plot outputs (regenerable)
+activation_plots/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# Editor / OS
+.DS_Store
+.vscode/
+.idea/
+.claude/

@@ -1,0 +1,9 @@
+[submodule "beat_this"]
+	path = beat_this
+	url = https://github.com/CPJKU/beat_this.git
+[submodule "beat_this_annotations"]
+	path = beat_this_annotations
+	url = https://github.com/CPJKU/beat_this_annotations.git
+[submodule "Beat-Transformer"]
+	path = Beat-Transformer
+	url = https://github.com/zhaojw1998/Beat-Transformer.git

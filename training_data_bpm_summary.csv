@@ -1,0 +1,7 @@
+dataset,n_files,mean_bpm,std_bpm,median_bpm,min_bpm,max_bpm,n_below_55bpm,pct_below_55bpm,note
+ballroom,687,130.0,39.9,123.9,69.0,214.0,0,0.0,
+beatles,179,116.8,26.8,119.7,65.0,185.0,0,0.0,
+gtzan,999,119.2,39.8,113.3,38.0,299.0,20,2.0,10 genres x 100 tracks; slow tracks spread across 7 genres (classical 6 / jazz 4 / country 3 / blues 2 / disco 2 / pop 2 / reggae 1)
+hains,222,113.5,28.9,115.0,53.0,199.0,1,0.5,
+hjdb,234,38.1,2.6,38.7,30.0,43.0,,,downbeat-only annotations; BPM values are downbeat rate not beat BPM
+rwc_popular,115,111.9,28.6,108.7,62.0,200.0,0,0.0,
