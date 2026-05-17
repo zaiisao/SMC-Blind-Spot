@@ -6,7 +6,7 @@ Code and pre-computed results for:
 
 **Repository:** [github.com/zaiisao/SMC-Blind-Spot](https://github.com/zaiisao/SMC-Blind-Spot)
 
-The paper asks why deep beat trackers that score >0.9 F-measure on mainstream datasets collapse on the [SMC dataset](https://zenodo.org/record/3553592), and traces the failures back to (i) activation-level breakdowns rooted in training-data distribution mismatch and (ii) a DBN tempo prior that is wrong for ~20% of SMC.
+The paper asks why deep beat trackers that score >0.9 F-measure on mainstream datasets collapse on the [SMC dataset](http://smc.inescporto.pt/research/data-2/), and traces the failures back to (i) activation-level breakdowns rooted in training-data distribution mismatch and (ii) a DBN tempo prior that is wrong for ~20% of SMC.
 
 The companion artifact is a single Jupyter notebook, [SMC_Beat_Tracking_Analysis.ipynb](SMC_Beat_Tracking_Analysis.ipynb), that reproduces every number and figure in the paper.
 
@@ -56,7 +56,7 @@ pip install madmom mir_eval librosa pandas scipy tqdm einops soxr rotary-embeddi
 pip install -e beat_this
 
 # Data
-#   1. SMC_MIREX dataset:           https://zenodo.org/record/3553592  ->  ./SMC_MIREX/
+#   1. SMC_MIREX dataset:           http://smc.inescporto.pt/research/data-2/  ->  ./SMC_MIREX/
 #   2. Beat Transformer artifacts:  see Beat-Transformer/README.md     ->  ./Beat-Transformer/data/demix_spectrogram_data.npz
 #   3. Pretrained checkpoints:      beat_this auto-downloads;  Beat-Transformer/checkpoint/ comes with the submodule
 

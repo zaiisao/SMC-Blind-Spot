@@ -12,7 +12,7 @@ This folder exists because the difficulty descriptors and annotator metadata tha
 | `annotations/SMC_XXX_*_*_*_*.txt` | 217 | Ground-truth **beat times** in seconds, one beat per line. These are the corrected annotations from `SMC_MIREX_Annotations_05_08_2014` (excerpts 056, 137, 153, 203, and 257 have updated final beats vs. the original release; see the parent `SMC_MIREX_Readme.txt` for details). Filename suffix encodes metrical interpretation and annotator letter — for beat tracking evaluation only the beat times matter. |
 | `SMC_MIREX_Readme.txt` | 1 | The original README distributed with the dataset, preserved verbatim for provenance. |
 
-The audio (217 mono `.wav` files at 44.1 kHz) is **not** included here. Obtain it from the [original Zenodo record](https://zenodo.org/record/3553592) or the IRCAM/INESC TEC mirrors.
+The audio (217 mono `.wav` files at 44.1 kHz) is **not** included here. Obtain it from the [SMC Group's data page](http://smc.inescporto.pt/research/data-2/) at INESC TEC Porto, the dataset's canonical distribution site.
 
 ## Source and attribution
 
