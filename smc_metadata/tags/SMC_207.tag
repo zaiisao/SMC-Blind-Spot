@@ -1,0 +1,3 @@
+expressive timing
+strong syncopation
+m2

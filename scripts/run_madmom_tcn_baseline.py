@@ -26,6 +26,8 @@ from beat_this.inference import Audio2Frames
 from beat_this.preprocessing import load_audio
 
 ROOT = Path(__file__).parent.parent
+DATA_DIR = ROOT / "data"
+DATA_DIR.mkdir(parents=True, exist_ok=True)
 GT_DIR = ROOT / "beat_this_annotations" / "smc" / "annotations" / "beats"
 AUDIO_DIR = ROOT / "SMC_MIREX" / "SMC_MIREX_Audio"
 SPLIT_FILE = ROOT / "beat_this_annotations" / "smc" / "8-folds.split"
@@ -36,7 +38,7 @@ TCN_MADMOM_OUT = ROOT / "madmom_tcn_output"
 TCN_TEMPO_DIR = ROOT / "madmom_tcn_tempo"  # cached per-track tempo estimates
 BT_ACT_DIR = ROOT / "beat_this_activations_cache"  # cached beat_this logits
 TCN_CONSTRAINED_OUT = ROOT / "beat_this_output_tcn_constrained"
-OUT_CSV = ROOT / "tcn_tempo_constrained_results.csv"
+OUT_CSV = DATA_DIR / "tcn_tempo_constrained_results.csv"
 
 BT_FPS = 50
 MADMOM_FPS = 100

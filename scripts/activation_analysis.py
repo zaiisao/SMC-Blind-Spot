@@ -21,13 +21,15 @@ from pathlib import Path
 
 # ── Paths ──────────────────────────────────────────────────────────────────
 ROOT = Path(__file__).resolve().parent.parent
+DATA_DIR = ROOT / "data"
+DATA_DIR.mkdir(parents=True, exist_ok=True)
 BT_ACT_CACHE = ROOT / "beat_this_activations_cache"
 BTR_ACT_CACHE = ROOT / "bt_transformer_cache"
 GT_DIR = ROOT / "beat_this_annotations" / "smc" / "annotations" / "beats"
 BT_PRED_DIR = ROOT / "beat_this_output"
 BTR_PRED_DIR = ROOT / "bt_transformer_beats"
-RESULTS_CSV = ROOT / "results.csv"
-BTR_RESULTS_CSV = ROOT / "bt_transformer_tempo_constrained_results.csv"
+RESULTS_CSV = DATA_DIR / "results.csv"
+BTR_RESULTS_CSV = DATA_DIR / "bt_transformer_tempo_constrained_results.csv"
 OUT_DIR = ROOT / "activation_plots"
 OUT_DIR.mkdir(exist_ok=True)
 
@@ -429,7 +431,7 @@ def main():
     diag_df = pd.DataFrame(all_diags)
 
     # Save diagnostics CSV
-    csv_path = ROOT / "activation_diagnostics.csv"
+    csv_path = DATA_DIR / "activation_diagnostics.csv"
     diag_df.to_csv(csv_path, index=False, float_format='%.4f')
     print(f"\nSaved diagnostics for {len(diag_df)} tracks to {csv_path}")
 

@@ -1,0 +1,2 @@
+(strong syncopation)
+j1

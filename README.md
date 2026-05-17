@@ -13,15 +13,20 @@ The companion artifact is a single Jupyter notebook, [SMC_Beat_Tracking_Analysis
 ```
 Analyze-SMC/
 ├── SMC_Beat_Tracking_Analysis.ipynb  # paper-companion notebook (all results + figures)
-├── results.csv                       # main per-track table (217 × 64)
-├── *.csv                             # 10 supporting CSVs — see "Data files" below
-├── scripts/                          # producer scripts for the CSVs
+├── data/                             # 12 CSVs the notebook reads / writes — see "Data files"
+├── smc_metadata/                     # non-audio portion of the SMC dataset (tags + corrected
+│                                     # beat annotations + provenance README), redistributed
+│                                     # because the original metadata is hard to find
+├── scripts/                          # producer scripts for the CSVs in data/
 ├── beat_this/                        # submodule: github.com/CPJKU/beat_this
 ├── beat_this_annotations/            # submodule: github.com/CPJKU/beat_this_annotations
 └── Beat-Transformer/                 # submodule: github.com/zhaojw1998/Beat-Transformer
 ```
 
-The SMC audio, ground-truth beats, and pretrained checkpoints are **not** in this repo (size + license); the notebook's setup cell handles downloading them on Colab, and instructions below cover local setup.
+The SMC audio and pretrained checkpoints are **not** in this repo (size + license); the
+notebook's setup cell handles downloading them on Colab, and instructions below cover local
+setup. The SMC difficulty descriptors and ground-truth beat annotations *are* included in
+[smc_metadata/](smc_metadata/) — see that folder's README for details and attribution.
 
 ## Reproducing the paper
 
@@ -60,33 +65,35 @@ python scripts/run_beat_transformer.py            # Beat Transformer, 8-fold
 python scripts/run_madmom_tcn_baseline.py         # madmom TCN baseline + tempo-constrained DBN
 
 # Build the master per-track table
-python scripts/build_results_csv.py               # writes results.csv
+python scripts/build_results_csv.py               # writes data/results.csv
 
 # Diagnostics & follow-up experiments
-python scripts/activation_analysis.py             # writes activation_diagnostics.csv (+ activation_plots/)
-python scripts/octave_correction.py               # writes octave_correction_results.csv
-python scripts/ibi_cleanup.py                     # writes ibi_cleanup_results.csv
-python scripts/threshold_sweep.py                 # writes threshold_sweep_results.csv
-python scripts/gt_tempo_lambda_sweep.py           # writes gt_tempo_lambda_sweep_results.csv
+python scripts/activation_analysis.py             # writes data/activation_diagnostics.csv (+ activation_plots/)
+python scripts/octave_correction.py               # writes data/octave_correction_results.csv
+python scripts/ibi_cleanup.py                     # writes data/ibi_cleanup_results.csv
+python scripts/threshold_sweep.py                 # writes data/threshold_sweep_results.csv
+python scripts/gt_tempo_lambda_sweep.py           # writes data/gt_tempo_lambda_sweep_results.csv
 python scripts/analyze_tags.py                    # prints SMC tag/confidence breakdown
 ```
 
 ## Data files
 
+All CSVs live in [data/](data/) and are loaded via `DATA_DIR = ROOT / "data"` in both the notebook and the scripts.
+
 | CSV | Rows × Cols | Source | Contents |
 |---|---|---|---|
-| `results.csv` | 217 × 64 | `build_results_csv.py` | Master table: per-track metadata, tag one-hots, mir_eval metrics under no-DBN and DBN, plus DBN log-prob and tempo stats. |
-| `activation_diagnostics.csv` | 217 × 32 | `activation_analysis.py` | Activation-function statistics for beat_this and Beat Transformer (mean, max, peak prominence, periodicity, entropy, mean activation at GT-beat positions, failure-mode label per model). |
-| `octave_correction_results.csv` | 217 × 15 | `octave_correction.py` | ACF-based octave error detection/correction. Orig F vs. corrected F (subsample / interpolate / oracle). |
-| `ibi_cleanup_results.csv` | 217 × 13 | `ibi_cleanup.py` | Removal of beats whose inter-beat interval deviates from local median. Orig vs. clean F/CMLt/AMLt. |
-| `threshold_sweep_results.csv` | 15 × 7 | `threshold_sweep.py` | Peak-pick threshold sweep, aggregate F/CMLt/AMLt per threshold. |
-| `transition_lambda_sweep_results.csv` | 217 × 24 | *(producer lost — see note)* | Per-track DBN `transition_lambda` sweep across 13 values, optimal-λ and default-λ scores. |
-| `gt_tempo_lambda_sweep_results.csv` | 217 × 10 | `gt_tempo_lambda_sweep.py` | GT-tempo constraint combined with per-track λ sweep; isolates whether the two levers compound. |
-| `tcn_tempo_constrained_results.csv` | 217 × 20 | `run_madmom_tcn_baseline.py` | madmom TCN baseline, plus its tempo estimate used to constrain the DBN on beat_this activations. |
-| `ibi_variability.csv` | 2304 × 6 | *(producer lost — see note)* | Per-track inter-beat-interval variability (mean, std, coefficient of variation) across SMC and several comparator datasets. |
-| `training_data_bpm_summary.csv` | 6 × 10 | hand-curated | Tempo distribution summary for beat_this's 6 main training datasets (% below 55 BPM, etc.). |
-| `gt_activation_dbn_per_track.csv` | 217 × 4 | written by the notebook | Upper-bound experiment: GT activations → DBN. |
-| `bt_transformer_tempo_constrained_results.csv` | 217 × 44 | written by the notebook | Beat Transformer's full per-track table (paper-default DBN, wide DBN, top-K tempo, oracle, plus beat_this counterparts). |
+| `data/results.csv` | 217 × 64 | `build_results_csv.py` | Master table: per-track metadata, tag one-hots, mir_eval metrics under no-DBN and DBN, plus DBN log-prob and tempo stats. |
+| `data/activation_diagnostics.csv` | 217 × 32 | `activation_analysis.py` | Activation-function statistics for beat_this and Beat Transformer (mean, max, peak prominence, periodicity, entropy, mean activation at GT-beat positions, failure-mode label per model). |
+| `data/octave_correction_results.csv` | 217 × 15 | `octave_correction.py` | ACF-based octave error detection/correction. Orig F vs. corrected F (subsample / interpolate / oracle). |
+| `data/ibi_cleanup_results.csv` | 217 × 13 | `ibi_cleanup.py` | Removal of beats whose inter-beat interval deviates from local median. Orig vs. clean F/CMLt/AMLt. |
+| `data/threshold_sweep_results.csv` | 15 × 7 | `threshold_sweep.py` | Peak-pick threshold sweep, aggregate F/CMLt/AMLt per threshold. |
+| `data/transition_lambda_sweep_results.csv` | 217 × 24 | *(producer lost — see note)* | Per-track DBN `transition_lambda` sweep across 13 values, optimal-λ and default-λ scores. |
+| `data/gt_tempo_lambda_sweep_results.csv` | 217 × 10 | `gt_tempo_lambda_sweep.py` | GT-tempo constraint combined with per-track λ sweep; isolates whether the two levers compound. |
+| `data/tcn_tempo_constrained_results.csv` | 217 × 20 | `run_madmom_tcn_baseline.py` | madmom TCN baseline, plus its tempo estimate used to constrain the DBN on beat_this activations. |
+| `data/ibi_variability.csv` | 2304 × 6 | *(producer lost — see note)* | Per-track inter-beat-interval variability (mean, std, coefficient of variation) across SMC and several comparator datasets. |
+| `data/training_data_bpm_summary.csv` | 6 × 10 | hand-curated | Tempo distribution summary for beat_this's 6 main training datasets (% below 55 BPM, etc.). |
+| `data/gt_activation_dbn_per_track.csv` | 217 × 4 | written by the notebook | Upper-bound experiment: GT activations → DBN. |
+| `data/bt_transformer_tempo_constrained_results.csv` | 217 × 44 | written by the notebook | Beat Transformer's full per-track table (paper-default DBN, wide DBN, top-K tempo, oracle, plus beat_this counterparts). |
 
 **Note on lost producer scripts.** `transition_lambda_sweep_results.csv` and `ibi_variability.csv` were produced by scripts that are no longer in `scripts/`. The CSVs are committed as the canonical record of those experiments; reproducing them from scratch would require rewriting the producer scripts.
 

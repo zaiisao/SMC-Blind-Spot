@@ -18,10 +18,12 @@ from beat_this.preprocessing import load_audio
 from beat_this.model.postprocessor import deduplicate_peaks
 
 ROOT = Path(__file__).parent.parent
+DATA_DIR = ROOT / "data"
+DATA_DIR.mkdir(parents=True, exist_ok=True)
 GT_DIR = ROOT / "beat_this_annotations" / "smc" / "annotations" / "beats"
 SPLIT_FILE = ROOT / "beat_this_annotations" / "smc" / "8-folds.split"
 AUDIO_DIR = ROOT / "SMC_MIREX" / "SMC_MIREX_Audio"
-OUT_CSV = ROOT / "threshold_sweep_results.csv"
+OUT_CSV = DATA_DIR / "threshold_sweep_results.csv"
 
 FPS = 50
 

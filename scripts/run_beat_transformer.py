@@ -30,6 +30,8 @@ warnings.filterwarnings("ignore")
 os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "3")
 
 ROOT = Path(__file__).parent.parent
+DATA_DIR = ROOT / "data"
+DATA_DIR.mkdir(parents=True, exist_ok=True)
 BT_REPO = ROOT / "Beat-Transformer"
 CKPT_DIR = BT_REPO / "checkpoint"
 BT_AUDIO_LIST = BT_REPO / "data" / "audio_lists" / "smc.txt"
@@ -39,7 +41,7 @@ GT_DIR = ROOT / "beat_this_annotations" / "smc" / "annotations" / "beats"
 BT_ACT_DIR = ROOT / "beat_this_activations_cache"   # beat_this (beat_this_net) activations
 CACHE_DIR = ROOT / "bt_transformer_cache"
 BT_BEATS_DIR = ROOT / "bt_transformer_beats"
-OUT_CSV = ROOT / "bt_transformer_tempo_constrained_results.csv"
+OUT_CSV = DATA_DIR / "bt_transformer_tempo_constrained_results.csv"
 
 # Make Beat Transformer code importable
 sys.path.insert(0, str(BT_REPO / "code"))
@@ -658,7 +660,7 @@ def main():
               f"{np.mean([r['bt_oracle_F'] for r in subset]):>12.4f}")
 
     # Compare to TCN experiment if CSV exists
-    tcn_csv = ROOT / "tcn_tempo_constrained_results.csv"
+    tcn_csv = DATA_DIR / "tcn_tempo_constrained_results.csv"
     if tcn_csv.exists():
         print(f"\n{'='*80}")
         print("THREE-POINT CURVE: TEMPO ACCURACY → CONSTRAINT EFFECTIVENESS")

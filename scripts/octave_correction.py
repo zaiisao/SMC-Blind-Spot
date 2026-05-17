@@ -18,12 +18,14 @@ from beat_this.inference import Audio2Frames
 from beat_this.preprocessing import load_audio
 
 ROOT = Path(__file__).parent.parent
+DATA_DIR = ROOT / "data"
+DATA_DIR.mkdir(parents=True, exist_ok=True)
 GT_DIR = ROOT / "beat_this_annotations" / "smc" / "annotations" / "beats"
 PRED_DIR = ROOT / "beat_this_output"
 SPLIT_FILE = ROOT / "beat_this_annotations" / "smc" / "8-folds.split"
 AUDIO_DIR = ROOT / "SMC_MIREX" / "SMC_MIREX_Audio"
 OUT_DIR = ROOT / "beat_this_output_corrected"
-OUT_CSV = ROOT / "octave_correction_results.csv"
+OUT_CSV = DATA_DIR / "octave_correction_results.csv"
 
 FPS = 50
 

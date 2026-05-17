@@ -12,9 +12,11 @@ import mir_eval
 from pathlib import Path
 
 ROOT = Path(__file__).parent.parent
+DATA_DIR = ROOT / "data"
+DATA_DIR.mkdir(parents=True, exist_ok=True)
 GT_DIR = ROOT / "beat_this_annotations" / "smc" / "annotations" / "beats"
 PRED_DIR = ROOT / "beat_this_output"
-OUT_CSV = ROOT / "ibi_cleanup_results.csv"
+OUT_CSV = DATA_DIR / "ibi_cleanup_results.csv"
 
 FPS = 50
 

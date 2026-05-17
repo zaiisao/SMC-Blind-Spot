@@ -18,9 +18,11 @@ from scipy.special import expit  # sigmoid
 
 # ── Paths ──
 ROOT = Path(__file__).parent.parent
+DATA_DIR = ROOT / "data"
+DATA_DIR.mkdir(parents=True, exist_ok=True)
 BT_ACT_DIR = ROOT / "beat_this_activations_cache"
 GT_DIR = ROOT / "beat_this_annotations" / "smc" / "annotations" / "beats"
-EXISTING_SWEEP = ROOT / "transition_lambda_sweep_results.csv"
+EXISTING_SWEEP = DATA_DIR / "transition_lambda_sweep_results.csv"
 
 FPS = 50  # beat_this frame rate
 LAMBDAS = [1, 2, 5, 10, 20, 30, 50, 75, 100, 150, 200, 300, 500]
@@ -156,7 +158,7 @@ def main():
     ex = pd.read_csv(EXISTING_SWEEP)
 
     # ── Beat_this raw (no DBN) scores from results.csv ──
-    raw_csv = ROOT / "results.csv"
+    raw_csv = DATA_DIR / "results.csv"
     raw_df = pd.read_csv(raw_csv)
     raw_f = raw_df["F-measure"].mean()
     raw_cmlt = raw_df["CMLt"].mean()
@@ -251,7 +253,7 @@ def main():
               f"{r['wide_fix_F']:>9.4f} {r['default_lambda_F']:>9.4f} {r['optimal_F']:>9.4f} {r['combo_gain']:>+10.4f}")
 
     # ── Save CSV ──
-    csv_path = ROOT / "gt_tempo_lambda_sweep_results.csv"
+    csv_path = DATA_DIR / "gt_tempo_lambda_sweep_results.csv"
     out_cols = ["track_id", "error_category", "gt_bpm", "optimal_lambda",
                 "optimal_F", "optimal_CMLt", "optimal_AMLt",
                 "default_lambda_F", "default_lambda_CMLt", "default_lambda_AMLt"]
