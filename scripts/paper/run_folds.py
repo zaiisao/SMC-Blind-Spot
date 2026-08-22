@@ -8,10 +8,10 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
-ROOT = Path(__file__).parent.parent
-SPLIT_FILE = ROOT / "beat_this_annotations" / "smc" / "8-folds.split"
+ROOT = Path(__file__).resolve().parents[2]
+SPLIT_FILE = ROOT / "third-party" / "beat_this_annotations" / "smc" / "8-folds.split"
 AUDIO_DIR = ROOT / "SMC_MIREX" / "SMC_MIREX_Audio"
-OUTPUT_DIR = ROOT / "beat_this_output"
+OUTPUT_DIR = ROOT / "cache" / "beat_this_output"
 
 OUTPUT_DIR.mkdir(exist_ok=True)
 

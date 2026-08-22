@@ -17,11 +17,11 @@ from pathlib import Path
 from scipy.special import expit  # sigmoid
 
 # ── Paths ──
-ROOT = Path(__file__).parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 DATA_DIR = ROOT / "data"
 DATA_DIR.mkdir(parents=True, exist_ok=True)
-BT_ACT_DIR = ROOT / "beat_this_activations_cache"
-GT_DIR = ROOT / "beat_this_annotations" / "smc" / "annotations" / "beats"
+BT_ACT_DIR = ROOT / "cache" / "beat_this_activations_cache"
+GT_DIR = ROOT / "third-party" / "beat_this_annotations" / "smc" / "annotations" / "beats"
 EXISTING_SWEEP = DATA_DIR / "transition_lambda_sweep_results.csv"
 
 FPS = 50  # beat_this frame rate

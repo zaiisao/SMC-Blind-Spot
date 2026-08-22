@@ -20,17 +20,17 @@ from scipy.stats import spearmanr, entropy as scipy_entropy
 from pathlib import Path
 
 # ── Paths ──────────────────────────────────────────────────────────────────
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 DATA_DIR = ROOT / "data"
 DATA_DIR.mkdir(parents=True, exist_ok=True)
-BT_ACT_CACHE = ROOT / "beat_this_activations_cache"
-BTR_ACT_CACHE = ROOT / "bt_transformer_cache"
-GT_DIR = ROOT / "beat_this_annotations" / "smc" / "annotations" / "beats"
-BT_PRED_DIR = ROOT / "beat_this_output"
-BTR_PRED_DIR = ROOT / "bt_transformer_beats"
+BT_ACT_CACHE = ROOT / "cache" / "beat_this_activations_cache"
+BTR_ACT_CACHE = ROOT / "cache" / "bt_transformer_cache"
+GT_DIR = ROOT / "third-party" / "beat_this_annotations" / "smc" / "annotations" / "beats"
+BT_PRED_DIR = ROOT / "cache" / "beat_this_output"
+BTR_PRED_DIR = ROOT / "cache" / "bt_transformer_beats"
 RESULTS_CSV = DATA_DIR / "results.csv"
 BTR_RESULTS_CSV = DATA_DIR / "bt_transformer_tempo_constrained_results.csv"
-OUT_DIR = ROOT / "activation_plots"
+OUT_DIR = ROOT / "cache" / "activation_plots"
 OUT_DIR.mkdir(exist_ok=True)
 
 BT_FPS = 50.0

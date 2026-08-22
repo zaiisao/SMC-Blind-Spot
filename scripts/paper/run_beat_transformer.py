@@ -29,18 +29,18 @@ import torch
 warnings.filterwarnings("ignore")
 os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "3")
 
-ROOT = Path(__file__).parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 DATA_DIR = ROOT / "data"
 DATA_DIR.mkdir(parents=True, exist_ok=True)
-BT_REPO = ROOT / "Beat-Transformer"
+BT_REPO = ROOT / "third-party" / "Beat-Transformer"
 CKPT_DIR = BT_REPO / "checkpoint"
 BT_AUDIO_LIST = BT_REPO / "data" / "audio_lists" / "smc.txt"
 
 AUDIO_DIR = ROOT / "SMC_MIREX" / "SMC_MIREX_Audio"
-GT_DIR = ROOT / "beat_this_annotations" / "smc" / "annotations" / "beats"
-BT_ACT_DIR = ROOT / "beat_this_activations_cache"   # beat_this (beat_this_net) activations
-CACHE_DIR = ROOT / "bt_transformer_cache"
-BT_BEATS_DIR = ROOT / "bt_transformer_beats"
+GT_DIR = ROOT / "third-party" / "beat_this_annotations" / "smc" / "annotations" / "beats"
+BT_ACT_DIR = ROOT / "cache" / "beat_this_activations_cache"   # beat_this (beat_this_net) activations
+CACHE_DIR = ROOT / "cache" / "bt_transformer_cache"
+BT_BEATS_DIR = ROOT / "cache" / "bt_transformer_beats"
 OUT_CSV = DATA_DIR / "bt_transformer_tempo_constrained_results.csv"
 
 # Make Beat Transformer code importable
@@ -500,8 +500,8 @@ def main():
             bt_own_oracle = bt_own
 
         # Beat_this raw (from existing output files) and + DBN (existing) — read cached outputs
-        from_bt_raw = ROOT / "beat_this_output" / f"{tid.upper()}.beats"
-        from_bt_dbn = ROOT / "beat_this_output_dbn" / f"{tid.upper()}.beats"
+        from_bt_raw = ROOT / "cache" / "beat_this_output" / f"{tid.upper()}.beats"
+        from_bt_dbn = ROOT / "cache" / "beat_this_output_dbn" / f"{tid.upper()}.beats"
         bt_raw = np.array([float(l.split("\t")[0]) for l in open(from_bt_raw) if l.strip()]) if from_bt_raw.exists() else np.array([])
         bt_dbn = np.array([float(l.split("\t")[0]) for l in open(from_bt_dbn) if l.strip()]) if from_bt_dbn.exists() else np.array([])
 

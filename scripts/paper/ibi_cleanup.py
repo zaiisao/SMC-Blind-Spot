@@ -11,11 +11,11 @@ import numpy as np
 import mir_eval
 from pathlib import Path
 
-ROOT = Path(__file__).parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 DATA_DIR = ROOT / "data"
 DATA_DIR.mkdir(parents=True, exist_ok=True)
-GT_DIR = ROOT / "beat_this_annotations" / "smc" / "annotations" / "beats"
-PRED_DIR = ROOT / "beat_this_output"
+GT_DIR = ROOT / "third-party" / "beat_this_annotations" / "smc" / "annotations" / "beats"
+PRED_DIR = ROOT / "cache" / "beat_this_output"
 OUT_CSV = DATA_DIR / "ibi_cleanup_results.csv"
 
 FPS = 50

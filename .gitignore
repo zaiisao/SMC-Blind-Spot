@@ -7,23 +7,23 @@ __MACOSX/
 pretrained_models/
 
 # Inference caches & per-track output dirs (regenerable by scripts/the notebook)
-beat_this_activations_cache/
-beat_this_output/
-beat_this_output_dbn/
-beat_this_output_tcn_constrained/
-bt_transformer_cache/
-bt_transformer_cache_original/
-bt_transformer_beats/
-madmom_output/
-madmom_tcn_output/
-madmom_tcn_tempo/
+cache/beat_this_activations_cache/
+cache/beat_this_output/
+cache/beat_this_output_dbn/
+cache/beat_this_output_tcn_constrained/
+cache/bt_transformer_cache/
+cache/bt_transformer_cache_original/
+cache/bt_transformer_beats/
+cache/madmom_output/
+cache/madmom_tcn_output/
+cache/madmom_tcn_tempo/
 
 # Notebook-regenerated CSVs (the notebook writes these as it runs)
 axis_analysis_summary.csv
 bt_transformer_aggregate_summary.csv
 
 # Notebook plot outputs (regenerable)
-activation_plots/
+cache/activation_plots/
 
 # Python
 __pycache__/

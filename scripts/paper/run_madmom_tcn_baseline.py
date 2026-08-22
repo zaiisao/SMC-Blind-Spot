@@ -25,19 +25,19 @@ from madmom.features.downbeats import DBNDownBeatTrackingProcessor
 from beat_this.inference import Audio2Frames
 from beat_this.preprocessing import load_audio
 
-ROOT = Path(__file__).parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 DATA_DIR = ROOT / "data"
 DATA_DIR.mkdir(parents=True, exist_ok=True)
-GT_DIR = ROOT / "beat_this_annotations" / "smc" / "annotations" / "beats"
+GT_DIR = ROOT / "third-party" / "beat_this_annotations" / "smc" / "annotations" / "beats"
 AUDIO_DIR = ROOT / "SMC_MIREX" / "SMC_MIREX_Audio"
-SPLIT_FILE = ROOT / "beat_this_annotations" / "smc" / "8-folds.split"
-BT_PRED_DIR = ROOT / "beat_this_output"
-BT_DBN_DIR = ROOT / "beat_this_output_dbn"
+SPLIT_FILE = ROOT / "third-party" / "beat_this_annotations" / "smc" / "8-folds.split"
+BT_PRED_DIR = ROOT / "cache" / "beat_this_output"
+BT_DBN_DIR = ROOT / "cache" / "beat_this_output_dbn"
 
-TCN_MADMOM_OUT = ROOT / "madmom_tcn_output"
-TCN_TEMPO_DIR = ROOT / "madmom_tcn_tempo"  # cached per-track tempo estimates
-BT_ACT_DIR = ROOT / "beat_this_activations_cache"  # cached beat_this logits
-TCN_CONSTRAINED_OUT = ROOT / "beat_this_output_tcn_constrained"
+TCN_MADMOM_OUT = ROOT / "cache" / "madmom_tcn_output"
+TCN_TEMPO_DIR = ROOT / "cache" / "madmom_tcn_tempo"  # cached per-track tempo estimates
+BT_ACT_DIR = ROOT / "cache" / "beat_this_activations_cache"  # cached beat_this logits
+TCN_CONSTRAINED_OUT = ROOT / "cache" / "beat_this_output_tcn_constrained"
 OUT_CSV = DATA_DIR / "tcn_tempo_constrained_results.csv"
 
 BT_FPS = 50

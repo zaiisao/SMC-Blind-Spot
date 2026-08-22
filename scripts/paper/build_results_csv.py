@@ -11,14 +11,14 @@ import mir_eval
 from collections import defaultdict
 from pathlib import Path
 
-ROOT = Path(__file__).parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 DATA_DIR = ROOT / "data"
 DATA_DIR.mkdir(parents=True, exist_ok=True)
-GT_DIR = ROOT / "beat_this_annotations" / "smc" / "annotations" / "beats"
-PRED_DIR = ROOT / "beat_this_output"
-PRED_DBN_DIR = ROOT / "beat_this_output_dbn"
+GT_DIR = ROOT / "third-party" / "beat_this_annotations" / "smc" / "annotations" / "beats"
+PRED_DIR = ROOT / "cache" / "beat_this_output"
+PRED_DBN_DIR = ROOT / "cache" / "beat_this_output_dbn"
 TAG_DIR = ROOT / "SMC_MIREX" / "SMC_MIREX_Tags"
-FOLD_FILE = ROOT / "beat_this_annotations" / "smc" / "8-folds.split"
+FOLD_FILE = ROOT / "third-party" / "beat_this_annotations" / "smc" / "8-folds.split"
 CONFIDENCE_CSV = ROOT / "dbn_confidence.csv"
 OUT_CSV = DATA_DIR / "results.csv"
 

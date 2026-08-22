@@ -24,12 +24,12 @@ from madmom.features.downbeats import (
     _process_dbn,
 )
 
-ROOT = Path(__file__).parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 DATA_DIR = ROOT / "data"
 DATA_DIR.mkdir(parents=True, exist_ok=True)
-SPLIT_FILE = ROOT / "beat_this_annotations" / "smc" / "8-folds.split"
+SPLIT_FILE = ROOT / "third-party" / "beat_this_annotations" / "smc" / "8-folds.split"
 AUDIO_DIR = ROOT / "SMC_MIREX" / "SMC_MIREX_Audio"
-OUTPUT_DIR = ROOT / "beat_this_output_dbn"
+OUTPUT_DIR = ROOT / "cache" / "beat_this_output_dbn"
 CONFIDENCE_CSV = DATA_DIR / "dbn_confidence.csv"
 
 FPS = 50

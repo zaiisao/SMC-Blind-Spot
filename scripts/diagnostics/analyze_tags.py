@@ -14,7 +14,7 @@ import re
 from collections import Counter
 from pathlib import Path
 
-TAG_DIR = Path(__file__).parent.parent / "SMC_MIREX" / "SMC_MIREX_Tags"
+TAG_DIR = Path(__file__).resolve().parents[2] / "SMC_MIREX" / "SMC_MIREX_Tags"
 
 
 def parse_tag_file(filepath):
