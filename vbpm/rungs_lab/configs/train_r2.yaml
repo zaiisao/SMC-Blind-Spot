@@ -1,0 +1,13 @@
+# R2 EM training, resurrected 2026-08-08. Frozen frontend = OFFICIAL Beat Transformer fold_0
+# checkpoint (repacked); the era's own vanilla_best_prelim.pt did not survive the v2 cleanup.
+# Val fold 0 is held out of fold_0's training -> fold-honest val.
+rung:
+  name: r2_em
+frontend:
+  mode: frozen
+  checkpoint: checkpoints/bt_fold0_repacked.pt
+training:
+  device: cuda:0        # remapped to physical GPU 3 via CUDA_VISIBLE_DEVICES=3
+  seed: 0
+  output_directory: runs/r2_seed0
+  eval_every: 2

@@ -1,0 +1,34 @@
+{
+ "best": {
+  "beat_f": 0.9612674904550522,
+  "downbeat_f": 0.9395877314063663,
+  "epoch": 21,
+  "lambda": 100.0
+ },
+ "history": [
+  "epoch 00 | loss 0.2541 | crops 1020 (bad 0, nan 0) | 72s | lr 1.00e-03",
+  "epoch 01 | loss 0.2562 | crops 1020 (bad 0, nan 0) | 72s | lr 1.00e-03 | val beatF 0.9437 dbF 0.8911",
+  "epoch 02 | loss 0.2518 | crops 1019 (bad 1, nan 0) | 74s | lr 1.00e-03",
+  "epoch 03 | loss 0.2511 | crops 1019 (bad 1, nan 0) | 74s | lr 1.00e-03 | val beatF 0.9239 dbF 0.8984",
+  "epoch 04 | loss 0.2504 | crops 1019 (bad 1, nan 0) | 74s | lr 1.00e-03",
+  "epoch 05 | loss 0.2463 | crops 1020 (bad 0, nan 0) | 75s | lr 1.00e-03 | val beatF 0.9395 dbF 0.9152",
+  "epoch 06 | loss 0.2396 | crops 1019 (bad 1, nan 0) | 74s | lr 1.00e-03",
+  "epoch 07 | loss 0.2387 | crops 1019 (bad 1, nan 0) | 74s | lr 1.00e-03 | val beatF 0.9386 dbF 0.9269",
+  "epoch 08 | loss 0.2449 | crops 1019 (bad 1, nan 0) | 75s | lr 1.00e-03",
+  "epoch 09 | loss 0.2392 | crops 1020 (bad 0, nan 0) | 75s | lr 1.00e-03 | val beatF 0.9449 dbF 0.9079",
+  "epoch 10 | loss 0.2389 | crops 1020 (bad 0, nan 0) | 74s | lr 2.00e-04",
+  "epoch 11 | loss 0.2245 | crops 1020 (bad 0, nan 0) | 74s | lr 2.00e-04 | val beatF 0.9519 dbF 0.9415",
+  "epoch 12 | loss 0.2227 | crops 1020 (bad 0, nan 0) | 74s | lr 2.00e-04",
+  "epoch 13 | loss 0.2212 | crops 1019 (bad 1, nan 0) | 74s | lr 2.00e-04 | val beatF 0.9576 dbF 0.9391",
+  "epoch 14 | loss 0.2193 | crops 1019 (bad 1, nan 0) | 74s | lr 2.00e-04",
+  "epoch 15 | loss 0.2207 | crops 1020 (bad 0, nan 0) | 74s | lr 2.00e-04 | val beatF 0.9480 dbF 0.9210",
+  "epoch 16 | loss 0.2163 | crops 1020 (bad 0, nan 0) | 74s | lr 2.00e-04",
+  "epoch 17 | loss 0.2173 | crops 1019 (bad 1, nan 0) | 74s | lr 2.00e-04 | val beatF 0.9568 dbF 0.9183",
+  "epoch 18 | loss 0.2161 | crops 1019 (bad 1, nan 0) | 74s | lr 2.00e-04",
+  "epoch 19 | loss 0.2148 | crops 1020 (bad 0, nan 0) | 74s | lr 2.00e-04 | val beatF 0.9584 dbF 0.9362",
+  "epoch 20 | loss 0.2154 | crops 1019 (bad 1, nan 0) | 74s | lr 2.00e-04",
+  "epoch 21 | loss 0.2130 | crops 1019 (bad 1, nan 0) | 74s | lr 2.00e-04 | val beatF 0.9613 dbF 0.9396",
+  "epoch 22 | loss 0.2131 | crops 1020 (bad 0, nan 0) | 74s | lr 2.00e-04",
+  "epoch 23 | loss 0.2121 | crops 1020 (bad 0, nan 0) | 74s | lr 2.00e-04 | val beatF 0.9613 dbF 0.9339"
+ ]
+}

@@ -1,0 +1,27 @@
+# Tracker composition for track.py: which frontend, which bar-pointer model, and their kwargs.
+# Everything except the audio path lives here. Each section's extra keys pass straight through to
+# that component's constructor (frontend: build_frontend kwargs; bar_pointer: the model's kwargs --
+# min_bpm, beats_per_bar, num_tempi, threshold, correct, ...). fps and bounding are wired by the
+# Tracker from the frontend and must not appear here.
+
+frontend:
+  name: frontends.beat_this   # dotted module path; the module's Frontend subclass is loaded
+                              # (alternative: frontends.beat_transformer -- co-designed WITH the
+                              # DBN; pair it with its shipped decode params on the bar_pointer:
+                              # observation_lambda: 6, num_tempi: null, threshold: 0.2)
+  output: activations   # which layer the frontend is cut at: "activations" = final [T, 2]
+                        # (beat, downbeat); frontends may offer richer modes (e.g. "features" =
+                        # penultimate [T, 512], final linear head deleted) for latent rungs
+  checkpoint: final0    # NOT fold-honest on the training datasets; use foldN for evaluation
+  device: cuda
+
+bar_pointer:
+  name: 2016_dbn        # or madmom_dbn (R0; takes no device and no bare opt-out -- always shipped)
+  input: activations    # what this rung consumes; MUST equal frontend.output (checked). The HMM
+                        # family reads [T, 2] activations only.
+  device: cuda
+  # Defaults are madmom-as-shipped. The BARE model (the certificate / rung-comparison
+  # configuration, no decode heuristics) is the explicit opt-out:
+  # num_tempi: null
+  # threshold: 0.0
+  # correct: false

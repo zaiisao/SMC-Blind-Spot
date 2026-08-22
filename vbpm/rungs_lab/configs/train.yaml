@@ -1,0 +1,43 @@
+# Training composition for train.py (mirrors configs/track.yaml): which rung to train, on which
+# frontend, with what algorithm hyperparameters. `python train.py --config configs/train.yaml`.
+#
+# rung.name selects the arm and its dedicated train(); every other rung: key is passed straight to
+# that rung's constructor. The frontend: and training: sections configure the shared algorithm.
+# Anything left unset falls back to that rung's idiomatic default (see each rung's train()).
+
+rung:
+  name: r2_em            # vanilla | crf | r2_em | r3 | r4_5
+  # --- rung constructor kwargs pass straight through (observation_lambda defaults to 6) ---
+  # observation_lambda: 6
+  # beats_per_bar: [3, 4]
+  # r3:   lambda_base: 100.0    lambda_reg: 0.0      (0 lets lambda_t drift; >0 = redistribute only)
+  # r4_5: feature_dim: 256      tied_covariance: false    mixture_w: 0.370    transition_lambda: 93.1
+  #       (feature_dim must match training.projection: 256 for standardize, 16 for pca/lda)
+
+frontend:
+  mode: frozen           # frozen (learn only the rung's factors) | e2e (train the Beat Transformer
+                         #   too -- gradient rungs crf/r3 and vanilla only; EM rungs are frozen-only)
+  checkpoint: experiments/bt_e2e/vanilla_best_prelim.pt   # frozen: the trained frontend to freeze
+  # init_from: null      # e2e: resume the frontend from this checkpoint
+
+training:
+  device: cuda:0
+  seed: 0
+  output_directory: runs        # <arm>_best.pt + <arm>_history.json land here
+  eval_every: 2
+  evaluation_songs: 60
+  # score_bare_model: false     # eval the bare model (no threshold crop / peak snap) vs shipped
+
+  # --- gradient rungs (crf, r3) and e2e ---
+  # epochs: 8                    # crf-frozen default 8; r3 default 12; e2e default 30
+  # learning_rate: 0.05          # crf-frozen 0.05; r3 1e-3; e2e 1e-3
+  # gradient_clip: 0.0           # r3 uses 1.0
+  # smooth_targets: false        # r3 defaults true (jitter-free annotated path)
+
+  # --- EM rungs (r2_em, r4_5) ---
+  # `training:` OVERRIDES the rung's TRAIN_DEFAULTS, so uncomment only to override on purpose.
+  # em_iterations: 8             # r2_em default 8; r4_5 default 10
+  # num_crops: 300
+  # crop_frames: 700
+  # learn_observation_lambda: false   # r2_em: also learn observation_lambda (discrete argmax)
+  # projection: standardize      # r4_5 feature conditioning: standardize (256) | pca (16) | lda (16)

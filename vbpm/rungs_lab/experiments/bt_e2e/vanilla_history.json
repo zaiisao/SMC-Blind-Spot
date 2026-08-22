@@ -1,0 +1,40 @@
+{
+ "best": {
+  "beat_f": 0.9657925959528175,
+  "downbeat_f": 0.9280965497485181,
+  "epoch": 29,
+  "lambda": 100.0
+ },
+ "history": [
+  "epoch 00 | loss 0.4550 | crops 1020 (bad 0, nan 0) | 72s | lr 1.00e-03",
+  "epoch 01 | loss 0.3428 | crops 1020 (bad 0, nan 0) | 71s | lr 1.00e-03 | val beatF 0.8834 dbF 0.8024",
+  "epoch 02 | loss 0.3134 | crops 1019 (bad 1, nan 0) | 74s | lr 1.00e-03",
+  "epoch 03 | loss 0.2995 | crops 1019 (bad 1, nan 0) | 73s | lr 1.00e-03 | val beatF 0.9050 dbF 0.8204",
+  "epoch 04 | loss 0.2886 | crops 1019 (bad 1, nan 0) | 73s | lr 1.00e-03",
+  "epoch 05 | loss 0.2824 | crops 1020 (bad 0, nan 0) | 73s | lr 1.00e-03 | val beatF 0.9185 dbF 0.8389",
+  "epoch 06 | loss 0.2704 | crops 1019 (bad 1, nan 0) | 73s | lr 1.00e-03",
+  "epoch 07 | loss 0.2676 | crops 1019 (bad 1, nan 0) | 73s | lr 1.00e-03 | val beatF 0.9295 dbF 0.8732",
+  "epoch 08 | loss 0.2647 | crops 1019 (bad 1, nan 0) | 73s | lr 1.00e-03",
+  "epoch 09 | loss 0.2584 | crops 1020 (bad 0, nan 0) | 73s | lr 1.00e-03 | val beatF 0.9209 dbF 0.8804",
+  "epoch 10 | loss 0.2541 | crops 1020 (bad 0, nan 0) | 73s | lr 1.00e-03",
+  "epoch 11 | loss 0.2498 | crops 1019 (bad 0, nan 1) | 73s | lr 1.00e-03 | val beatF 0.9389 dbF 0.9193",
+  "epoch 12 | loss 0.2486 | crops 1020 (bad 0, nan 0) | 73s | lr 1.00e-03",
+  "epoch 13 | loss 0.2470 | crops 1019 (bad 1, nan 0) | 73s | lr 1.00e-03 | val beatF 0.9459 dbF 0.8974",
+  "epoch 14 | loss 0.2438 | crops 1019 (bad 1, nan 0) | 73s | lr 1.00e-03",
+  "epoch 15 | loss 0.2457 | crops 1020 (bad 0, nan 0) | 73s | lr 1.00e-03 | val beatF 0.9524 dbF 0.9250",
+  "epoch 16 | loss 0.2408 | crops 1020 (bad 0, nan 0) | 73s | lr 1.00e-03",
+  "epoch 17 | loss 0.2375 | crops 1019 (bad 1, nan 0) | 74s | lr 1.00e-03 | val beatF 0.9526 dbF 0.8860",
+  "epoch 18 | loss 0.2375 | crops 1019 (bad 1, nan 0) | 73s | lr 1.00e-03",
+  "epoch 19 | loss 0.2375 | crops 1020 (bad 0, nan 0) | 73s | lr 1.00e-03 | val beatF 0.9495 dbF 0.9229",
+  "epoch 20 | loss 0.2356 | crops 1019 (bad 1, nan 0) | 73s | lr 1.00e-03",
+  "epoch 21 | loss 0.2328 | crops 1019 (bad 1, nan 0) | 73s | lr 1.00e-03 | val beatF 0.9572 dbF 0.9122",
+  "epoch 22 | loss 0.2348 | crops 1020 (bad 0, nan 0) | 73s | lr 1.00e-03",
+  "epoch 23 | loss 0.2311 | crops 1020 (bad 0, nan 0) | 73s | lr 1.00e-03 | val beatF 0.9558 dbF 0.9057",
+  "epoch 24 | loss 0.2320 | crops 1019 (bad 0, nan 1) | 74s | lr 1.00e-03",
+  "epoch 25 | loss 0.2298 | crops 1019 (bad 1, nan 0) | 74s | lr 1.00e-03 | val beatF 0.9506 dbF 0.9005",
+  "epoch 26 | loss 0.2270 | crops 1020 (bad 0, nan 0) | 73s | lr 1.00e-03",
+  "epoch 27 | loss 0.2264 | crops 1019 (bad 1, nan 0) | 73s | lr 1.00e-03 | val beatF 0.9494 dbF 0.9003",
+  "epoch 28 | loss 0.2271 | crops 1019 (bad 1, nan 0) | 74s | lr 1.00e-03",
+  "epoch 29 | loss 0.2246 | crops 1020 (bad 0, nan 0) | 74s | lr 1.00e-03 | val beatF 0.9658 dbF 0.9281"
+ ]
+}

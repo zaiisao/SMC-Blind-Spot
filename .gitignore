@@ -36,3 +36,25 @@ __pycache__/
 .vscode/
 .idea/
 .claude/
+
+# Moved from the VBPM repo (2026-08-20): DBN ladder, harness, theory docs.
+# Code, configs, tests and result JSONs are tracked; heavy artifacts are not.
+vbpm/rungs_lab/cache/
+vbpm/rungs_lab/checkpoints/
+vbpm/rungs_lab/dataset_store
+vbpm/rungs_lab/external
+vbpm/rungs_lab/r4/
+vbpm/rungs_lab/mert/
+vbpm/rungs_lab/runs/
+*.log
+
+# Regenerable activation/gradient caches (2026-08-22). Kept out of git for size:
+# data/grad alone is 464 MB and every one of these is reproducible from the cached
+# Beat This activations plus the scripts that made them.
+data/grad/
+data/ts_tta_cache/
+data/tta_activations/
+data/tta_full/
+# Local copies of third-party material, not ours to redistribute
+*.pdf
+Conference Management Toolkit*.html

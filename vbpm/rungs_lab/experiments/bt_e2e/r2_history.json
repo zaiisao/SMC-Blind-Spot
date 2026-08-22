@@ -1,0 +1,40 @@
+{
+ "best": {
+  "beat_f": 0.9115376639931124,
+  "downbeat_f": 0.8573449021883721,
+  "epoch": 19,
+  "lambda": 101.03919982910156
+ },
+ "history": [
+  "epoch 00 | loss 0.6043 | crops 1019 (bad 1, nan 0) | 415s | lr 1.00e-03 | crf 0.0921 | lambda 88.61",
+  "epoch 01 | loss 0.4559 | crops 1018 (bad 2, nan 0) | 419s | lr 1.00e-03 | crf 0.0563 | lambda 82.49 | val beatF 0.7649 dbF 0.5536",
+  "epoch 02 | loss 0.4356 | crops 1018 (bad 2, nan 0) | 417s | lr 1.00e-03 | crf 0.0523 | lambda 78.16",
+  "epoch 03 | loss 0.4200 | crops 1019 (bad 1, nan 0) | 416s | lr 1.00e-03 | crf 0.0504 | lambda 76.60 | val beatF 0.8522 dbF 0.7548",
+  "epoch 04 | loss 0.4132 | crops 1018 (bad 2, nan 0) | 420s | lr 1.00e-03 | crf 0.0545 | lambda 78.27",
+  "epoch 05 | loss 0.4121 | crops 1020 (bad 0, nan 0) | 425s | lr 1.00e-03 | crf 0.0585 | lambda 80.67 | val beatF 0.8454 dbF 0.6677",
+  "epoch 06 | loss 0.4019 | crops 1018 (bad 2, nan 0) | 422s | lr 1.00e-03 | crf 0.0577 | lambda 86.49",
+  "epoch 07 | loss 0.4040 | crops 1018 (bad 2, nan 0) | 420s | lr 1.00e-03 | crf 0.0595 | lambda 89.71 | val beatF 0.8909 dbF 0.8031",
+  "epoch 08 | loss 0.3975 | crops 1017 (bad 3, nan 0) | 422s | lr 1.00e-03 | crf 0.0592 | lambda 91.69",
+  "epoch 09 | loss 0.3955 | crops 1019 (bad 1, nan 0) | 424s | lr 1.00e-03 | crf 0.0603 | lambda 94.11 | val beatF 0.6277 dbF 0.4143",
+  "epoch 10 | loss 0.3951 | crops 1020 (bad 0, nan 0) | 426s | lr 1.00e-03 | crf 0.0613 | lambda 97.65",
+  "epoch 11 | loss 0.3891 | crops 1020 (bad 0, nan 0) | 416s | lr 1.00e-03 | crf 0.0614 | lambda 98.75 | val beatF 0.9085 dbF 0.8878",
+  "epoch 12 | loss 0.3821 | crops 1020 (bad 0, nan 0) | 427s | lr 1.00e-03 | crf 0.0556 | lambda 98.40",
+  "epoch 13 | loss 0.3858 | crops 1018 (bad 2, nan 0) | 429s | lr 1.00e-03 | crf 0.0594 | lambda 99.20 | val beatF 0.7864 dbF 0.6711",
+  "epoch 14 | loss 0.3837 | crops 1019 (bad 1, nan 0) | 425s | lr 1.00e-03 | crf 0.0598 | lambda 98.47",
+  "epoch 15 | loss 0.3835 | crops 1020 (bad 0, nan 0) | 416s | lr 1.00e-03 | crf 0.0585 | lambda 99.48 | val beatF 0.8852 dbF 0.7778",
+  "epoch 16 | loss 0.3759 | crops 1020 (bad 0, nan 0) | 417s | lr 1.00e-03 | crf 0.0558 | lambda 101.87",
+  "epoch 17 | loss 0.3754 | crops 1019 (bad 1, nan 0) | 423s | lr 1.00e-03 | crf 0.0575 | lambda 103.67 | val beatF 0.8870 dbF 0.7922",
+  "epoch 18 | loss 0.3757 | crops 1017 (bad 3, nan 0) | 424s | lr 1.00e-03 | crf 0.0588 | lambda 104.12",
+  "epoch 19 | loss 0.3811 | crops 1019 (bad 1, nan 0) | 419s | lr 1.00e-03 | crf 0.0628 | lambda 101.04 | val beatF 0.9115 dbF 0.8573",
+  "epoch 20 | loss 0.3744 | crops 1019 (bad 1, nan 0) | 421s | lr 1.00e-03 | crf 0.0574 | lambda 100.09",
+  "epoch 21 | loss 0.3727 | crops 1019 (bad 1, nan 0) | 419s | lr 1.00e-03 | crf 0.0584 | lambda 102.70 | val beatF 0.8881 dbF 0.8520",
+  "epoch 22 | loss 0.3745 | crops 1020 (bad 0, nan 0) | 414s | lr 1.00e-03 | crf 0.0585 | lambda 104.16",
+  "epoch 23 | loss 0.3684 | crops 1020 (bad 0, nan 0) | 421s | lr 1.00e-03 | crf 0.0559 | lambda 102.67 | val beatF 0.8985 dbF 0.7993",
+  "epoch 24 | loss 0.3699 | crops 1020 (bad 0, nan 0) | 425s | lr 1.00e-03 | crf 0.0568 | lambda 102.56",
+  "epoch 25 | loss 0.3721 | crops 1019 (bad 1, nan 0) | 422s | lr 1.00e-03 | crf 0.0582 | lambda 105.82 | val beatF 0.8938 dbF 0.8767",
+  "epoch 26 | loss 0.3662 | crops 1020 (bad 0, nan 0) | 417s | lr 1.00e-03 | crf 0.0554 | lambda 105.12",
+  "epoch 27 | loss 0.3656 | crops 1018 (bad 2, nan 0) | 425s | lr 1.00e-03 | crf 0.0555 | lambda 104.98 | val beatF 0.8858 dbF 0.8550",
+  "epoch 28 | loss 0.3690 | crops 1018 (bad 2, nan 0) | 419s | lr 1.00e-03 | crf 0.0575 | lambda 104.91",
+  "epoch 29 | loss 0.3635 | crops 1020 (bad 0, nan 0) | 423s | lr 1.00e-03 | crf 0.0548 | lambda 105.51 | val beatF 0.8995 dbF 0.8716"
+ ]
+}
