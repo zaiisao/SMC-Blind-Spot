@@ -7,3 +7,6 @@
 [submodule "Beat-Transformer"]
 	path = third-party/Beat-Transformer
 	url = https://github.com/zhaojw1998/Beat-Transformer.git
+[submodule "third-party/stable-audio-tools"]
+	path = third-party/stable-audio-tools
+	url = https://github.com/Stability-AI/stable-audio-tools.git

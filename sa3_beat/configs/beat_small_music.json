@@ -1,0 +1,6 @@
+{
+  "base_model_config": "/disk1/jaehoon/sa3_small_music/model_config.json",
+  "ckpt_path": "/disk1/jaehoon/sa3_small_music/model.safetensors",
+  "include_downbeat": true,
+  "_comment": "The base config is read and patched in memory with modular_local_cond_configs; it is never copied, so it cannot drift from the published checkpoint."
+}

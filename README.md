@@ -22,11 +22,15 @@ SMC-Blind-Spot/
 ├── scripts/
 │   ├── paper/                        # producer scripts for the CSVs in data/
 │   └── diagnostics/                  # descriptive statistics over the SMC tags
+├── sa3_beat/                         # beat-conditioned Stable Audio 3, built by composition
+│                                     # over third-party/stable-audio-tools (no fork)
+├── docs/                             # design notes for the synthesis work
 ├── cache/                            # regenerable inference caches & per-track outputs (gitignored)
 └── third-party/                      # submodules
     ├── beat_this/                    # github.com/CPJKU/beat_this
     ├── beat_this_annotations/        # github.com/CPJKU/beat_this_annotations
-    └── Beat-Transformer/             # github.com/zhaojw1998/Beat-Transformer
+    ├── Beat-Transformer/             # github.com/zhaojw1998/Beat-Transformer
+    └── stable-audio-tools/           # github.com/Stability-AI/stable-audio-tools
 ```
 
 The SMC audio and pretrained checkpoints are **not** in this repo (size + license); the
