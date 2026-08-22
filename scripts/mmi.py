@@ -13,7 +13,7 @@ gradient is the occupancy difference gamma_den - gamma_num, obtained for free by
 (d log Z / d log_emission[t, c] = P(class(z_t) = c | obs), the same identity R2/R4.5 use for their
 E-steps), and is therefore bounded by 1 in absolute value -- which the gate checks.
 
-THE MASK (variant B of scripts/gate_mmi_numerator.py, which measured F 0.9916 / CMLt 0.9802 on the
+THE MASK (variant B of scripts/diagnostics/gate_mmi_numerator.py, which measured F 0.9916 / CMLt 0.9802 on the
 183 representable tracks):
   * forbid the BEAT class at frames farther than TOL_FRAMES from every annotation, and
   * forbid the NO_BEAT class at each annotation's own frame, which forces a beat AT the annotation.

@@ -22,9 +22,9 @@ from pathlib import Path
 warnings.filterwarnings("ignore")
 
 ROOT = Path(__file__).parent.parent
-GT_DIR = ROOT / "beat_this_annotations" / "smc" / "annotations" / "beats"
-BTHIS_DIR = ROOT / "beat_this_activations_cache"
-BTRANS_DIR = ROOT / "bt_transformer_cache"
+GT_DIR = ROOT / "third-party" / "beat_this_annotations" / "smc" / "annotations" / "beats"
+BTHIS_DIR = ROOT / "cache" / "beat_this_activations_cache"
+BTRANS_DIR = ROOT / "cache" / "bt_transformer_cache"
 
 FPS = 50                 # Beat This
 BT_FPS = 44100 / 1024    # Beat Transformer (~43.066)

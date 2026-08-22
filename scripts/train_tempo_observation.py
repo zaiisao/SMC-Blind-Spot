@@ -1,6 +1,6 @@
 """q_theta(phidot | h_t): a tempo observation model over the DBN's 60-point tempo grid.
 
-Implements SPECIFICATION.md sec.4 (the missing explicit tempo likelihood factor):
+Implements docs/spec/SPECIFICATION.md sec.4 (the missing explicit tempo likelihood factor):
 
     log p(y_t | z_t) = log p(y_t | class(phi_t)) + beta * [ log q_theta(phidot_t | h_t) - log p(phidot_t) ]
 
@@ -95,7 +95,7 @@ def frame_targets(T, beat_frames, start_frame=0):
     A frame lying in [beat_k, beat_{k+1}) gets the soft target of the LOCAL interval
     ibi_k = beat_{k+1} - beat_k. Frames outside any labelled interval are masked out (-1).
     Beat frames are beat CENTRES; interval boundaries use ceil(), matching
-    scripts/build_tempo_labels.py and the oracle injection in exp_oracle_tempo_beatonly.py.
+    scripts/training/build_tempo_labels.py and the oracle injection in exp_oracle_tempo_beatonly.py.
     """
     fr = beat_frames - start_frame
     tgt = np.zeros((T, len(GRID_BPM)), np.float16)
@@ -224,7 +224,7 @@ def octave_bandmask(grid, band_log2=0.15):
     0.4% (0.1469 -> 0.1473). The measured "failure" was a correctly measured null of a loss that did
     nothing. Penalising the band the metric actually scores gives -24% to -38.8% relative octave
     error, 8/8 paired seeds, p=0.008, on two independent corpus splits
-    (scripts/sandbox_octave_loss_v2.py).
+    (scripts/diagnostics/sandbox_octave_loss_v2.py).
     """
     lg = np.log2(np.asarray(grid, dtype=np.float64))
     M = np.zeros((len(lg), len(lg)), dtype=bool)

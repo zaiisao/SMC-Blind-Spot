@@ -16,13 +16,26 @@ The companion artifact is a single Jupyter notebook, [SMC_Beat_Tracking_Analysis
 SMC-Blind-Spot/
 ├── SMC_Beat_Tracking_Analysis.ipynb  # paper-companion notebook (all results + figures)
 ├── data/                             # 12 CSVs the notebook reads / writes — see "Data files"
+├── docs/                             # working notes: spec, findings, audits, prior art — see docs/README.md
 ├── smc_metadata/                     # non-audio portion of the SMC dataset (tags + corrected
 │                                     # beat annotations + provenance README), redistributed
 │                                     # because the original metadata is hard to find
-├── scripts/                          # producer scripts for the CSVs in data/
-├── beat_this/                        # submodule: github.com/CPJKU/beat_this
-├── beat_this_annotations/            # submodule: github.com/CPJKU/beat_this_annotations
-└── Beat-Transformer/                 # submodule: github.com/zhaojw1998/Beat-Transformer
+├── scripts/                          # shared harness at top level, then by role:
+│   ├── paper/                        #   reproduces the paper's CSVs in data/
+│   ├── experiments/                  #   follow-up experiments (see docs/findings/)
+│   ├── eval/                         #   evaluation & re-scoring drivers
+│   ├── diagnostics/                  #   probes, gates, sanity checks
+│   ├── training/                     #   model / head training + feature extraction
+│   ├── sa3/                          #   Stable Audio 3 autoencoder probes
+│   └── overnight/                    #   batched overnight runs
+├── sa3_beat/                         # beat-conditioned Stable Audio 3 (composition over
+│                                     # third-party/stable-audio-tools; no fork) + its tests
+├── cache/                            # regenerable inference caches & per-track outputs (gitignored)
+└── third-party/                      # submodules
+    ├── beat_this/                    # github.com/CPJKU/beat_this
+    ├── beat_this_annotations/        # github.com/CPJKU/beat_this_annotations
+    ├── Beat-Transformer/             # github.com/zhaojw1998/Beat-Transformer
+    └── stable-audio-tools/           # github.com/Stability-AI/stable-audio-tools
 ```
 
 The SMC audio and pretrained checkpoints are **not** in this repo (size + license); the
@@ -53,29 +66,29 @@ conda create -n analyze-smc python=3.10 -y
 conda activate analyze-smc
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 pip install madmom mir_eval librosa pandas scipy tqdm einops soxr rotary-embedding-torch mido
-pip install -e beat_this
+pip install -e third-party/beat_this
 
 # Data
 #   1. SMC_MIREX dataset:           http://smc.inescporto.pt/research/data-2/  ->  ./SMC_MIREX/
-#   2. Beat Transformer artifacts:  see Beat-Transformer/README.md     ->  ./Beat-Transformer/data/demix_spectrogram_data.npz
-#   3. Pretrained checkpoints:      beat_this auto-downloads;  Beat-Transformer/checkpoint/ comes with the submodule
+#   2. Beat Transformer artifacts:  see third-party/Beat-Transformer/README.md     ->  ./third-party/Beat-Transformer/data/demix_spectrogram_data.npz
+#   3. Pretrained checkpoints:      beat_this auto-downloads;  third-party/Beat-Transformer/checkpoint/ comes with the submodule
 
 # Run inference
-python scripts/run_folds.py                       # beat_this, no DBN
-python scripts/run_folds_dbn_confidence.py        # beat_this + DBN + confidence
-python scripts/run_beat_transformer.py            # Beat Transformer, 8-fold
-python scripts/run_madmom_tcn_baseline.py         # madmom TCN baseline + tempo-constrained DBN
+python scripts/paper/run_folds.py                       # beat_this, no DBN
+python scripts/paper/run_folds_dbn_confidence.py        # beat_this + DBN + confidence
+python scripts/paper/run_beat_transformer.py            # Beat Transformer, 8-fold
+python scripts/paper/run_madmom_tcn_baseline.py         # madmom TCN baseline + tempo-constrained DBN
 
 # Build the master per-track table
-python scripts/build_results_csv.py               # writes data/results.csv
+python scripts/paper/build_results_csv.py               # writes data/results.csv
 
 # Diagnostics & follow-up experiments
-python scripts/activation_analysis.py             # writes data/activation_diagnostics.csv (+ activation_plots/)
-python scripts/octave_correction.py               # writes data/octave_correction_results.csv
-python scripts/ibi_cleanup.py                     # writes data/ibi_cleanup_results.csv
-python scripts/threshold_sweep.py                 # writes data/threshold_sweep_results.csv
-python scripts/gt_tempo_lambda_sweep.py           # writes data/gt_tempo_lambda_sweep_results.csv
-python scripts/analyze_tags.py                    # prints SMC tag/confidence breakdown
+python scripts/paper/activation_analysis.py             # writes data/activation_diagnostics.csv (+ activation_plots/)
+python scripts/paper/octave_correction.py               # writes data/octave_correction_results.csv
+python scripts/paper/ibi_cleanup.py                     # writes data/ibi_cleanup_results.csv
+python scripts/paper/threshold_sweep.py                 # writes data/threshold_sweep_results.csv
+python scripts/paper/gt_tempo_lambda_sweep.py           # writes data/gt_tempo_lambda_sweep_results.csv
+python scripts/diagnostics/analyze_tags.py                    # prints SMC tag/confidence breakdown
 ```
 
 ## Data files
