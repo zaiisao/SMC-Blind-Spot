@@ -73,3 +73,4 @@ cache/sa3_generate/
 cache/sa3_cfg_prompt_sweep/
 cache/sa3_beat_adherence/
 cache/allfold0/*.wav
+third-party/stable-audio-tools/
