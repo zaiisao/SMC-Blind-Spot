@@ -1,0 +1,5 @@
+Pre-registered 2026-08-25 00:50, BEFORE running scripts/sa3/tempo_transplant.py.
+dB = F(original) - F(slowed to 45-70bpm);  dC = F(original) - F(stretch there+back)
+  PROCEED   dB >= 0.15  AND  dC <= 0.05  AND  (dB-dC) >= 0.10  AND  wilcoxon p < 0.01
+  KILL      dC >= 0.6 * dB   (effect is vocoder artifacts; TTA result must be re-described)
+  AMBIGUOUS otherwise -> repeat arm B with resampling (no vocoder) as second discriminant

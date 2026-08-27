@@ -1,0 +1,67 @@
+{
+ "adapter": "/disk1/jaehoon/sa3_beat_runs/cn_fold0/beat_adapter_step16000.safetensors",
+ "args": {
+  "adapter": "/disk1/jaehoon/sa3_beat_runs/cn_fold0/beat_adapter_step16000.safetensors",
+  "grids": "all",
+  "fold": 0,
+  "n": 10,
+  "seconds": 20.0,
+  "steps": 60,
+  "cfg_scale": 6.0,
+  "gpu": 2,
+  "prompt": "solo piano, quiet, expressive, intimate recording",
+  "out": "cache/adherence_cn_fold0.json"
+ },
+ "results": {
+  "metronomic_100bpm": {
+   "mean": {
+    "true": 0.30847373887752777,
+    "half_beat": -0.30727859341820857,
+    "scrambled": -0.07643564764730512,
+    "wrong_tempo": -0.04547214172506746
+   },
+   "se_true": 0.11673155494534601,
+   "n": 10
+  },
+  "rubato_d0.3": {
+   "mean": {
+    "true": -0.00907867938521079,
+    "half_beat": 0.005750184379779405,
+    "scrambled": 0.0291580715182425,
+    "wrong_tempo": -0.09742439718161701
+   },
+   "se_true": 0.09320451666449973,
+   "n": 10
+  },
+  "real:asap__Bach_Fugue_bwv_862_Son": {
+   "mean": {
+    "true": -0.08861103496628099,
+    "half_beat": 0.0843501124045781,
+    "scrambled": 0.022784195531224384,
+    "wrong_tempo": -0.0040805250579254385
+   },
+   "se_true": 0.10487897375625448,
+   "n": 10
+  },
+  "real:asap__Bach_Fugue_bwv_863_Lee": {
+   "mean": {
+    "true": -0.07183740572603717,
+    "half_beat": 0.05496701500874814,
+    "scrambled": 0.07578881789655299,
+    "wrong_tempo": -0.0011918009719283113
+   },
+   "se_true": 0.08375289806791256,
+   "n": 10
+  },
+  "real:asap__Bach_Fugue_bwv_863_Shy": {
+   "mean": {
+    "true": -0.2308889730363394,
+    "half_beat": 0.21772462637501994,
+    "scrambled": 0.07768070449061057,
+    "wrong_tempo": -0.08933685172181376
+   },
+   "se_true": 0.08747345399882908,
+   "n": 10
+  }
+ }
+}

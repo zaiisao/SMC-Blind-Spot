@@ -1,0 +1,50 @@
+Pre-registered 2026-08-26 00:42, BEFORE any per-item-loss checkpoint exists.
+
+HYPOTHESIS
+  The stock loss uses one global pos_weight (32 = 39 frames/beat = ~78 bpm),
+  computed from UNAUGMENTED tracks. This installs an implicit beat-rate prior,
+  and predictions regress toward it in BOTH directions.
+
+MEASURED (fold-honest released model, SMC n=217), the thing to be fixed:
+    band      est/true ratio   doubled(>1.5)   halved(<0.7)
+    <55            1.32            0.356          0.022
+    55-70          1.05            0.241          0.069
+    70-100         1.01            0.066          0.118
+    >100           1.00            0.053          0.316
+  and AMLt-CMLt is U-shaped: .140 / .080 / .052 / .158
+
+INTERVENTION
+  PerItemShiftTolerantBCELoss: pos_weight_i = (valid_i - beats_i*7)/beats_i,
+  from each excerpt's own annotation. 40 bpm -> 68, 180 bpm -> 10 (7x spread).
+  Verified to reproduce the stock loss EXACTLY at 75 bpm, where w = 32.
+
+DESIGN (2x2; the two old-loss cells are already measured)
+                        old loss          per-item loss
+    shipped +/-20      0.5818 (done)          C
+    wide -60..+20      0.5734 (done)          D
+  fold 0, seed 0 first; seeds 1-2 only if a cell passes the primary readout.
+
+PRIMARY READOUT -- the mechanism, not F
+  r_lo  = fraction of tracks <55 bpm with est/true ratio > 1.5   (now 0.356)
+  r_hi  = fraction of tracks >100 bpm with est/true ratio < 0.7  (now 0.316)
+  CONFIRMED if BOTH shrink by >= 0.10 absolute vs the matching old-loss arm.
+  This is the direct test of "the prior comes from the loss". It can succeed
+  even if F does not move, and that outcome is still a real finding.
+
+SECONDARY
+  s1  AMLt-CMLt gap in <55 and >100 bands should both shrink.
+  s2  F on all 217. Reported, but NOT the gate -- the failure mode is the claim.
+
+INTERACTION (Jaehoon's claim that the loss blocked the data interventions)
+  If the loss was the bottleneck, D should beat C by MORE than wide beat shipped
+  under the old loss (-0.0084). A loss-only story predicts C ~= D.
+
+KILL
+  If r_lo and r_hi both move < 0.05 while per-item weights genuinely vary 7x
+  across items, the prior does not come from the loss normalisation. Then the
+  failure mode stands as a characterisation and the fix does not; do NOT re-slice
+  to find a win.
+
+WHAT THIS CANNOT CLAIM
+  Absolute performance. Both arms train on ~43% of upstream's corpus, so no
+  comparison to released checkpoints or to the banked TTA 0.6449 is licensed.

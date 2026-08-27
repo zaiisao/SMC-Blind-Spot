@@ -1,0 +1,52 @@
+Pre-registered 2026-08-26 11:34, BEFORE any phase-loss checkpoint exists.
+
+HYPOTHESIS
+  The stock loss is written in ABSOLUTE frames, so its geometry changes with
+  tempo and one scalar pos_weight must serve every tempo. A phase-dependent
+  negative weight is tempo-invariant by construction and makes double-tempo cost
+  what half-tempo costs.
+
+    c(phi) = 1 + gamma * exp(-d(phi,1/2)^2 / (2 sigma^2)),  sigma = 0.06
+    gamma = 1.3 from cost parity: 7N(1+gamma) = 16N
+
+  Verified in unit tests: doubled-prediction loss ratio 1.72 vs halved 1.94
+  (was 0.85 vs 1.94); halved untouched (ratio 1.000); gamma=0 reproduces the
+  stock loss to 6 decimals; c identical at 40 and 180 bpm.
+
+BASELINE (already measured, same corpus / seed / schedule)
+  f0_shipped_s0, 100 epochs, stock loss, seed 0:
+    F(217) 0.5919   doubled(<55) 0.511   halved(>100) 0.316   correct-lvl 0.576
+
+ARMS
+  fold 0, seed 0, 100 epochs, val_frequency 5 (20 checkpoints -> trajectory
+  comparable against f0_shipped_s0). ONLY --loss and --phase-gamma differ from
+  the baseline command; every other flag is at its stock default.
+    gamma = 1.3   cost parity
+    gamma = 3.0   beyond parity
+
+PRIMARY READOUT -- the failure mode, per track, not the mean
+  The mean hid the effect once already: dw32 looked flat at +0.0058 while the
+  transition table showed doubled->correct flips were worth +0.0428 each,
+  cancelled by an equal number of correct->halved breaks. So:
+
+    doubled(<55) and halved(>100), intersected track sets
+    the doubled->correct / correct->halved transition table vs baseline
+    F(217) reported alongside, NOT as the gate
+
+CONFIRMED  doubled falls >= 0.10 AND halved rises < 0.05 AND F does not fall
+KILL       doubled falls < 0.05, OR halved rises >= 0.10 (it traded, like every
+           previous knob), OR F falls >= 0.02
+AMBIGUOUS  otherwise -> add seeds 1,2 before interpreting
+
+MECHANISM CHECK (reported, does not override the rule)
+  A halved prediction has no mass at phi=0.5, so c(phi) should leave halving
+  ALONE. If halving moves as much as doubling, the term is acting as a generic
+  rate knob like everything before it, and the phase formulation bought nothing.
+
+WHAT THIS CANNOT CLAIM
+  Absolute performance -- trains on ~43% of upstream's corpus. Measures a DELTA
+  against f0_shipped_s0 only.
+  The oracle screen (+0.030 SMC, +0.025 GTZAN) used GROUND-TRUTH phase and is an
+  upper bound; a trained model suppresses subdivisions of its OWN inferred grid,
+  which on a doubled track is the wrong grid. That gap is exactly what this run
+  tests and the screen could not.

@@ -1,0 +1,264 @@
+{
+  "meta": {
+    "n_tracks": 217,
+    "sr": 22050,
+    "n_features": 20,
+    "features": [
+      "onset_mean",
+      "onset_cv",
+      "tg_entropy",
+      "dom_bpm_log2",
+      "tg_dom_salience",
+      "tg_n_peaks",
+      "tg_second_peak_ratio",
+      "pulse_clarity",
+      "pulse_clarity_mean",
+      "ftg_entropy",
+      "ratio_2x",
+      "ratio_half",
+      "ratio_3x",
+      "ratio_third",
+      "metrical_conflict_max",
+      "tempo_std_log2",
+      "tempo_switch_frac",
+      "phase_entropy",
+      "phase_concentration",
+      "phase_top2_ratio"
+    ],
+    "classifier": "LogisticRegression C=1, StandardScaler, 5-fold stratified CV, pooled decision scores",
+    "permutations": 500
+  },
+  "tag_auc": {
+    "tag:ambiguity of metrical level": {
+      "n_pos": 14,
+      "auc": 0.393,
+      "perm_p": 0.8643,
+      "perm_auc_mean": 0.502,
+      "perm_auc_p95": 0.675
+    },
+    "tag:beat phase ambiguity": {
+      "n_pos": 11,
+      "auc": 0.5075,
+      "perm_p": 0.487,
+      "perm_auc_mean": 0.494,
+      "perm_auc_p95": 0.698
+    },
+    "tag:changing time signature": {
+      "n_pos": 14,
+      "auc": 0.412,
+      "perm_p": 0.7745,
+      "perm_auc_mean": 0.498,
+      "perm_auc_p95": 0.672
+    },
+    "tag:excerpt is the introduction of a song": {
+      "n_pos": 10,
+      "auc": 0.4725
+    },
+    "tag:excerpt is the introduction of the song": {
+      "n_pos": 12,
+      "auc": 0.4081
+    },
+    "tag:expressive timing": {
+      "n_pos": 124,
+      "auc": 0.7355
+    },
+    "tag:gradual tempo change": {
+      "n_pos": 55,
+      "auc": 0.587
+    },
+    "tag:lack of transient sounds": {
+      "n_pos": 70,
+      "auc": 0.8643,
+      "perm_p": 0.002,
+      "perm_auc_mean": 0.493,
+      "perm_auc_p95": 0.584
+    },
+    "tag:low familiarity": {
+      "n_pos": 15,
+      "auc": 0.602
+    },
+    "tag:low familiarity with the song/style": {
+      "n_pos": 8,
+      "auc": 0.6986
+    },
+    "tag:missing bass": {
+      "n_pos": 72,
+      "auc": 0.6796
+    },
+    "tag:none": {
+      "n_pos": 19,
+      "auc": 0.8546
+    },
+    "tag:pauses": {
+      "n_pos": 31,
+      "auc": 0.6403
+    },
+    "tag:poor sound quality": {
+      "n_pos": 21,
+      "auc": 0.6706,
+      "perm_p": 0.0259,
+      "perm_auc_mean": 0.494,
+      "perm_auc_p95": 0.634
+    },
+    "tag:quiet accompaniment": {
+      "n_pos": 47,
+      "auc": 0.6318
+    },
+    "tag:rich ornamentation in the interpretation": {
+      "n_pos": 25,
+      "auc": 0.7654
+    },
+    "tag:slow tempo": {
+      "n_pos": 71,
+      "auc": 0.7674
+    },
+    "tag:strong syncopation": {
+      "n_pos": 23,
+      "auc": 0.5654
+    },
+    "tag:tempo discontinuity": {
+      "n_pos": 12,
+      "auc": 0.715,
+      "perm_p": 0.02,
+      "perm_auc_mean": 0.482,
+      "perm_auc_p95": 0.665
+    },
+    "tag:tempo incontinuity": {
+      "n_pos": 30,
+      "auc": 0.5663,
+      "perm_p": 0.1577,
+      "perm_auc_mean": 0.49,
+      "perm_auc_p95": 0.615
+    },
+    "tag:ternary meter": {
+      "n_pos": 68,
+      "auc": 0.5605
+    },
+    "tag:wide dynamic range": {
+      "n_pos": 13,
+      "auc": 0.6719
+    }
+  },
+  "feature_correlations": {
+    "onset_mean": {
+      "r_F": 0.2,
+      "p_F": 0.00313,
+      "r_gap": 0.12,
+      "p_gap": 0.0785
+    },
+    "onset_cv": {
+      "r_F": 0.119,
+      "p_F": 0.0808,
+      "r_gap": 0.091,
+      "p_gap": 0.18
+    },
+    "tg_entropy": {
+      "r_F": -0.127,
+      "p_F": 0.0626,
+      "r_gap": -0.204,
+      "p_gap": 0.00253
+    },
+    "dom_bpm_log2": {
+      "r_F": -0.273,
+      "p_F": 4.61e-05,
+      "r_gap": 0.055,
+      "p_gap": 0.424
+    },
+    "tg_dom_salience": {
+      "r_F": 0.108,
+      "p_F": 0.114,
+      "r_gap": 0.257,
+      "p_gap": 0.000127
+    },
+    "tg_n_peaks": {
+      "r_F": 0.016,
+      "p_F": 0.815,
+      "r_gap": 0.0,
+      "p_gap": 0.999
+    },
+    "tg_second_peak_ratio": {
+      "r_F": 0.121,
+      "p_F": 0.0756,
+      "r_gap": -0.102,
+      "p_gap": 0.134
+    },
+    "pulse_clarity": {
+      "r_F": -0.069,
+      "p_F": 0.311,
+      "r_gap": 0.012,
+      "p_gap": 0.863
+    },
+    "pulse_clarity_mean": {
+      "r_F": -0.132,
+      "p_F": 0.0524,
+      "r_gap": -0.079,
+      "p_gap": 0.247
+    },
+    "ftg_entropy": {
+      "r_F": -0.116,
+      "p_F": 0.0894,
+      "r_gap": -0.096,
+      "p_gap": 0.158
+    },
+    "ratio_2x": {
+      "r_F": -0.103,
+      "p_F": 0.13,
+      "r_gap": -0.058,
+      "p_gap": 0.398
+    },
+    "ratio_half": {
+      "r_F": 0.123,
+      "p_F": 0.0696,
+      "r_gap": 0.051,
+      "p_gap": 0.456
+    },
+    "ratio_3x": {
+      "r_F": -0.16,
+      "p_F": 0.0187,
+      "r_gap": -0.046,
+      "p_gap": 0.496
+    },
+    "ratio_third": {
+      "r_F": 0.03,
+      "p_F": 0.659,
+      "r_gap": -0.048,
+      "p_gap": 0.479
+    },
+    "metrical_conflict_max": {
+      "r_F": -0.069,
+      "p_F": 0.311,
+      "r_gap": -0.036,
+      "p_gap": 0.599
+    },
+    "tempo_std_log2": {
+      "r_F": 0.162,
+      "p_F": 0.0171,
+      "r_gap": -0.045,
+      "p_gap": 0.506
+    },
+    "tempo_switch_frac": {
+      "r_F": -0.096,
+      "p_F": 0.16,
+      "r_gap": -0.126,
+      "p_gap": 0.064
+    },
+    "phase_entropy": {
+      "r_F": 0.218,
+      "p_F": 0.00124,
+      "r_gap": -0.017,
+      "p_gap": 0.8
+    },
+    "phase_concentration": {
+      "r_F": -0.012,
+      "p_F": 0.858,
+      "r_gap": 0.015,
+      "p_gap": 0.825
+    },
+    "phase_top2_ratio": {
+      "r_F": -0.228,
+      "p_F": 0.000704,
+      "r_gap": -0.032,
+      "p_gap": 0.637
+    }
+  }
+}

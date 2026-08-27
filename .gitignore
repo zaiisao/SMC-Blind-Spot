@@ -59,3 +59,17 @@ cache/tta_full/
 # Local copies of third-party material, not ours to redistribute
 *.pdf
 Conference Management Toolkit*.html
+
+# --- 2026-08-27 session ---------------------------------------------------
+# Training checkpoints written by launch_scripts/train.py (696 MB); the real
+# checkpoints live under /disk1/jaehoon/bt_wide/phase5/.
+beat_this/checkpoints/
+beat_this/lightning_logs/
+# Generated audio probes: regenerable from the sa3_beat scripts, ~1.2 GB.
+cache/sa3_encoder_overfit/
+cache/sa3_prior_probe/
+cache/sa3_prior_probe_n24/
+cache/sa3_generate/
+cache/sa3_cfg_prompt_sweep/
+cache/sa3_beat_adherence/
+cache/allfold0/*.wav

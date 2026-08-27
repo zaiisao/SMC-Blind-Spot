@@ -1,0 +1,4330 @@
+{
+ "real_piano": [
+  {
+   "n_onsets": 110,
+   "attack_slope": 0.5803691827235216,
+   "peak_prominence": 0.5100675563386765,
+   "ioi_cv": 0.26397792815946175,
+   "onset_rate_hz": 5.5
+  },
+  {
+   "n_onsets": 107,
+   "attack_slope": 0.6935236149083345,
+   "peak_prominence": 0.6599124462851892,
+   "ioi_cv": 0.2609901870019257,
+   "onset_rate_hz": 5.35
+  },
+  {
+   "n_onsets": 128,
+   "attack_slope": 0.7405902059123236,
+   "peak_prominence": 0.7341888740131176,
+   "ioi_cv": 0.22146436908868788,
+   "onset_rate_hz": 6.4
+  },
+  {
+   "n_onsets": 119,
+   "attack_slope": 0.7947404008987436,
+   "peak_prominence": 0.7975890449807461,
+   "ioi_cv": 0.15597084110472392,
+   "onset_rate_hz": 5.95
+  },
+  {
+   "n_onsets": 123,
+   "attack_slope": 0.6520126571519077,
+   "peak_prominence": 0.6241282324476864,
+   "ioi_cv": 0.24800939076377798,
+   "onset_rate_hz": 6.15
+  },
+  {
+   "n_onsets": 122,
+   "attack_slope": 0.7189066981918528,
+   "peak_prominence": 0.6776286319809922,
+   "ioi_cv": 0.2649751267610542,
+   "onset_rate_hz": 6.1
+  },
+  {
+   "n_onsets": 127,
+   "attack_slope": 0.8836112082436143,
+   "peak_prominence": 0.8867735458037639,
+   "ioi_cv": 0.2019339133510033,
+   "onset_rate_hz": 6.35
+  },
+  {
+   "n_onsets": 128,
+   "attack_slope": 0.7667009005056992,
+   "peak_prominence": 0.7479026294957435,
+   "ioi_cv": 0.18537517452845106,
+   "onset_rate_hz": 6.4
+  },
+  {
+   "n_onsets": 136,
+   "attack_slope": 0.8281153846846518,
+   "peak_prominence": 0.8043267312496863,
+   "ioi_cv": 0.20832178958408568,
+   "onset_rate_hz": 6.8
+  },
+  {
+   "n_onsets": 126,
+   "attack_slope": 0.7594442869111985,
+   "peak_prominence": 0.7597001898161633,
+   "ioi_cv": 0.1234056050571516,
+   "onset_rate_hz": 6.3
+  },
+  {
+   "n_onsets": 129,
+   "attack_slope": 0.8351144975813785,
+   "peak_prominence": 0.8724219104735494,
+   "ioi_cv": 0.22574288018016014,
+   "onset_rate_hz": 6.45
+  },
+  {
+   "n_onsets": 138,
+   "attack_slope": 0.8590922892681355,
+   "peak_prominence": 0.8469259170727886,
+   "ioi_cv": 0.11027243522596968,
+   "onset_rate_hz": 6.9
+  },
+  {
+   "n_onsets": 110,
+   "attack_slope": 0.6650218631294355,
+   "peak_prominence": 0.6348141814293424,
+   "ioi_cv": 0.26612859214137574,
+   "onset_rate_hz": 5.5
+  },
+  {
+   "n_onsets": 118,
+   "attack_slope": 0.8567159407906497,
+   "peak_prominence": 0.8413860931663736,
+   "ioi_cv": 0.30458823991876727,
+   "onset_rate_hz": 5.9
+  },
+  {
+   "n_onsets": 135,
+   "attack_slope": 0.8170719577855438,
+   "peak_prominence": 0.7870986616868699,
+   "ioi_cv": 0.22132934955397945,
+   "onset_rate_hz": 6.75
+  },
+  {
+   "n_onsets": 128,
+   "attack_slope": 0.8027697490863512,
+   "peak_prominence": 0.8238799715858355,
+   "ioi_cv": 0.1883679752139431,
+   "onset_rate_hz": 6.4
+  },
+  {
+   "n_onsets": 112,
+   "attack_slope": 0.5322279699462299,
+   "peak_prominence": 0.4472412939838107,
+   "ioi_cv": 0.23242489097394503,
+   "onset_rate_hz": 5.6
+  },
+  {
+   "n_onsets": 108,
+   "attack_slope": 0.44839702837335527,
+   "peak_prominence": 0.39716021483064656,
+   "ioi_cv": 0.24801417785896554,
+   "onset_rate_hz": 5.4
+  },
+  {
+   "n_onsets": 98,
+   "attack_slope": 0.5406724593681509,
+   "peak_prominence": 0.4727521921027874,
+   "ioi_cv": 0.29009373977168296,
+   "onset_rate_hz": 4.9
+  },
+  {
+   "n_onsets": 111,
+   "attack_slope": 0.5107139720670252,
+   "peak_prominence": 0.43998464474367055,
+   "ioi_cv": 0.25280796242338016,
+   "onset_rate_hz": 5.55
+  },
+  {
+   "n_onsets": 96,
+   "attack_slope": 0.6514363580889002,
+   "peak_prominence": 0.5515140565561422,
+   "ioi_cv": 0.5136021551883139,
+   "onset_rate_hz": 4.8
+  },
+  {
+   "n_onsets": 115,
+   "attack_slope": 0.523681329379713,
+   "peak_prominence": 0.44063991076332215,
+   "ioi_cv": 0.23265709479275729,
+   "onset_rate_hz": 5.75
+  },
+  {
+   "n_onsets": 108,
+   "attack_slope": 0.5486893925255593,
+   "peak_prominence": 0.47882261129892917,
+   "ioi_cv": 0.22917584892842416,
+   "onset_rate_hz": 5.4
+  },
+  {
+   "n_onsets": 130,
+   "attack_slope": 0.7275141667904045,
+   "peak_prominence": 0.7084037054791212,
+   "ioi_cv": 0.13550043587762992,
+   "onset_rate_hz": 6.5
+  },
+  {
+   "n_onsets": 123,
+   "attack_slope": 0.7107083152636816,
+   "peak_prominence": 0.7033201268578892,
+   "ioi_cv": 0.18783566597084458,
+   "onset_rate_hz": 6.15
+  },
+  {
+   "n_onsets": 124,
+   "attack_slope": 0.6718650663988541,
+   "peak_prominence": 0.6541960290299672,
+   "ioi_cv": 0.17364580955313652,
+   "onset_rate_hz": 6.2
+  },
+  {
+   "n_onsets": 124,
+   "attack_slope": 0.7984641669693396,
+   "peak_prominence": 0.7679586416577041,
+   "ioi_cv": 0.22079774291391066,
+   "onset_rate_hz": 6.2
+  },
+  {
+   "n_onsets": 126,
+   "attack_slope": 0.8329214737035491,
+   "peak_prominence": 0.8262614624294797,
+   "ioi_cv": 0.29381043984281346,
+   "onset_rate_hz": 6.3
+  },
+  {
+   "n_onsets": 123,
+   "attack_slope": 0.6506666069707724,
+   "peak_prominence": 0.6434702766074997,
+   "ioi_cv": 0.1670296959403901,
+   "onset_rate_hz": 6.15
+  },
+  {
+   "n_onsets": 106,
+   "attack_slope": 0.5197659009161144,
+   "peak_prominence": 0.4787900142868813,
+   "ioi_cv": 0.2866746451851388,
+   "onset_rate_hz": 5.3
+  }
+ ],
+ "roundtrip_piano": [
+  {
+   "n_onsets": 118,
+   "attack_slope": 0.5038851242823951,
+   "peak_prominence": 0.4582604351264441,
+   "ioi_cv": 0.19301635576476664,
+   "onset_rate_hz": 5.9
+  },
+  {
+   "n_onsets": 117,
+   "attack_slope": 0.53590141150134,
+   "peak_prominence": 0.5178520078493953,
+   "ioi_cv": 0.23217729127402728,
+   "onset_rate_hz": 5.85
+  },
+  {
+   "n_onsets": 124,
+   "attack_slope": 0.5814079671224774,
+   "peak_prominence": 0.5811530552788993,
+   "ioi_cv": 0.21343543774632678,
+   "onset_rate_hz": 6.2
+  },
+  {
+   "n_onsets": 121,
+   "attack_slope": 0.6335370635900341,
+   "peak_prominence": 0.6700870202492957,
+   "ioi_cv": 0.13136434662120264,
+   "onset_rate_hz": 6.05
+  },
+  {
+   "n_onsets": 121,
+   "attack_slope": 0.5260242150004516,
+   "peak_prominence": 0.4938359673734154,
+   "ioi_cv": 0.23759681085787876,
+   "onset_rate_hz": 6.05
+  },
+  {
+   "n_onsets": 125,
+   "attack_slope": 0.5719832731772992,
+   "peak_prominence": 0.5909915081436367,
+   "ioi_cv": 0.23497408094940175,
+   "onset_rate_hz": 6.25
+  },
+  {
+   "n_onsets": 130,
+   "attack_slope": 0.814790230384419,
+   "peak_prominence": 0.8015225418030374,
+   "ioi_cv": 0.12614519059534068,
+   "onset_rate_hz": 6.5
+  },
+  {
+   "n_onsets": 127,
+   "attack_slope": 0.5772060449088992,
+   "peak_prominence": 0.6135570266232299,
+   "ioi_cv": 0.1926887502982032,
+   "onset_rate_hz": 6.35
+  },
+  {
+   "n_onsets": 127,
+   "attack_slope": 0.6415604142411038,
+   "peak_prominence": 0.6286470334698582,
+   "ioi_cv": 0.23419574021140446,
+   "onset_rate_hz": 6.35
+  },
+  {
+   "n_onsets": 126,
+   "attack_slope": 0.6144956184437489,
+   "peak_prominence": 0.6577924736987085,
+   "ioi_cv": 0.11770847266007912,
+   "onset_rate_hz": 6.3
+  },
+  {
+   "n_onsets": 128,
+   "attack_slope": 0.7040246391580611,
+   "peak_prominence": 0.7354363933635206,
+   "ioi_cv": 0.2137575168697538,
+   "onset_rate_hz": 6.4
+  },
+  {
+   "n_onsets": 136,
+   "attack_slope": 0.724336715267893,
+   "peak_prominence": 0.7362817573170228,
+   "ioi_cv": 0.1318190592929788,
+   "onset_rate_hz": 6.8
+  },
+  {
+   "n_onsets": 113,
+   "attack_slope": 0.5608204815188201,
+   "peak_prominence": 0.5178247345361566,
+   "ioi_cv": 0.23887017154046253,
+   "onset_rate_hz": 5.65
+  },
+  {
+   "n_onsets": 113,
+   "attack_slope": 0.6705034800623467,
+   "peak_prominence": 0.643993659469555,
+   "ioi_cv": 0.26212118473609625,
+   "onset_rate_hz": 5.65
+  },
+  {
+   "n_onsets": 126,
+   "attack_slope": 0.64204349663604,
+   "peak_prominence": 0.6401893800961134,
+   "ioi_cv": 0.24716710801047423,
+   "onset_rate_hz": 6.3
+  },
+  {
+   "n_onsets": 127,
+   "attack_slope": 0.7195388517282247,
+   "peak_prominence": 0.7312778502243865,
+   "ioi_cv": 0.17705395620901182,
+   "onset_rate_hz": 6.35
+  },
+  {
+   "n_onsets": 114,
+   "attack_slope": 0.5321608227494113,
+   "peak_prominence": 0.4659957801952993,
+   "ioi_cv": 0.19209443179512398,
+   "onset_rate_hz": 5.7
+  },
+  {
+   "n_onsets": 111,
+   "attack_slope": 0.5209976638211348,
+   "peak_prominence": 0.4731384194759812,
+   "ioi_cv": 0.17585082703059673,
+   "onset_rate_hz": 5.55
+  },
+  {
+   "n_onsets": 114,
+   "attack_slope": 0.5432188226746889,
+   "peak_prominence": 0.5098183300637538,
+   "ioi_cv": 0.16946374133756031,
+   "onset_rate_hz": 5.7
+  },
+  {
+   "n_onsets": 112,
+   "attack_slope": 0.5469124555842704,
+   "peak_prominence": 0.49173907484651885,
+   "ioi_cv": 0.18788283019184598,
+   "onset_rate_hz": 5.6
+  },
+  {
+   "n_onsets": 112,
+   "attack_slope": 0.5370042173814333,
+   "peak_prominence": 0.479500736358426,
+   "ioi_cv": 0.2179596408956147,
+   "onset_rate_hz": 5.6
+  },
+  {
+   "n_onsets": 110,
+   "attack_slope": 0.5478331350963473,
+   "peak_prominence": 0.48262284694421825,
+   "ioi_cv": 0.1918997603103368,
+   "onset_rate_hz": 5.5
+  },
+  {
+   "n_onsets": 113,
+   "attack_slope": 0.5263351017240409,
+   "peak_prominence": 0.47061104749093285,
+   "ioi_cv": 0.20598215331007577,
+   "onset_rate_hz": 5.65
+  },
+  {
+   "n_onsets": 125,
+   "attack_slope": 0.5752256942590578,
+   "peak_prominence": 0.5834029469944676,
+   "ioi_cv": 0.16687782692964997,
+   "onset_rate_hz": 6.25
+  },
+  {
+   "n_onsets": 122,
+   "attack_slope": 0.5710458934644378,
+   "peak_prominence": 0.5863672362478918,
+   "ioi_cv": 0.16144464351100254,
+   "onset_rate_hz": 6.1
+  },
+  {
+   "n_onsets": 124,
+   "attack_slope": 0.581329777854525,
+   "peak_prominence": 0.5728444750319743,
+   "ioi_cv": 0.1738668361406413,
+   "onset_rate_hz": 6.2
+  },
+  {
+   "n_onsets": 125,
+   "attack_slope": 0.6869372802894107,
+   "peak_prominence": 0.6970895595522342,
+   "ioi_cv": 0.16186536407433458,
+   "onset_rate_hz": 6.25
+  },
+  {
+   "n_onsets": 126,
+   "attack_slope": 0.7477581964466512,
+   "peak_prominence": 0.7194044854067304,
+   "ioi_cv": 0.21042875853847526,
+   "onset_rate_hz": 6.3
+  },
+  {
+   "n_onsets": 121,
+   "attack_slope": 0.5822054601427916,
+   "peak_prominence": 0.5715147121029259,
+   "ioi_cv": 0.16464534526853195,
+   "onset_rate_hz": 6.05
+  },
+  {
+   "n_onsets": 118,
+   "attack_slope": 0.5045499238341657,
+   "peak_prominence": 0.4406321574268704,
+   "ioi_cv": 0.21080218102703996,
+   "onset_rate_hz": 5.9
+  }
+ ],
+ "real_drums": [
+  {
+   "n_onsets": 110,
+   "attack_slope": 0.7060439339610969,
+   "peak_prominence": 0.6757730279271625,
+   "ioi_cv": 0.25329136265110364,
+   "onset_rate_hz": 5.5
+  },
+  {
+   "n_onsets": 113,
+   "attack_slope": 0.7435581956357293,
+   "peak_prominence": 0.6953304580626787,
+   "ioi_cv": 0.20584629175145722,
+   "onset_rate_hz": 5.65
+  },
+  {
+   "n_onsets": 126,
+   "attack_slope": 0.7870034183519469,
+   "peak_prominence": 0.7875949129534261,
+   "ioi_cv": 0.24295918424636398,
+   "onset_rate_hz": 6.3
+  },
+  {
+   "n_onsets": 80,
+   "attack_slope": 0.7798013752150309,
+   "peak_prominence": 0.7609039584382469,
+   "ioi_cv": 0.3994168908545462,
+   "onset_rate_hz": 4.0
+  },
+  {
+   "n_onsets": 109,
+   "attack_slope": 0.7908351899046866,
+   "peak_prominence": 0.7599594365277598,
+   "ioi_cv": 0.1639680931232923,
+   "onset_rate_hz": 5.45
+  },
+  {
+   "n_onsets": 108,
+   "attack_slope": 0.7314465394878729,
+   "peak_prominence": 0.6860336926604614,
+   "ioi_cv": 0.26944438287367284,
+   "onset_rate_hz": 5.4
+  },
+  {
+   "n_onsets": 64,
+   "attack_slope": 0.846477414846138,
+   "peak_prominence": 0.8380421855493272,
+   "ioi_cv": 0.32090205656485293,
+   "onset_rate_hz": 3.2
+  },
+  {
+   "n_onsets": 111,
+   "attack_slope": 0.6339043267273816,
+   "peak_prominence": 0.5651247479949849,
+   "ioi_cv": 0.23150981450118185,
+   "onset_rate_hz": 5.55
+  },
+  {
+   "n_onsets": 108,
+   "attack_slope": 0.5952155303631195,
+   "peak_prominence": 0.5580703106671264,
+   "ioi_cv": 0.23719536557131177,
+   "onset_rate_hz": 5.4
+  },
+  {
+   "n_onsets": 95,
+   "attack_slope": 0.7189689423339934,
+   "peak_prominence": 0.7058272702085333,
+   "ioi_cv": 0.4174765321912868,
+   "onset_rate_hz": 4.75
+  },
+  {
+   "n_onsets": 96,
+   "attack_slope": 0.7129309741684011,
+   "peak_prominence": 0.7004650658991926,
+   "ioi_cv": 0.29502298729614024,
+   "onset_rate_hz": 4.8
+  },
+  {
+   "n_onsets": 128,
+   "attack_slope": 0.7823759418067715,
+   "peak_prominence": 0.7620846305482648,
+   "ioi_cv": 0.12448076734537725,
+   "onset_rate_hz": 6.4
+  },
+  {
+   "n_onsets": 103,
+   "attack_slope": 0.7024037563770821,
+   "peak_prominence": 0.6709851580054779,
+   "ioi_cv": 0.26573397852076097,
+   "onset_rate_hz": 5.15
+  },
+  {
+   "n_onsets": 117,
+   "attack_slope": 0.8515594179752368,
+   "peak_prominence": 0.8515836053407759,
+   "ioi_cv": 0.17712220844381527,
+   "onset_rate_hz": 5.85
+  },
+  {
+   "n_onsets": 102,
+   "attack_slope": 0.87076212880124,
+   "peak_prominence": 0.8319484917108275,
+   "ioi_cv": 0.7042840455734073,
+   "onset_rate_hz": 5.1
+  },
+  {
+   "n_onsets": 121,
+   "attack_slope": 0.6830392173231883,
+   "peak_prominence": 0.6886436038902838,
+   "ioi_cv": 0.22472119687478825,
+   "onset_rate_hz": 6.05
+  },
+  {
+   "n_onsets": 109,
+   "attack_slope": 0.8433810396242224,
+   "peak_prominence": 0.8293174819582148,
+   "ioi_cv": 0.30006952123617175,
+   "onset_rate_hz": 5.45
+  },
+  {
+   "n_onsets": 109,
+   "attack_slope": 0.6814728149899942,
+   "peak_prominence": 0.6219191458547573,
+   "ioi_cv": 0.25817312956003174,
+   "onset_rate_hz": 5.45
+  },
+  {
+   "n_onsets": 111,
+   "attack_slope": 0.8217132507868304,
+   "peak_prominence": 0.7854163874967337,
+   "ioi_cv": 0.31780618527103344,
+   "onset_rate_hz": 5.55
+  },
+  {
+   "n_onsets": 108,
+   "attack_slope": 0.7524210621417238,
+   "peak_prominence": 0.7126431699396912,
+   "ioi_cv": 0.250874636889663,
+   "onset_rate_hz": 5.4
+  },
+  {
+   "n_onsets": 107,
+   "attack_slope": 0.7361714661984278,
+   "peak_prominence": 0.7068915719717255,
+   "ioi_cv": 0.2892377485850624,
+   "onset_rate_hz": 5.35
+  },
+  {
+   "n_onsets": 99,
+   "attack_slope": 0.725354400365296,
+   "peak_prominence": 0.6632178210506797,
+   "ioi_cv": 0.3353067910400401,
+   "onset_rate_hz": 4.95
+  },
+  {
+   "n_onsets": 113,
+   "attack_slope": 0.8759444726751215,
+   "peak_prominence": 0.8599529961043177,
+   "ioi_cv": 0.12095494423006968,
+   "onset_rate_hz": 5.65
+  },
+  {
+   "n_onsets": 112,
+   "attack_slope": 0.5906486510074748,
+   "peak_prominence": 0.5790634062718537,
+   "ioi_cv": 0.2454333461073976,
+   "onset_rate_hz": 5.6
+  },
+  {
+   "n_onsets": 92,
+   "attack_slope": 0.7067942784685751,
+   "peak_prominence": 0.7036840088761123,
+   "ioi_cv": 0.3832309571245353,
+   "onset_rate_hz": 4.6
+  },
+  {
+   "n_onsets": 115,
+   "attack_slope": 0.8646485354184976,
+   "peak_prominence": 0.858728583655169,
+   "ioi_cv": 0.3181350336257461,
+   "onset_rate_hz": 5.75
+  },
+  {
+   "n_onsets": 95,
+   "attack_slope": 0.7456554384386891,
+   "peak_prominence": 0.705259511772211,
+   "ioi_cv": 0.2714735516604825,
+   "onset_rate_hz": 4.75
+  },
+  {
+   "n_onsets": 111,
+   "attack_slope": 0.610615957604854,
+   "peak_prominence": 0.616817412677501,
+   "ioi_cv": 0.21102657736674982,
+   "onset_rate_hz": 5.55
+  },
+  {
+   "n_onsets": 102,
+   "attack_slope": 0.7266964585503886,
+   "peak_prominence": 0.7540387354439911,
+   "ioi_cv": 0.16588805222258274,
+   "onset_rate_hz": 5.1
+  },
+  {
+   "n_onsets": 101,
+   "attack_slope": 0.8152329493771869,
+   "peak_prominence": 0.8098970133300671,
+   "ioi_cv": 0.1425595438430257,
+   "onset_rate_hz": 5.05
+  }
+ ],
+ "roundtrip_drums": [
+  {
+   "n_onsets": 117,
+   "attack_slope": 0.6980424870835914,
+   "peak_prominence": 0.6605001309032358,
+   "ioi_cv": 0.21387155745796127,
+   "onset_rate_hz": 5.85
+  },
+  {
+   "n_onsets": 113,
+   "attack_slope": 0.7342732285281061,
+   "peak_prominence": 0.697695425174152,
+   "ioi_cv": 0.2084855683572277,
+   "onset_rate_hz": 5.65
+  },
+  {
+   "n_onsets": 127,
+   "attack_slope": 0.7844320655209475,
+   "peak_prominence": 0.7822777022363475,
+   "ioi_cv": 0.2364101735071662,
+   "onset_rate_hz": 6.35
+  },
+  {
+   "n_onsets": 84,
+   "attack_slope": 0.8095636519814963,
+   "peak_prominence": 0.7783491163224295,
+   "ioi_cv": 0.412365212473184,
+   "onset_rate_hz": 4.2
+  },
+  {
+   "n_onsets": 110,
+   "attack_slope": 0.7976824732036891,
+   "peak_prominence": 0.7581659848146728,
+   "ioi_cv": 0.17016420972897467,
+   "onset_rate_hz": 5.5
+  },
+  {
+   "n_onsets": 112,
+   "attack_slope": 0.7661578793690873,
+   "peak_prominence": 0.6961612366472215,
+   "ioi_cv": 0.25605536624297265,
+   "onset_rate_hz": 5.6
+  },
+  {
+   "n_onsets": 72,
+   "attack_slope": 0.8156547659776666,
+   "peak_prominence": 0.8103947335878716,
+   "ioi_cv": 0.4062988192314341,
+   "onset_rate_hz": 3.6
+  },
+  {
+   "n_onsets": 115,
+   "attack_slope": 0.6401912200767683,
+   "peak_prominence": 0.5484215153841915,
+   "ioi_cv": 0.1855559908693169,
+   "onset_rate_hz": 5.75
+  },
+  {
+   "n_onsets": 113,
+   "attack_slope": 0.6046026088485639,
+   "peak_prominence": 0.5134536954567056,
+   "ioi_cv": 0.2131664260221014,
+   "onset_rate_hz": 5.65
+  },
+  {
+   "n_onsets": 92,
+   "attack_slope": 0.7447709569149481,
+   "peak_prominence": 0.7280628593083109,
+   "ioi_cv": 0.4300045152827021,
+   "onset_rate_hz": 4.6
+  },
+  {
+   "n_onsets": 107,
+   "attack_slope": 0.7431014382405008,
+   "peak_prominence": 0.6943884298847657,
+   "ioi_cv": 0.29815440229637796,
+   "onset_rate_hz": 5.35
+  },
+  {
+   "n_onsets": 126,
+   "attack_slope": 0.7247329129225756,
+   "peak_prominence": 0.740293811469644,
+   "ioi_cv": 0.147668513840542,
+   "onset_rate_hz": 6.3
+  },
+  {
+   "n_onsets": 102,
+   "attack_slope": 0.7966308830796228,
+   "peak_prominence": 0.7361163527809741,
+   "ioi_cv": 0.24147345415883464,
+   "onset_rate_hz": 5.1
+  },
+  {
+   "n_onsets": 116,
+   "attack_slope": 0.8074486296047142,
+   "peak_prominence": 0.8063953579932137,
+   "ioi_cv": 0.19643551916870855,
+   "onset_rate_hz": 5.8
+  },
+  {
+   "n_onsets": 106,
+   "attack_slope": 0.7361340479680325,
+   "peak_prominence": 0.6685978463250034,
+   "ioi_cv": 0.6949368466657301,
+   "onset_rate_hz": 5.3
+  },
+  {
+   "n_onsets": 129,
+   "attack_slope": 0.7268828916933917,
+   "peak_prominence": 0.6965251851838522,
+   "ioi_cv": 0.18400159202869265,
+   "onset_rate_hz": 6.45
+  },
+  {
+   "n_onsets": 111,
+   "attack_slope": 0.830719857984627,
+   "peak_prominence": 0.794204479479255,
+   "ioi_cv": 0.2842983960260469,
+   "onset_rate_hz": 5.55
+  },
+  {
+   "n_onsets": 108,
+   "attack_slope": 0.715757968076692,
+   "peak_prominence": 0.6410440783588119,
+   "ioi_cv": 0.26062994085949226,
+   "onset_rate_hz": 5.4
+  },
+  {
+   "n_onsets": 118,
+   "attack_slope": 0.785352782139188,
+   "peak_prominence": 0.7636650938387424,
+   "ioi_cv": 0.25840508053125205,
+   "onset_rate_hz": 5.9
+  },
+  {
+   "n_onsets": 111,
+   "attack_slope": 0.7227753601188691,
+   "peak_prominence": 0.632907296359109,
+   "ioi_cv": 0.24903850259669408,
+   "onset_rate_hz": 5.55
+  },
+  {
+   "n_onsets": 109,
+   "attack_slope": 0.757152773935333,
+   "peak_prominence": 0.7502783604055818,
+   "ioi_cv": 0.28107517331964527,
+   "onset_rate_hz": 5.45
+  },
+  {
+   "n_onsets": 100,
+   "attack_slope": 0.7732648041584659,
+   "peak_prominence": 0.7171739819464578,
+   "ioi_cv": 0.319248643225467,
+   "onset_rate_hz": 5.0
+  },
+  {
+   "n_onsets": 113,
+   "attack_slope": 0.8179097647123987,
+   "peak_prominence": 0.8106168397719411,
+   "ioi_cv": 0.1678611322592288,
+   "onset_rate_hz": 5.65
+  },
+  {
+   "n_onsets": 108,
+   "attack_slope": 0.6778424838378377,
+   "peak_prominence": 0.6514654978127915,
+   "ioi_cv": 0.3088018310185006,
+   "onset_rate_hz": 5.4
+  },
+  {
+   "n_onsets": 95,
+   "attack_slope": 0.7379029920633678,
+   "peak_prominence": 0.7198179222285817,
+   "ioi_cv": 0.46582185674714255,
+   "onset_rate_hz": 4.75
+  },
+  {
+   "n_onsets": 113,
+   "attack_slope": 0.8201120052954554,
+   "peak_prominence": 0.7914315889041763,
+   "ioi_cv": 0.3301229772007761,
+   "onset_rate_hz": 5.65
+  },
+  {
+   "n_onsets": 110,
+   "attack_slope": 0.6764359916400403,
+   "peak_prominence": 0.6236985727266191,
+   "ioi_cv": 0.2698387067068882,
+   "onset_rate_hz": 5.5
+  },
+  {
+   "n_onsets": 115,
+   "attack_slope": 0.6605188493690093,
+   "peak_prominence": 0.5949251027942065,
+   "ioi_cv": 0.20043231560788066,
+   "onset_rate_hz": 5.75
+  },
+  {
+   "n_onsets": 109,
+   "attack_slope": 0.7021965413756455,
+   "peak_prominence": 0.6649150931638285,
+   "ioi_cv": 0.18880924929001933,
+   "onset_rate_hz": 5.45
+  },
+  {
+   "n_onsets": 108,
+   "attack_slope": 0.7703233037164893,
+   "peak_prominence": 0.6935303721228201,
+   "ioi_cv": 0.1873896325959134,
+   "onset_rate_hz": 5.4
+  }
+ ],
+ "real_smc": [
+  {
+   "n_onsets": 117,
+   "attack_slope": 0.3579193142228567,
+   "peak_prominence": 0.28045388647487396,
+   "ioi_cv": 0.23605735881398057,
+   "onset_rate_hz": 5.85
+  },
+  {
+   "n_onsets": 115,
+   "attack_slope": 0.4088294393473706,
+   "peak_prominence": 0.3606503168642929,
+   "ioi_cv": 0.2289053520933031,
+   "onset_rate_hz": 5.75
+  },
+  {
+   "n_onsets": 115,
+   "attack_slope": 0.5624456181994335,
+   "peak_prominence": 0.5103972158491293,
+   "ioi_cv": 0.21505728760827705,
+   "onset_rate_hz": 5.75
+  },
+  {
+   "n_onsets": 102,
+   "attack_slope": 0.5777278604551592,
+   "peak_prominence": 0.4920776873046947,
+   "ioi_cv": 0.32282710712295704,
+   "onset_rate_hz": 5.1
+  },
+  {
+   "n_onsets": 118,
+   "attack_slope": 0.3168177964044725,
+   "peak_prominence": 0.23325800521811174,
+   "ioi_cv": 0.21358558278200765,
+   "onset_rate_hz": 5.9
+  },
+  {
+   "n_onsets": 113,
+   "attack_slope": 0.494220078496783,
+   "peak_prominence": 0.458010114621316,
+   "ioi_cv": 0.25824534351053674,
+   "onset_rate_hz": 5.65
+  },
+  {
+   "n_onsets": 122,
+   "attack_slope": 0.3027982165654969,
+   "peak_prominence": 0.22780060033803656,
+   "ioi_cv": 0.20300232618862424,
+   "onset_rate_hz": 6.1
+  },
+  {
+   "n_onsets": 115,
+   "attack_slope": 0.32843979878305885,
+   "peak_prominence": 0.2801688839970226,
+   "ioi_cv": 0.20535954012564223,
+   "onset_rate_hz": 5.75
+  },
+  {
+   "n_onsets": 115,
+   "attack_slope": 0.5638626510785062,
+   "peak_prominence": 0.5001993878240902,
+   "ioi_cv": 0.22753322930958034,
+   "onset_rate_hz": 5.75
+  },
+  {
+   "n_onsets": 118,
+   "attack_slope": 0.35830899170497815,
+   "peak_prominence": 0.30424996955778927,
+   "ioi_cv": 0.18731895697631734,
+   "onset_rate_hz": 5.9
+  },
+  {
+   "n_onsets": 113,
+   "attack_slope": 0.6572431008270482,
+   "peak_prominence": 0.614733416071286,
+   "ioi_cv": 0.2266225638278209,
+   "onset_rate_hz": 5.65
+  },
+  {
+   "n_onsets": 113,
+   "attack_slope": 0.5141853363863332,
+   "peak_prominence": 0.4643811716108104,
+   "ioi_cv": 0.2406349811895569,
+   "onset_rate_hz": 5.65
+  },
+  {
+   "n_onsets": 117,
+   "attack_slope": 0.32858737392040327,
+   "peak_prominence": 0.2745089130580371,
+   "ioi_cv": 0.19192233652807753,
+   "onset_rate_hz": 5.85
+  },
+  {
+   "n_onsets": 111,
+   "attack_slope": 0.4454882946831404,
+   "peak_prominence": 0.41016295122434016,
+   "ioi_cv": 0.2224375675559094,
+   "onset_rate_hz": 5.55
+  },
+  {
+   "n_onsets": 108,
+   "attack_slope": 0.6060534704156294,
+   "peak_prominence": 0.5524805235225878,
+   "ioi_cv": 0.29380001709758374,
+   "onset_rate_hz": 5.4
+  },
+  {
+   "n_onsets": 117,
+   "attack_slope": 0.4939051568555182,
+   "peak_prominence": 0.4473675220387662,
+   "ioi_cv": 0.20787069665486207,
+   "onset_rate_hz": 5.85
+  },
+  {
+   "n_onsets": 118,
+   "attack_slope": 0.41006580480368104,
+   "peak_prominence": 0.33866662433758604,
+   "ioi_cv": 0.226540913424438,
+   "onset_rate_hz": 5.9
+  },
+  {
+   "n_onsets": 117,
+   "attack_slope": 0.5564621887616071,
+   "peak_prominence": 0.5057457209610569,
+   "ioi_cv": 0.2134587704987586,
+   "onset_rate_hz": 5.85
+  },
+  {
+   "n_onsets": 117,
+   "attack_slope": 0.32609998974770754,
+   "peak_prominence": 0.24774224745445403,
+   "ioi_cv": 0.22850629728937288,
+   "onset_rate_hz": 5.85
+  },
+  {
+   "n_onsets": 120,
+   "attack_slope": 0.36776753387232136,
+   "peak_prominence": 0.3090823525021987,
+   "ioi_cv": 0.210222444420555,
+   "onset_rate_hz": 6.0
+  },
+  {
+   "n_onsets": 112,
+   "attack_slope": 0.5759724583815815,
+   "peak_prominence": 0.5454524217944262,
+   "ioi_cv": 0.27368412162643324,
+   "onset_rate_hz": 5.6
+  },
+  {
+   "n_onsets": 100,
+   "attack_slope": 0.5169903517194705,
+   "peak_prominence": 0.4808568026348407,
+   "ioi_cv": 0.45982312387905544,
+   "onset_rate_hz": 5.0
+  },
+  {
+   "n_onsets": 107,
+   "attack_slope": 0.5487119913202765,
+   "peak_prominence": 0.5087560894028861,
+   "ioi_cv": 0.27018736962093026,
+   "onset_rate_hz": 5.35
+  },
+  {
+   "n_onsets": 119,
+   "attack_slope": 0.3328569349334505,
+   "peak_prominence": 0.24367592495126883,
+   "ioi_cv": 0.21691763034599984,
+   "onset_rate_hz": 5.95
+  },
+  {
+   "n_onsets": 107,
+   "attack_slope": 0.4762309745523411,
+   "peak_prominence": 0.4377419737007289,
+   "ioi_cv": 0.25891392716491696,
+   "onset_rate_hz": 5.35
+  },
+  {
+   "n_onsets": 111,
+   "attack_slope": 0.5549214270132296,
+   "peak_prominence": 0.5331385629294936,
+   "ioi_cv": 0.30827934111256466,
+   "onset_rate_hz": 5.55
+  },
+  {
+   "n_onsets": 118,
+   "attack_slope": 0.4183786728429168,
+   "peak_prominence": 0.3784979635056985,
+   "ioi_cv": 0.20802879409139236,
+   "onset_rate_hz": 5.9
+  },
+  {
+   "n_onsets": 112,
+   "attack_slope": 0.3645715176711626,
+   "peak_prominence": 0.31254550764978645,
+   "ioi_cv": 0.2481874036696119,
+   "onset_rate_hz": 5.6
+  },
+  {
+   "n_onsets": 106,
+   "attack_slope": 0.6374955905810831,
+   "peak_prominence": 0.580640712190921,
+   "ioi_cv": 0.31167365792506596,
+   "onset_rate_hz": 5.3
+  },
+  {
+   "n_onsets": 114,
+   "attack_slope": 0.3657874122931642,
+   "peak_prominence": 0.29599497977908384,
+   "ioi_cv": 0.2220104421314555,
+   "onset_rate_hz": 5.7
+  }
+ ],
+ "roundtrip_smc": [
+  {
+   "n_onsets": 120,
+   "attack_slope": 0.3953022494563282,
+   "peak_prominence": 0.33285013278478726,
+   "ioi_cv": 0.17847648242293968,
+   "onset_rate_hz": 6.0
+  },
+  {
+   "n_onsets": 123,
+   "attack_slope": 0.46098699725354025,
+   "peak_prominence": 0.4024946203380484,
+   "ioi_cv": 0.17139641680428264,
+   "onset_rate_hz": 6.15
+  },
+  {
+   "n_onsets": 111,
+   "attack_slope": 0.5013963800337876,
+   "peak_prominence": 0.43354245697257826,
+   "ioi_cv": 0.21955288164230102,
+   "onset_rate_hz": 5.55
+  },
+  {
+   "n_onsets": 112,
+   "attack_slope": 0.526403774326737,
+   "peak_prominence": 0.45089410704182076,
+   "ioi_cv": 0.21099363220099066,
+   "onset_rate_hz": 5.6
+  },
+  {
+   "n_onsets": 121,
+   "attack_slope": 0.3487768544703189,
+   "peak_prominence": 0.27660730897490904,
+   "ioi_cv": 0.19107222842524269,
+   "onset_rate_hz": 6.05
+  },
+  {
+   "n_onsets": 114,
+   "attack_slope": 0.4938627023445343,
+   "peak_prominence": 0.43766816719585,
+   "ioi_cv": 0.18022107976133847,
+   "onset_rate_hz": 5.7
+  },
+  {
+   "n_onsets": 122,
+   "attack_slope": 0.38728349215465313,
+   "peak_prominence": 0.29440080132478763,
+   "ioi_cv": 0.18415571421029056,
+   "onset_rate_hz": 6.1
+  },
+  {
+   "n_onsets": 115,
+   "attack_slope": 0.397540583784046,
+   "peak_prominence": 0.34338977207769183,
+   "ioi_cv": 0.18139633739464583,
+   "onset_rate_hz": 5.75
+  },
+  {
+   "n_onsets": 116,
+   "attack_slope": 0.5110141078538625,
+   "peak_prominence": 0.4551633109788554,
+   "ioi_cv": 0.2242825375393789,
+   "onset_rate_hz": 5.8
+  },
+  {
+   "n_onsets": 119,
+   "attack_slope": 0.4260457878665684,
+   "peak_prominence": 0.33378714919954705,
+   "ioi_cv": 0.21437472808528013,
+   "onset_rate_hz": 5.95
+  },
+  {
+   "n_onsets": 120,
+   "attack_slope": 0.6043614195114453,
+   "peak_prominence": 0.5606444170787533,
+   "ioi_cv": 0.2217752806717322,
+   "onset_rate_hz": 6.0
+  },
+  {
+   "n_onsets": 119,
+   "attack_slope": 0.5181559852234816,
+   "peak_prominence": 0.45534603798276285,
+   "ioi_cv": 0.21100575758015824,
+   "onset_rate_hz": 5.95
+  },
+  {
+   "n_onsets": 121,
+   "attack_slope": 0.38547504047953074,
+   "peak_prominence": 0.32491549820092325,
+   "ioi_cv": 0.1902117309358071,
+   "onset_rate_hz": 6.05
+  },
+  {
+   "n_onsets": 118,
+   "attack_slope": 0.5245125646739426,
+   "peak_prominence": 0.43654670836317394,
+   "ioi_cv": 0.20234409433349146,
+   "onset_rate_hz": 5.9
+  },
+  {
+   "n_onsets": 120,
+   "attack_slope": 0.5402229721979179,
+   "peak_prominence": 0.4845359661173435,
+   "ioi_cv": 0.1782779003140439,
+   "onset_rate_hz": 6.0
+  },
+  {
+   "n_onsets": 119,
+   "attack_slope": 0.4896932114351268,
+   "peak_prominence": 0.3944490325159354,
+   "ioi_cv": 0.1819728098511794,
+   "onset_rate_hz": 5.95
+  },
+  {
+   "n_onsets": 119,
+   "attack_slope": 0.4635798600830378,
+   "peak_prominence": 0.41174613514084085,
+   "ioi_cv": 0.2117614046262865,
+   "onset_rate_hz": 5.95
+  },
+  {
+   "n_onsets": 120,
+   "attack_slope": 0.5320314504432901,
+   "peak_prominence": 0.47015266659715726,
+   "ioi_cv": 0.20590222788212853,
+   "onset_rate_hz": 6.0
+  },
+  {
+   "n_onsets": 121,
+   "attack_slope": 0.3768728619528528,
+   "peak_prominence": 0.30985784519390913,
+   "ioi_cv": 0.184727255442139,
+   "onset_rate_hz": 6.05
+  },
+  {
+   "n_onsets": 122,
+   "attack_slope": 0.4124678351618898,
+   "peak_prominence": 0.33731773733255227,
+   "ioi_cv": 0.17378951945899745,
+   "onset_rate_hz": 6.1
+  },
+  {
+   "n_onsets": 117,
+   "attack_slope": 0.5595339427518401,
+   "peak_prominence": 0.5063074349893801,
+   "ioi_cv": 0.19538054843829566,
+   "onset_rate_hz": 5.85
+  },
+  {
+   "n_onsets": 115,
+   "attack_slope": 0.5318769360392706,
+   "peak_prominence": 0.45031634149182714,
+   "ioi_cv": 0.17261885276679553,
+   "onset_rate_hz": 5.75
+  },
+  {
+   "n_onsets": 115,
+   "attack_slope": 0.4984338816628881,
+   "peak_prominence": 0.44077010787825077,
+   "ioi_cv": 0.21447041955395052,
+   "onset_rate_hz": 5.75
+  },
+  {
+   "n_onsets": 118,
+   "attack_slope": 0.42273531968845923,
+   "peak_prominence": 0.36369608167086337,
+   "ioi_cv": 0.16623815726313104,
+   "onset_rate_hz": 5.9
+  },
+  {
+   "n_onsets": 113,
+   "attack_slope": 0.4821516760333539,
+   "peak_prominence": 0.42149283443613766,
+   "ioi_cv": 0.24573682220193646,
+   "onset_rate_hz": 5.65
+  },
+  {
+   "n_onsets": 117,
+   "attack_slope": 0.5418729717034118,
+   "peak_prominence": 0.4836538701857369,
+   "ioi_cv": 0.19242195134776216,
+   "onset_rate_hz": 5.85
+  },
+  {
+   "n_onsets": 120,
+   "attack_slope": 0.45495771795788187,
+   "peak_prominence": 0.40416858409173906,
+   "ioi_cv": 0.18218337189207012,
+   "onset_rate_hz": 6.0
+  },
+  {
+   "n_onsets": 118,
+   "attack_slope": 0.3913633814002894,
+   "peak_prominence": 0.31345713151102983,
+   "ioi_cv": 0.20706936701635842,
+   "onset_rate_hz": 5.9
+  },
+  {
+   "n_onsets": 116,
+   "attack_slope": 0.5459836504741099,
+   "peak_prominence": 0.5293368790066695,
+   "ioi_cv": 0.23414523001374318,
+   "onset_rate_hz": 5.8
+  },
+  {
+   "n_onsets": 120,
+   "attack_slope": 0.4047654497462581,
+   "peak_prominence": 0.31726731577956063,
+   "ioi_cv": 0.1915803279012327,
+   "onset_rate_hz": 6.0
+  }
+ ],
+ "gen_piano_expressive": [
+  {
+   "n_onsets": 111,
+   "attack_slope": 0.5761552970925798,
+   "peak_prominence": 0.5351358776540707,
+   "ioi_cv": 0.2347922607791789,
+   "onset_rate_hz": 5.558571039244186
+  },
+  {
+   "n_onsets": 98,
+   "attack_slope": 0.5381177487504346,
+   "peak_prominence": 0.5546854951742308,
+   "ioi_cv": 0.20597010963188564,
+   "onset_rate_hz": 4.9075672238372094
+  },
+  {
+   "n_onsets": 114,
+   "attack_slope": 0.5520258145193211,
+   "peak_prominence": 0.519268075136679,
+   "ioi_cv": 0.1957370226848711,
+   "onset_rate_hz": 5.708802688953488
+  },
+  {
+   "n_onsets": 108,
+   "attack_slope": 0.5887784201329325,
+   "peak_prominence": 0.5486569342234086,
+   "ioi_cv": 0.44328892977840767,
+   "onset_rate_hz": 5.408339389534883
+  },
+  {
+   "n_onsets": 100,
+   "attack_slope": 0.5549813105662742,
+   "peak_prominence": 0.5304570390691196,
+   "ioi_cv": 0.14505639739292644,
+   "onset_rate_hz": 5.007721656976744
+  },
+  {
+   "n_onsets": 115,
+   "attack_slope": 0.5330206426815539,
+   "peak_prominence": 0.4955913035621599,
+   "ioi_cv": 0.17401143370055186,
+   "onset_rate_hz": 5.758879905523256
+  },
+  {
+   "n_onsets": 114,
+   "attack_slope": 0.567059829332162,
+   "peak_prominence": 0.5366275790056585,
+   "ioi_cv": 0.18539612607551811,
+   "onset_rate_hz": 5.708802688953488
+  },
+  {
+   "n_onsets": 116,
+   "attack_slope": 0.5867292642281221,
+   "peak_prominence": 0.5676665155385968,
+   "ioi_cv": 0.23479101494891808,
+   "onset_rate_hz": 5.808957122093023
+  },
+  {
+   "n_onsets": 110,
+   "attack_slope": 0.5738872482317554,
+   "peak_prominence": 0.516943685851594,
+   "ioi_cv": 0.26584871006676963,
+   "onset_rate_hz": 5.508493822674418
+  },
+  {
+   "n_onsets": 107,
+   "attack_slope": 0.6063126285343862,
+   "peak_prominence": 0.5665830296874185,
+   "ioi_cv": 0.2641374358768016,
+   "onset_rate_hz": 5.358262172965116
+  },
+  {
+   "n_onsets": 113,
+   "attack_slope": 0.564600676516636,
+   "peak_prominence": 0.5213067473657709,
+   "ioi_cv": 0.311503124584518,
+   "onset_rate_hz": 5.658725472383721
+  },
+  {
+   "n_onsets": 103,
+   "attack_slope": 0.5754660618948103,
+   "peak_prominence": 0.5250043071508833,
+   "ioi_cv": 0.44023550508661835,
+   "onset_rate_hz": 5.157953306686046
+  },
+  {
+   "n_onsets": 102,
+   "attack_slope": 0.5992874771226323,
+   "peak_prominence": 0.5589622720784367,
+   "ioi_cv": 0.20194544689974123,
+   "onset_rate_hz": 5.107876090116279
+  },
+  {
+   "n_onsets": 99,
+   "attack_slope": 0.5963752480304425,
+   "peak_prominence": 0.5721778089949935,
+   "ioi_cv": 0.20000632266694437,
+   "onset_rate_hz": 4.957644440406977
+  },
+  {
+   "n_onsets": 102,
+   "attack_slope": 0.5936127415946926,
+   "peak_prominence": 0.5448270245474957,
+   "ioi_cv": 0.21499668090886187,
+   "onset_rate_hz": 5.107876090116279
+  },
+  {
+   "n_onsets": 110,
+   "attack_slope": 0.6264634927010893,
+   "peak_prominence": 0.5990682028696235,
+   "ioi_cv": 0.2853902412028439,
+   "onset_rate_hz": 5.508493822674418
+  },
+  {
+   "n_onsets": 107,
+   "attack_slope": 0.5819355402952361,
+   "peak_prominence": 0.5285411535064,
+   "ioi_cv": 0.3844583973198952,
+   "onset_rate_hz": 5.358262172965116
+  },
+  {
+   "n_onsets": 112,
+   "attack_slope": 0.5595163057635629,
+   "peak_prominence": 0.5474025508511664,
+   "ioi_cv": 0.19601089865915336,
+   "onset_rate_hz": 5.608648255813954
+  },
+  {
+   "n_onsets": 102,
+   "attack_slope": 0.5390855340574545,
+   "peak_prominence": 0.5106458781509803,
+   "ioi_cv": 0.7617489790719228,
+   "onset_rate_hz": 5.107876090116279
+  },
+  {
+   "n_onsets": 106,
+   "attack_slope": 0.5596136347757854,
+   "peak_prominence": 0.5352398186758806,
+   "ioi_cv": 0.1509011998700757,
+   "onset_rate_hz": 5.3081849563953485
+  },
+  {
+   "n_onsets": 108,
+   "attack_slope": 0.5884736605474062,
+   "peak_prominence": 0.5289571985215483,
+   "ioi_cv": 0.31889774654463077,
+   "onset_rate_hz": 5.408339389534883
+  },
+  {
+   "n_onsets": 105,
+   "attack_slope": 0.6270753916246957,
+   "peak_prominence": 0.6140407434350463,
+   "ioi_cv": 0.3509950217307765,
+   "onset_rate_hz": 5.258107739825581
+  },
+  {
+   "n_onsets": 114,
+   "attack_slope": 0.523841392431578,
+   "peak_prominence": 0.49874710392166,
+   "ioi_cv": 0.1683499011118696,
+   "onset_rate_hz": 5.708802688953488
+  },
+  {
+   "n_onsets": 104,
+   "attack_slope": 0.5471387692767103,
+   "peak_prominence": 0.5300558420526211,
+   "ioi_cv": 0.8196762863225191,
+   "onset_rate_hz": 5.208030523255814
+  }
+ ],
+ "gen_piano_plain": [
+  {
+   "n_onsets": 103,
+   "attack_slope": 0.5164510373636484,
+   "peak_prominence": 0.44095469716351543,
+   "ioi_cv": 0.44324912225304836,
+   "onset_rate_hz": 5.157953306686046
+  },
+  {
+   "n_onsets": 117,
+   "attack_slope": 0.5088440074998695,
+   "peak_prominence": 0.44319674683041727,
+   "ioi_cv": 0.1944175431374721,
+   "onset_rate_hz": 5.8590343386627906
+  },
+  {
+   "n_onsets": 109,
+   "attack_slope": 0.4941766973726667,
+   "peak_prominence": 0.4647456946775638,
+   "ioi_cv": 0.22782524994951175,
+   "onset_rate_hz": 5.458416606104651
+  },
+  {
+   "n_onsets": 110,
+   "attack_slope": 0.5216372121337935,
+   "peak_prominence": 0.48698199119206703,
+   "ioi_cv": 0.19852430532162502,
+   "onset_rate_hz": 5.508493822674418
+  },
+  {
+   "n_onsets": 116,
+   "attack_slope": 0.4904256358910909,
+   "peak_prominence": 0.42938973801168057,
+   "ioi_cv": 0.21293325433905408,
+   "onset_rate_hz": 5.808957122093023
+  },
+  {
+   "n_onsets": 110,
+   "attack_slope": 0.5071806328653219,
+   "peak_prominence": 0.44509665911794183,
+   "ioi_cv": 0.2126003235116616,
+   "onset_rate_hz": 5.508493822674418
+  },
+  {
+   "n_onsets": 114,
+   "attack_slope": 0.4937207952627754,
+   "peak_prominence": 0.45872450934469294,
+   "ioi_cv": 0.18326659737509216,
+   "onset_rate_hz": 5.708802688953488
+  },
+  {
+   "n_onsets": 115,
+   "attack_slope": 0.5206823967573819,
+   "peak_prominence": 0.44874500728422595,
+   "ioi_cv": 0.16601141584253304,
+   "onset_rate_hz": 5.758879905523256
+  },
+  {
+   "n_onsets": 113,
+   "attack_slope": 0.49769121700449015,
+   "peak_prominence": 0.43459672309747877,
+   "ioi_cv": 0.1692061411298952,
+   "onset_rate_hz": 5.658725472383721
+  },
+  {
+   "n_onsets": 114,
+   "attack_slope": 0.45137525034469816,
+   "peak_prominence": 0.4160664732787795,
+   "ioi_cv": 0.17357360763823054,
+   "onset_rate_hz": 5.708802688953488
+  },
+  {
+   "n_onsets": 111,
+   "attack_slope": 0.4818829024090987,
+   "peak_prominence": 0.44918986480092576,
+   "ioi_cv": 0.19192148014139673,
+   "onset_rate_hz": 5.558571039244186
+  },
+  {
+   "n_onsets": 111,
+   "attack_slope": 0.5148166382353037,
+   "peak_prominence": 0.4525097772751625,
+   "ioi_cv": 0.19786892821537283,
+   "onset_rate_hz": 5.558571039244186
+  },
+  {
+   "n_onsets": 103,
+   "attack_slope": 0.5049638306268801,
+   "peak_prominence": 0.45401521255733546,
+   "ioi_cv": 0.340380062740676,
+   "onset_rate_hz": 5.157953306686046
+  },
+  {
+   "n_onsets": 112,
+   "attack_slope": 0.45912562175970517,
+   "peak_prominence": 0.41779850126016826,
+   "ioi_cv": 0.18891630077503907,
+   "onset_rate_hz": 5.608648255813954
+  },
+  {
+   "n_onsets": 111,
+   "attack_slope": 0.5281478062686266,
+   "peak_prominence": 0.4687793421143625,
+   "ioi_cv": 0.17412729419582754,
+   "onset_rate_hz": 5.558571039244186
+  },
+  {
+   "n_onsets": 107,
+   "attack_slope": 0.5162405525865519,
+   "peak_prominence": 0.45642182011219684,
+   "ioi_cv": 0.20334928118624718,
+   "onset_rate_hz": 5.358262172965116
+  },
+  {
+   "n_onsets": 112,
+   "attack_slope": 0.471584981828984,
+   "peak_prominence": 0.4006831914600197,
+   "ioi_cv": 0.17626408143684963,
+   "onset_rate_hz": 5.608648255813954
+  },
+  {
+   "n_onsets": 110,
+   "attack_slope": 0.47981407530223835,
+   "peak_prominence": 0.42824875498993636,
+   "ioi_cv": 0.19799478137747484,
+   "onset_rate_hz": 5.508493822674418
+  },
+  {
+   "n_onsets": 107,
+   "attack_slope": 0.47827251922668873,
+   "peak_prominence": 0.4229531817936035,
+   "ioi_cv": 0.41057581006774146,
+   "onset_rate_hz": 5.358262172965116
+  },
+  {
+   "n_onsets": 107,
+   "attack_slope": 0.49251810117152983,
+   "peak_prominence": 0.45662671002667576,
+   "ioi_cv": 0.1853842700170702,
+   "onset_rate_hz": 5.358262172965116
+  },
+  {
+   "n_onsets": 113,
+   "attack_slope": 0.479382195242997,
+   "peak_prominence": 0.4063581711813755,
+   "ioi_cv": 0.2008488873820727,
+   "onset_rate_hz": 5.658725472383721
+  },
+  {
+   "n_onsets": 113,
+   "attack_slope": 0.5705312311829362,
+   "peak_prominence": 0.5337362328438879,
+   "ioi_cv": 0.21340005887830868,
+   "onset_rate_hz": 5.658725472383721
+  },
+  {
+   "n_onsets": 114,
+   "attack_slope": 0.4883178787982079,
+   "peak_prominence": 0.4452473079130916,
+   "ioi_cv": 0.17904468875949534,
+   "onset_rate_hz": 5.708802688953488
+  },
+  {
+   "n_onsets": 110,
+   "attack_slope": 0.5588084221194124,
+   "peak_prominence": 0.5190788583652834,
+   "ioi_cv": 0.19238805174940554,
+   "onset_rate_hz": 5.508493822674418
+  }
+ ],
+ "gen_percussive": [
+  {
+   "n_onsets": 107,
+   "attack_slope": 0.6934248781998492,
+   "peak_prominence": 0.6333147641013832,
+   "ioi_cv": 0.3488738085452639,
+   "onset_rate_hz": 5.358262172965116
+  },
+  {
+   "n_onsets": 111,
+   "attack_slope": 0.6812071410117673,
+   "peak_prominence": 0.6217178407969812,
+   "ioi_cv": 0.22949296830231525,
+   "onset_rate_hz": 5.558571039244186
+  },
+  {
+   "n_onsets": 116,
+   "attack_slope": 0.728629062355151,
+   "peak_prominence": 0.6601927072803551,
+   "ioi_cv": 0.20757907415313737,
+   "onset_rate_hz": 5.808957122093023
+  },
+  {
+   "n_onsets": 106,
+   "attack_slope": 0.6546630530311116,
+   "peak_prominence": 0.6245059317263847,
+   "ioi_cv": 0.2555529845395075,
+   "onset_rate_hz": 5.3081849563953485
+  },
+  {
+   "n_onsets": 116,
+   "attack_slope": 0.7170854754495259,
+   "peak_prominence": 0.7098324288996027,
+   "ioi_cv": 0.2221858870155594,
+   "onset_rate_hz": 5.808957122093023
+  },
+  {
+   "n_onsets": 108,
+   "attack_slope": 0.7124935293009504,
+   "peak_prominence": 0.6901845766007821,
+   "ioi_cv": 0.24433827933677119,
+   "onset_rate_hz": 5.408339389534883
+  },
+  {
+   "n_onsets": 108,
+   "attack_slope": 0.6781520895703177,
+   "peak_prominence": 0.6185717610716955,
+   "ioi_cv": 0.20374536952837768,
+   "onset_rate_hz": 5.408339389534883
+  },
+  {
+   "n_onsets": 115,
+   "attack_slope": 0.7241755431125241,
+   "peak_prominence": 0.6882759665914179,
+   "ioi_cv": 0.2329403760930411,
+   "onset_rate_hz": 5.758879905523256
+  },
+  {
+   "n_onsets": 112,
+   "attack_slope": 0.7019320588743688,
+   "peak_prominence": 0.6162259419019759,
+   "ioi_cv": 0.2083266653883745,
+   "onset_rate_hz": 5.608648255813954
+  },
+  {
+   "n_onsets": 105,
+   "attack_slope": 0.6893558458036342,
+   "peak_prominence": 0.6386883804788859,
+   "ioi_cv": 0.2564908455413287,
+   "onset_rate_hz": 5.258107739825581
+  },
+  {
+   "n_onsets": 107,
+   "attack_slope": 0.7064851990568088,
+   "peak_prominence": 0.6505679371843153,
+   "ioi_cv": 0.2376148862986085,
+   "onset_rate_hz": 5.358262172965116
+  },
+  {
+   "n_onsets": 114,
+   "attack_slope": 0.7019967433937292,
+   "peak_prominence": 0.6548793507055063,
+   "ioi_cv": 0.1922898653971776,
+   "onset_rate_hz": 5.708802688953488
+  },
+  {
+   "n_onsets": 109,
+   "attack_slope": 0.6761321220932252,
+   "peak_prominence": 0.6340776251894936,
+   "ioi_cv": 0.24612541618597888,
+   "onset_rate_hz": 5.458416606104651
+  },
+  {
+   "n_onsets": 108,
+   "attack_slope": 0.7003311988488172,
+   "peak_prominence": 0.670163835018288,
+   "ioi_cv": 0.2554309545161717,
+   "onset_rate_hz": 5.408339389534883
+  },
+  {
+   "n_onsets": 106,
+   "attack_slope": 0.6865039642081325,
+   "peak_prominence": 0.6412936970690248,
+   "ioi_cv": 0.2483724717421958,
+   "onset_rate_hz": 5.3081849563953485
+  },
+  {
+   "n_onsets": 113,
+   "attack_slope": 0.7169009542656943,
+   "peak_prominence": 0.6609428761181007,
+   "ioi_cv": 0.24106327075370992,
+   "onset_rate_hz": 5.658725472383721
+  },
+  {
+   "n_onsets": 110,
+   "attack_slope": 0.6991512699877566,
+   "peak_prominence": 0.6250095232186598,
+   "ioi_cv": 0.22704713741383079,
+   "onset_rate_hz": 5.508493822674418
+  },
+  {
+   "n_onsets": 107,
+   "attack_slope": 0.7183815003456641,
+   "peak_prominence": 0.6852002410712781,
+   "ioi_cv": 0.2209260467654108,
+   "onset_rate_hz": 5.358262172965116
+  },
+  {
+   "n_onsets": 116,
+   "attack_slope": 0.761502584629064,
+   "peak_prominence": 0.6967552804390649,
+   "ioi_cv": 0.23433455312161366,
+   "onset_rate_hz": 5.808957122093023
+  },
+  {
+   "n_onsets": 109,
+   "attack_slope": 0.690939354505979,
+   "peak_prominence": 0.6591409630887708,
+   "ioi_cv": 0.2557847973958613,
+   "onset_rate_hz": 5.458416606104651
+  },
+  {
+   "n_onsets": 113,
+   "attack_slope": 0.7169892518002958,
+   "peak_prominence": 0.6636387612953046,
+   "ioi_cv": 0.2199785816272664,
+   "onset_rate_hz": 5.658725472383721
+  },
+  {
+   "n_onsets": 105,
+   "attack_slope": 0.6493140027709845,
+   "peak_prominence": 0.592122864138388,
+   "ioi_cv": 0.2489614332449452,
+   "onset_rate_hz": 5.258107739825581
+  },
+  {
+   "n_onsets": 103,
+   "attack_slope": 0.6592659019865129,
+   "peak_prominence": 0.5760601544097268,
+   "ioi_cv": 0.22304411861682308,
+   "onset_rate_hz": 5.157953306686046
+  },
+  {
+   "n_onsets": 109,
+   "attack_slope": 0.6909848393767702,
+   "peak_prominence": 0.6432968670864625,
+   "ioi_cv": 0.2514603211504472,
+   "onset_rate_hz": 5.458416606104651
+  }
+ ],
+ "_sanity": {
+  "smear10ms_piano": [
+   {
+    "n_onsets": 99,
+    "attack_slope": 0.5522426033686535,
+    "peak_prominence": 0.5138208818075968,
+    "ioi_cv": 0.2914993855274574,
+    "onset_rate_hz": 4.95
+   },
+   {
+    "n_onsets": 103,
+    "attack_slope": 0.6432243420052866,
+    "peak_prominence": 0.6078912993137671,
+    "ioi_cv": 0.25316640976278887,
+    "onset_rate_hz": 5.15
+   },
+   {
+    "n_onsets": 125,
+    "attack_slope": 0.6607544716516569,
+    "peak_prominence": 0.6859039816627619,
+    "ioi_cv": 0.233036841931144,
+    "onset_rate_hz": 6.25
+   },
+   {
+    "n_onsets": 120,
+    "attack_slope": 0.7580452404787136,
+    "peak_prominence": 0.76546341661167,
+    "ioi_cv": 0.1233544247072976,
+    "onset_rate_hz": 6.0
+   },
+   {
+    "n_onsets": 124,
+    "attack_slope": 0.616899533072082,
+    "peak_prominence": 0.6101550341737716,
+    "ioi_cv": 0.26521548668629236,
+    "onset_rate_hz": 6.2
+   },
+   {
+    "n_onsets": 122,
+    "attack_slope": 0.6731949467064712,
+    "peak_prominence": 0.6767529952899793,
+    "ioi_cv": 0.2651824255808323,
+    "onset_rate_hz": 6.1
+   },
+   {
+    "n_onsets": 126,
+    "attack_slope": 0.839756721048544,
+    "peak_prominence": 0.8525402880289121,
+    "ioi_cv": 0.19619231030751086,
+    "onset_rate_hz": 6.3
+   },
+   {
+    "n_onsets": 126,
+    "attack_slope": 0.7240637736327961,
+    "peak_prominence": 0.7266377407374869,
+    "ioi_cv": 0.21550598780489216,
+    "onset_rate_hz": 6.3
+   },
+   {
+    "n_onsets": 134,
+    "attack_slope": 0.776779843038723,
+    "peak_prominence": 0.7724870949784837,
+    "ioi_cv": 0.2265328620785676,
+    "onset_rate_hz": 6.7
+   },
+   {
+    "n_onsets": 124,
+    "attack_slope": 0.7197254153524116,
+    "peak_prominence": 0.7238852924755431,
+    "ioi_cv": 0.1540496834454298,
+    "onset_rate_hz": 6.2
+   },
+   {
+    "n_onsets": 128,
+    "attack_slope": 0.791524666402215,
+    "peak_prominence": 0.8420933230813065,
+    "ioi_cv": 0.2262736276080343,
+    "onset_rate_hz": 6.4
+   },
+   {
+    "n_onsets": 140,
+    "attack_slope": 0.8185102612726974,
+    "peak_prominence": 0.8140138347175784,
+    "ioi_cv": 0.07593787309631522,
+    "onset_rate_hz": 7.0
+   },
+   {
+    "n_onsets": 107,
+    "attack_slope": 0.6355208491593399,
+    "peak_prominence": 0.6179270733810696,
+    "ioi_cv": 0.2701180059822543,
+    "onset_rate_hz": 5.35
+   },
+   {
+    "n_onsets": 116,
+    "attack_slope": 0.7805223208177081,
+    "peak_prominence": 0.7857667475464775,
+    "ioi_cv": 0.30378703074355534,
+    "onset_rate_hz": 5.8
+   },
+   {
+    "n_onsets": 132,
+    "attack_slope": 0.7623514090183211,
+    "peak_prominence": 0.7173365982206495,
+    "ioi_cv": 0.23616573860264106,
+    "onset_rate_hz": 6.6
+   },
+   {
+    "n_onsets": 133,
+    "attack_slope": 0.7824292219747533,
+    "peak_prominence": 0.7938218708080097,
+    "ioi_cv": 0.14359806740532652,
+    "onset_rate_hz": 6.65
+   },
+   {
+    "n_onsets": 104,
+    "attack_slope": 0.547084386077569,
+    "peak_prominence": 0.5155505414392753,
+    "ioi_cv": 0.22153290889742128,
+    "onset_rate_hz": 5.2
+   },
+   {
+    "n_onsets": 105,
+    "attack_slope": 0.4780074455328625,
+    "peak_prominence": 0.4161742238561728,
+    "ioi_cv": 0.32389094850909667,
+    "onset_rate_hz": 5.25
+   },
+   {
+    "n_onsets": 93,
+    "attack_slope": 0.5850669240766291,
+    "peak_prominence": 0.5300450121955974,
+    "ioi_cv": 0.3968764366045404,
+    "onset_rate_hz": 4.65
+   },
+   {
+    "n_onsets": 102,
+    "attack_slope": 0.5329282821539544,
+    "peak_prominence": 0.4619608702637616,
+    "ioi_cv": 0.3043883809942066,
+    "onset_rate_hz": 5.1
+   },
+   {
+    "n_onsets": 87,
+    "attack_slope": 0.6554086024847903,
+    "peak_prominence": 0.6212723944233007,
+    "ioi_cv": 0.5561019142194645,
+    "onset_rate_hz": 4.35
+   },
+   {
+    "n_onsets": 109,
+    "attack_slope": 0.5141198527241854,
+    "peak_prominence": 0.45303335069518247,
+    "ioi_cv": 0.25265365826679914,
+    "onset_rate_hz": 5.45
+   },
+   {
+    "n_onsets": 106,
+    "attack_slope": 0.5626141044712096,
+    "peak_prominence": 0.4895593198977875,
+    "ioi_cv": 0.2624191670909488,
+    "onset_rate_hz": 5.3
+   },
+   {
+    "n_onsets": 126,
+    "attack_slope": 0.6652955343948797,
+    "peak_prominence": 0.6643238842253382,
+    "ioi_cv": 0.19516076313709663,
+    "onset_rate_hz": 6.3
+   },
+   {
+    "n_onsets": 123,
+    "attack_slope": 0.6675096913833367,
+    "peak_prominence": 0.6648690411575756,
+    "ioi_cv": 0.20237723886524606,
+    "onset_rate_hz": 6.15
+   },
+   {
+    "n_onsets": 121,
+    "attack_slope": 0.6541007559067196,
+    "peak_prominence": 0.6281847415927431,
+    "ioi_cv": 0.2142212460275507,
+    "onset_rate_hz": 6.05
+   },
+   {
+    "n_onsets": 121,
+    "attack_slope": 0.7529555662042395,
+    "peak_prominence": 0.7562814952602847,
+    "ioi_cv": 0.21174113310882475,
+    "onset_rate_hz": 6.05
+   },
+   {
+    "n_onsets": 132,
+    "attack_slope": 0.7986053713638843,
+    "peak_prominence": 0.7952684528596363,
+    "ioi_cv": 0.23497097315596066,
+    "onset_rate_hz": 6.6
+   },
+   {
+    "n_onsets": 122,
+    "attack_slope": 0.6311222258284241,
+    "peak_prominence": 0.6401142080112778,
+    "ioi_cv": 0.16536793365337865,
+    "onset_rate_hz": 6.1
+   },
+   {
+    "n_onsets": 103,
+    "attack_slope": 0.5200008940890459,
+    "peak_prominence": 0.46662289114618943,
+    "ioi_cv": 0.31618960572876714,
+    "onset_rate_hz": 5.15
+   }
+  ],
+  "smear25ms_piano": [
+   {
+    "n_onsets": 98,
+    "attack_slope": 0.5063584081241017,
+    "peak_prominence": 0.506311316502408,
+    "ioi_cv": 0.38151690758867446,
+    "onset_rate_hz": 4.9
+   },
+   {
+    "n_onsets": 105,
+    "attack_slope": 0.5373525338950352,
+    "peak_prominence": 0.6098392779942412,
+    "ioi_cv": 0.27290188408610483,
+    "onset_rate_hz": 5.25
+   },
+   {
+    "n_onsets": 124,
+    "attack_slope": 0.5509795813871252,
+    "peak_prominence": 0.6808765170731068,
+    "ioi_cv": 0.2534262987810092,
+    "onset_rate_hz": 6.2
+   },
+   {
+    "n_onsets": 120,
+    "attack_slope": 0.6537950225437006,
+    "peak_prominence": 0.7445558433363023,
+    "ioi_cv": 0.15173382004999564,
+    "onset_rate_hz": 6.0
+   },
+   {
+    "n_onsets": 121,
+    "attack_slope": 0.5442066897325029,
+    "peak_prominence": 0.6053983069282245,
+    "ioi_cv": 0.2893993540097917,
+    "onset_rate_hz": 6.05
+   },
+   {
+    "n_onsets": 118,
+    "attack_slope": 0.5268932217367103,
+    "peak_prominence": 0.6497099336108831,
+    "ioi_cv": 0.29866068904575666,
+    "onset_rate_hz": 5.9
+   },
+   {
+    "n_onsets": 125,
+    "attack_slope": 0.7399629046072095,
+    "peak_prominence": 0.851880451400521,
+    "ioi_cv": 0.23276272424157987,
+    "onset_rate_hz": 6.25
+   },
+   {
+    "n_onsets": 126,
+    "attack_slope": 0.600437348434936,
+    "peak_prominence": 0.7102318055931527,
+    "ioi_cv": 0.23529076780819344,
+    "onset_rate_hz": 6.3
+   },
+   {
+    "n_onsets": 134,
+    "attack_slope": 0.6504281325750682,
+    "peak_prominence": 0.7649857208747778,
+    "ioi_cv": 0.22752648924365992,
+    "onset_rate_hz": 6.7
+   },
+   {
+    "n_onsets": 124,
+    "attack_slope": 0.5964968896055229,
+    "peak_prominence": 0.7291869201275459,
+    "ioi_cv": 0.169768612830709,
+    "onset_rate_hz": 6.2
+   },
+   {
+    "n_onsets": 133,
+    "attack_slope": 0.6761262248703337,
+    "peak_prominence": 0.8233534029858509,
+    "ioi_cv": 0.1781271906417205,
+    "onset_rate_hz": 6.65
+   },
+   {
+    "n_onsets": 140,
+    "attack_slope": 0.6870147183315755,
+    "peak_prominence": 0.7981106922181216,
+    "ioi_cv": 0.075387709331582,
+    "onset_rate_hz": 7.0
+   },
+   {
+    "n_onsets": 106,
+    "attack_slope": 0.5358904148005849,
+    "peak_prominence": 0.6031163705074126,
+    "ioi_cv": 0.2729403119541286,
+    "onset_rate_hz": 5.3
+   },
+   {
+    "n_onsets": 112,
+    "attack_slope": 0.6455973602452162,
+    "peak_prominence": 0.7660428651613913,
+    "ioi_cv": 0.30758645587645705,
+    "onset_rate_hz": 5.6
+   },
+   {
+    "n_onsets": 133,
+    "attack_slope": 0.6510281779195258,
+    "peak_prominence": 0.7335097878412004,
+    "ioi_cv": 0.25803050094478325,
+    "onset_rate_hz": 6.65
+   },
+   {
+    "n_onsets": 127,
+    "attack_slope": 0.6822551215391209,
+    "peak_prominence": 0.7862426997851798,
+    "ioi_cv": 0.21814933546149498,
+    "onset_rate_hz": 6.35
+   },
+   {
+    "n_onsets": 101,
+    "attack_slope": 0.49546300614143624,
+    "peak_prominence": 0.5294959299033009,
+    "ioi_cv": 0.3164433479081068,
+    "onset_rate_hz": 5.05
+   },
+   {
+    "n_onsets": 94,
+    "attack_slope": 0.46891714788387306,
+    "peak_prominence": 0.452150660890362,
+    "ioi_cv": 0.35228407730620886,
+    "onset_rate_hz": 4.7
+   },
+   {
+    "n_onsets": 92,
+    "attack_slope": 0.5005942321791751,
+    "peak_prominence": 0.5546288894479898,
+    "ioi_cv": 0.4191782832987533,
+    "onset_rate_hz": 4.6
+   },
+   {
+    "n_onsets": 100,
+    "attack_slope": 0.5034522007351793,
+    "peak_prominence": 0.5065772445405697,
+    "ioi_cv": 0.2712557878343261,
+    "onset_rate_hz": 5.0
+   },
+   {
+    "n_onsets": 84,
+    "attack_slope": 0.567408593100881,
+    "peak_prominence": 0.6151830193949245,
+    "ioi_cv": 0.4780088090132361,
+    "onset_rate_hz": 4.2
+   },
+   {
+    "n_onsets": 105,
+    "attack_slope": 0.4853169959362137,
+    "peak_prominence": 0.48685698894578544,
+    "ioi_cv": 0.28052955030419696,
+    "onset_rate_hz": 5.25
+   },
+   {
+    "n_onsets": 97,
+    "attack_slope": 0.5564616401026761,
+    "peak_prominence": 0.5580468239907892,
+    "ioi_cv": 0.29888282833115,
+    "onset_rate_hz": 4.85
+   },
+   {
+    "n_onsets": 124,
+    "attack_slope": 0.5640838911172971,
+    "peak_prominence": 0.6570398318724936,
+    "ioi_cv": 0.20103028903776063,
+    "onset_rate_hz": 6.2
+   },
+   {
+    "n_onsets": 122,
+    "attack_slope": 0.5911460580266021,
+    "peak_prominence": 0.6541101345566789,
+    "ioi_cv": 0.2025418829787058,
+    "onset_rate_hz": 6.1
+   },
+   {
+    "n_onsets": 121,
+    "attack_slope": 0.5618349380836007,
+    "peak_prominence": 0.620075760354378,
+    "ioi_cv": 0.2802324094480516,
+    "onset_rate_hz": 6.05
+   },
+   {
+    "n_onsets": 121,
+    "attack_slope": 0.6785409881614615,
+    "peak_prominence": 0.7668606025294261,
+    "ioi_cv": 0.25100152913720936,
+    "onset_rate_hz": 6.05
+   },
+   {
+    "n_onsets": 125,
+    "attack_slope": 0.7615801964752369,
+    "peak_prominence": 0.8082571589584666,
+    "ioi_cv": 0.2746418590746735,
+    "onset_rate_hz": 6.25
+   },
+   {
+    "n_onsets": 120,
+    "attack_slope": 0.5186853864906198,
+    "peak_prominence": 0.6106969152284457,
+    "ioi_cv": 0.21922480918831921,
+    "onset_rate_hz": 6.0
+   },
+   {
+    "n_onsets": 101,
+    "attack_slope": 0.4803221824151505,
+    "peak_prominence": 0.48929430641417976,
+    "ioi_cv": 0.28938916050772123,
+    "onset_rate_hz": 5.05
+   }
+  ],
+  "smear50ms_piano": [
+   {
+    "n_onsets": 93,
+    "attack_slope": 0.4215016827085577,
+    "peak_prominence": 0.5243546838587508,
+    "ioi_cv": 0.4046923824540978,
+    "onset_rate_hz": 4.65
+   },
+   {
+    "n_onsets": 103,
+    "attack_slope": 0.4380010371295247,
+    "peak_prominence": 0.517641374522077,
+    "ioi_cv": 0.2700965863306827,
+    "onset_rate_hz": 5.15
+   },
+   {
+    "n_onsets": 123,
+    "attack_slope": 0.42048329053373074,
+    "peak_prominence": 0.5709518525862725,
+    "ioi_cv": 0.2605483885732131,
+    "onset_rate_hz": 6.15
+   },
+   {
+    "n_onsets": 117,
+    "attack_slope": 0.45604825337156857,
+    "peak_prominence": 0.6710245949871683,
+    "ioi_cv": 0.2165638480359079,
+    "onset_rate_hz": 5.85
+   },
+   {
+    "n_onsets": 116,
+    "attack_slope": 0.40977173119363236,
+    "peak_prominence": 0.48127200845270035,
+    "ioi_cv": 0.2990397206225683,
+    "onset_rate_hz": 5.8
+   },
+   {
+    "n_onsets": 121,
+    "attack_slope": 0.4235756550477128,
+    "peak_prominence": 0.557932641661956,
+    "ioi_cv": 0.3151490393435847,
+    "onset_rate_hz": 6.05
+   },
+   {
+    "n_onsets": 127,
+    "attack_slope": 0.511246992866487,
+    "peak_prominence": 0.7347107488009343,
+    "ioi_cv": 0.22553638407600143,
+    "onset_rate_hz": 6.35
+   },
+   {
+    "n_onsets": 123,
+    "attack_slope": 0.4365238105386211,
+    "peak_prominence": 0.594952344099943,
+    "ioi_cv": 0.2503957828607127,
+    "onset_rate_hz": 6.15
+   },
+   {
+    "n_onsets": 128,
+    "attack_slope": 0.4487688099354394,
+    "peak_prominence": 0.6422690215815189,
+    "ioi_cv": 0.27986698012847533,
+    "onset_rate_hz": 6.4
+   },
+   {
+    "n_onsets": 119,
+    "attack_slope": 0.43134311405546377,
+    "peak_prominence": 0.6374768079909287,
+    "ioi_cv": 0.21529791427307507,
+    "onset_rate_hz": 5.95
+   },
+   {
+    "n_onsets": 127,
+    "attack_slope": 0.45337109350333615,
+    "peak_prominence": 0.6800909996238192,
+    "ioi_cv": 0.23124553369535458,
+    "onset_rate_hz": 6.35
+   },
+   {
+    "n_onsets": 138,
+    "attack_slope": 0.5159452968670828,
+    "peak_prominence": 0.6848314251988019,
+    "ioi_cv": 0.13839686312328428,
+    "onset_rate_hz": 6.9
+   },
+   {
+    "n_onsets": 101,
+    "attack_slope": 0.4068905704943002,
+    "peak_prominence": 0.4934308480269975,
+    "ioi_cv": 0.2914293021714941,
+    "onset_rate_hz": 5.05
+   },
+   {
+    "n_onsets": 117,
+    "attack_slope": 0.4895196166639473,
+    "peak_prominence": 0.5874586658336447,
+    "ioi_cv": 0.30230457562610674,
+    "onset_rate_hz": 5.85
+   },
+   {
+    "n_onsets": 132,
+    "attack_slope": 0.4842781394510295,
+    "peak_prominence": 0.5988308514337066,
+    "ioi_cv": 0.23576428534301402,
+    "onset_rate_hz": 6.6
+   },
+   {
+    "n_onsets": 125,
+    "attack_slope": 0.44673206387034636,
+    "peak_prominence": 0.7090401051592273,
+    "ioi_cv": 0.24288072201366812,
+    "onset_rate_hz": 6.25
+   },
+   {
+    "n_onsets": 101,
+    "attack_slope": 0.4319986972694912,
+    "peak_prominence": 0.5158001935891171,
+    "ioi_cv": 0.3063912038241443,
+    "onset_rate_hz": 5.05
+   },
+   {
+    "n_onsets": 91,
+    "attack_slope": 0.41879432283179474,
+    "peak_prominence": 0.44871534827896503,
+    "ioi_cv": 0.36571557699759316,
+    "onset_rate_hz": 4.55
+   },
+   {
+    "n_onsets": 85,
+    "attack_slope": 0.45983862821021765,
+    "peak_prominence": 0.5700709982780771,
+    "ioi_cv": 0.509207703553343,
+    "onset_rate_hz": 4.25
+   },
+   {
+    "n_onsets": 100,
+    "attack_slope": 0.44743972562900963,
+    "peak_prominence": 0.48005540607133623,
+    "ioi_cv": 0.2867603981580052,
+    "onset_rate_hz": 5.0
+   },
+   {
+    "n_onsets": 78,
+    "attack_slope": 0.4961559946091359,
+    "peak_prominence": 0.5567518385993409,
+    "ioi_cv": 0.6547852880350817,
+    "onset_rate_hz": 3.9
+   },
+   {
+    "n_onsets": 102,
+    "attack_slope": 0.363810410388342,
+    "peak_prominence": 0.4700839274079945,
+    "ioi_cv": 0.2923918536704465,
+    "onset_rate_hz": 5.1
+   },
+   {
+    "n_onsets": 94,
+    "attack_slope": 0.4249267169744143,
+    "peak_prominence": 0.5442192453201925,
+    "ioi_cv": 0.3272083867086313,
+    "onset_rate_hz": 4.7
+   },
+   {
+    "n_onsets": 120,
+    "attack_slope": 0.4208271120284174,
+    "peak_prominence": 0.5773076783276528,
+    "ioi_cv": 0.2499585235680862,
+    "onset_rate_hz": 6.0
+   },
+   {
+    "n_onsets": 118,
+    "attack_slope": 0.41924744200454245,
+    "peak_prominence": 0.5876427278178293,
+    "ioi_cv": 0.26204273211638773,
+    "onset_rate_hz": 5.9
+   },
+   {
+    "n_onsets": 121,
+    "attack_slope": 0.42967305113292714,
+    "peak_prominence": 0.5623228343902548,
+    "ioi_cv": 0.2433989541458074,
+    "onset_rate_hz": 6.05
+   },
+   {
+    "n_onsets": 120,
+    "attack_slope": 0.45336381338393894,
+    "peak_prominence": 0.7008281203075799,
+    "ioi_cv": 0.24762221778059643,
+    "onset_rate_hz": 6.0
+   },
+   {
+    "n_onsets": 127,
+    "attack_slope": 0.44665886768026813,
+    "peak_prominence": 0.6703044751475813,
+    "ioi_cv": 0.26899312116384577,
+    "onset_rate_hz": 6.35
+   },
+   {
+    "n_onsets": 115,
+    "attack_slope": 0.40581468482963445,
+    "peak_prominence": 0.5394898687790536,
+    "ioi_cv": 0.2677025801100958,
+    "onset_rate_hz": 5.75
+   },
+   {
+    "n_onsets": 94,
+    "attack_slope": 0.4353795276788859,
+    "peak_prominence": 0.4848990747322755,
+    "ioi_cv": 0.38187743027681703,
+    "onset_rate_hz": 4.7
+   }
+  ],
+  "smear100ms_piano": [
+   {
+    "n_onsets": 85,
+    "attack_slope": 0.457409965414126,
+    "peak_prominence": 0.4181955575124298,
+    "ioi_cv": 0.40736072533356227,
+    "onset_rate_hz": 4.25
+   },
+   {
+    "n_onsets": 111,
+    "attack_slope": 0.3190294241358972,
+    "peak_prominence": 0.3322778727133369,
+    "ioi_cv": 0.26371612241380255,
+    "onset_rate_hz": 5.55
+   },
+   {
+    "n_onsets": 114,
+    "attack_slope": 0.31595860188514824,
+    "peak_prominence": 0.3365209121747528,
+    "ioi_cv": 0.2624399687266644,
+    "onset_rate_hz": 5.7
+   },
+   {
+    "n_onsets": 113,
+    "attack_slope": 0.3933761485400966,
+    "peak_prominence": 0.3936562025691236,
+    "ioi_cv": 0.2086694195480564,
+    "onset_rate_hz": 5.65
+   },
+   {
+    "n_onsets": 112,
+    "attack_slope": 0.3206233753410949,
+    "peak_prominence": 0.3590772315653255,
+    "ioi_cv": 0.2667444897412473,
+    "onset_rate_hz": 5.6
+   },
+   {
+    "n_onsets": 111,
+    "attack_slope": 0.3461358540926139,
+    "peak_prominence": 0.3380469393676186,
+    "ioi_cv": 0.2513207722824186,
+    "onset_rate_hz": 5.55
+   },
+   {
+    "n_onsets": 121,
+    "attack_slope": 0.36652846800379335,
+    "peak_prominence": 0.4192843756750103,
+    "ioi_cv": 0.20922251107727977,
+    "onset_rate_hz": 6.05
+   },
+   {
+    "n_onsets": 116,
+    "attack_slope": 0.35716739715923196,
+    "peak_prominence": 0.32481930200496406,
+    "ioi_cv": 0.2651477731598383,
+    "onset_rate_hz": 5.8
+   },
+   {
+    "n_onsets": 123,
+    "attack_slope": 0.328250806113392,
+    "peak_prominence": 0.34405712444148046,
+    "ioi_cv": 0.22340586461639053,
+    "onset_rate_hz": 6.15
+   },
+   {
+    "n_onsets": 118,
+    "attack_slope": 0.3739785849382033,
+    "peak_prominence": 0.33005357637643207,
+    "ioi_cv": 0.19554560230006357,
+    "onset_rate_hz": 5.9
+   },
+   {
+    "n_onsets": 124,
+    "attack_slope": 0.40805274649784323,
+    "peak_prominence": 0.40769445217706335,
+    "ioi_cv": 0.2045812054435884,
+    "onset_rate_hz": 6.2
+   },
+   {
+    "n_onsets": 131,
+    "attack_slope": 0.3261629891376514,
+    "peak_prominence": 0.4257844158790462,
+    "ioi_cv": 0.20989233964908874,
+    "onset_rate_hz": 6.55
+   },
+   {
+    "n_onsets": 102,
+    "attack_slope": 0.34022858433318953,
+    "peak_prominence": 0.36650005587868756,
+    "ioi_cv": 0.28747140959721945,
+    "onset_rate_hz": 5.1
+   },
+   {
+    "n_onsets": 113,
+    "attack_slope": 0.41885175043145284,
+    "peak_prominence": 0.38254091875156937,
+    "ioi_cv": 0.2741734101473754,
+    "onset_rate_hz": 5.65
+   },
+   {
+    "n_onsets": 114,
+    "attack_slope": 0.36169432305103416,
+    "peak_prominence": 0.3796226988656017,
+    "ioi_cv": 0.3061361127027421,
+    "onset_rate_hz": 5.7
+   },
+   {
+    "n_onsets": 120,
+    "attack_slope": 0.38345972409445944,
+    "peak_prominence": 0.38976274068257827,
+    "ioi_cv": 0.21441253119932535,
+    "onset_rate_hz": 6.0
+   },
+   {
+    "n_onsets": 100,
+    "attack_slope": 0.4854295424520926,
+    "peak_prominence": 0.38179387022268835,
+    "ioi_cv": 0.283278222563538,
+    "onset_rate_hz": 5.0
+   },
+   {
+    "n_onsets": 91,
+    "attack_slope": 0.42711468177023587,
+    "peak_prominence": 0.37602267728153277,
+    "ioi_cv": 0.3555971895904134,
+    "onset_rate_hz": 4.55
+   },
+   {
+    "n_onsets": 82,
+    "attack_slope": 0.5575649605313241,
+    "peak_prominence": 0.4607492530297023,
+    "ioi_cv": 0.5160702139463715,
+    "onset_rate_hz": 4.1
+   },
+   {
+    "n_onsets": 93,
+    "attack_slope": 0.4573918834999802,
+    "peak_prominence": 0.39115347437865033,
+    "ioi_cv": 0.38531386397501194,
+    "onset_rate_hz": 4.65
+   },
+   {
+    "n_onsets": 79,
+    "attack_slope": 0.5341734171277968,
+    "peak_prominence": 0.4499788925707063,
+    "ioi_cv": 0.6112943973088959,
+    "onset_rate_hz": 3.95
+   },
+   {
+    "n_onsets": 93,
+    "attack_slope": 0.4261648219648891,
+    "peak_prominence": 0.40780443415839995,
+    "ioi_cv": 0.2884408329934294,
+    "onset_rate_hz": 4.65
+   },
+   {
+    "n_onsets": 92,
+    "attack_slope": 0.5016300419710542,
+    "peak_prominence": 0.42133338654812674,
+    "ioi_cv": 0.33165263805242234,
+    "onset_rate_hz": 4.6
+   },
+   {
+    "n_onsets": 114,
+    "attack_slope": 0.31749301150731807,
+    "peak_prominence": 0.3675728517064302,
+    "ioi_cv": 0.2511804481766662,
+    "onset_rate_hz": 5.7
+   },
+   {
+    "n_onsets": 106,
+    "attack_slope": 0.3093344377075075,
+    "peak_prominence": 0.40750416220627217,
+    "ioi_cv": 0.31145498133182303,
+    "onset_rate_hz": 5.3
+   },
+   {
+    "n_onsets": 115,
+    "attack_slope": 0.3749284540866754,
+    "peak_prominence": 0.3657037387065487,
+    "ioi_cv": 0.23399424738383773,
+    "onset_rate_hz": 5.75
+   },
+   {
+    "n_onsets": 116,
+    "attack_slope": 0.3654808363778458,
+    "peak_prominence": 0.4322452450655484,
+    "ioi_cv": 0.27649808037601364,
+    "onset_rate_hz": 5.8
+   },
+   {
+    "n_onsets": 108,
+    "attack_slope": 0.365845226358597,
+    "peak_prominence": 0.40239892103362923,
+    "ioi_cv": 0.33497404562163474,
+    "onset_rate_hz": 5.4
+   },
+   {
+    "n_onsets": 106,
+    "attack_slope": 0.3538627552280354,
+    "peak_prominence": 0.3827932066047921,
+    "ioi_cv": 0.3144956543227019,
+    "onset_rate_hz": 5.3
+   },
+   {
+    "n_onsets": 94,
+    "attack_slope": 0.4521686815165726,
+    "peak_prominence": 0.40742571681055684,
+    "ioi_cv": 0.2792616554682613,
+    "onset_rate_hz": 4.7
+   }
+  ],
+  "smear10ms_drums": [
+   {
+    "n_onsets": 108,
+    "attack_slope": 0.6794008929600639,
+    "peak_prominence": 0.6638767854611274,
+    "ioi_cv": 0.25162515247111666,
+    "onset_rate_hz": 5.4
+   },
+   {
+    "n_onsets": 113,
+    "attack_slope": 0.7547386161036308,
+    "peak_prominence": 0.7521743804373568,
+    "ioi_cv": 0.21748825220847992,
+    "onset_rate_hz": 5.65
+   },
+   {
+    "n_onsets": 123,
+    "attack_slope": 0.780801836635959,
+    "peak_prominence": 0.7693807991888495,
+    "ioi_cv": 0.2622663685650706,
+    "onset_rate_hz": 6.15
+   },
+   {
+    "n_onsets": 82,
+    "attack_slope": 0.8025427932188852,
+    "peak_prominence": 0.7987301366791594,
+    "ioi_cv": 0.40928383662631435,
+    "onset_rate_hz": 4.1
+   },
+   {
+    "n_onsets": 107,
+    "attack_slope": 0.8503768518805346,
+    "peak_prominence": 0.8677858790277726,
+    "ioi_cv": 0.14725651410416177,
+    "onset_rate_hz": 5.35
+   },
+   {
+    "n_onsets": 103,
+    "attack_slope": 0.7653019044774771,
+    "peak_prominence": 0.7368879149795886,
+    "ioi_cv": 0.30719536689402216,
+    "onset_rate_hz": 5.15
+   },
+   {
+    "n_onsets": 59,
+    "attack_slope": 0.9101051599877527,
+    "peak_prominence": 0.8926873095926093,
+    "ioi_cv": 0.2793716519928109,
+    "onset_rate_hz": 2.95
+   },
+   {
+    "n_onsets": 105,
+    "attack_slope": 0.6456468780895963,
+    "peak_prominence": 0.6077525684388064,
+    "ioi_cv": 0.2301480517273856,
+    "onset_rate_hz": 5.25
+   },
+   {
+    "n_onsets": 104,
+    "attack_slope": 0.5893023855373466,
+    "peak_prominence": 0.5283394787783517,
+    "ioi_cv": 0.23730770716752322,
+    "onset_rate_hz": 5.2
+   },
+   {
+    "n_onsets": 86,
+    "attack_slope": 0.7182505392172989,
+    "peak_prominence": 0.745718340680832,
+    "ioi_cv": 0.3984484187491117,
+    "onset_rate_hz": 4.3
+   },
+   {
+    "n_onsets": 93,
+    "attack_slope": 0.7249296721271352,
+    "peak_prominence": 0.7035802408463978,
+    "ioi_cv": 0.3114003725290554,
+    "onset_rate_hz": 4.65
+   },
+   {
+    "n_onsets": 124,
+    "attack_slope": 0.736306556372292,
+    "peak_prominence": 0.7385653981340555,
+    "ioi_cv": 0.1685699505193653,
+    "onset_rate_hz": 6.2
+   },
+   {
+    "n_onsets": 93,
+    "attack_slope": 0.800278134578355,
+    "peak_prominence": 0.8042898583539483,
+    "ioi_cv": 0.23698414546260133,
+    "onset_rate_hz": 4.65
+   },
+   {
+    "n_onsets": 118,
+    "attack_slope": 0.8613261442441168,
+    "peak_prominence": 0.853322063845748,
+    "ioi_cv": 0.15973003508512063,
+    "onset_rate_hz": 5.9
+   },
+   {
+    "n_onsets": 101,
+    "attack_slope": 0.7749051584202561,
+    "peak_prominence": 0.7632594814983655,
+    "ioi_cv": 0.7042703752411753,
+    "onset_rate_hz": 5.05
+   },
+   {
+    "n_onsets": 119,
+    "attack_slope": 0.6758456827828692,
+    "peak_prominence": 0.6456098300625843,
+    "ioi_cv": 0.19688002145478115,
+    "onset_rate_hz": 5.95
+   },
+   {
+    "n_onsets": 105,
+    "attack_slope": 0.8593791507213856,
+    "peak_prominence": 0.8364217556090843,
+    "ioi_cv": 0.3261599698593709,
+    "onset_rate_hz": 5.25
+   },
+   {
+    "n_onsets": 94,
+    "attack_slope": 0.7587271872387589,
+    "peak_prominence": 0.692750458623769,
+    "ioi_cv": 0.252660535278943,
+    "onset_rate_hz": 4.7
+   },
+   {
+    "n_onsets": 110,
+    "attack_slope": 0.8585066348032864,
+    "peak_prominence": 0.8315085987073726,
+    "ioi_cv": 0.3149941874167038,
+    "onset_rate_hz": 5.5
+   },
+   {
+    "n_onsets": 107,
+    "attack_slope": 0.786375872225172,
+    "peak_prominence": 0.7387484220087146,
+    "ioi_cv": 0.24643533977179058,
+    "onset_rate_hz": 5.35
+   },
+   {
+    "n_onsets": 97,
+    "attack_slope": 0.7467464543590991,
+    "peak_prominence": 0.7439263697236178,
+    "ioi_cv": 0.31801517047861483,
+    "onset_rate_hz": 4.85
+   },
+   {
+    "n_onsets": 90,
+    "attack_slope": 0.7806260640963817,
+    "peak_prominence": 0.7312568447063018,
+    "ioi_cv": 0.3261009760625326,
+    "onset_rate_hz": 4.5
+   },
+   {
+    "n_onsets": 111,
+    "attack_slope": 0.864891702956285,
+    "peak_prominence": 0.8453135881640909,
+    "ioi_cv": 0.17701245186660697,
+    "onset_rate_hz": 5.55
+   },
+   {
+    "n_onsets": 107,
+    "attack_slope": 0.6461859043160003,
+    "peak_prominence": 0.6081776921952471,
+    "ioi_cv": 0.28485993780344576,
+    "onset_rate_hz": 5.35
+   },
+   {
+    "n_onsets": 75,
+    "attack_slope": 0.7707778998785254,
+    "peak_prominence": 0.7750540534190978,
+    "ioi_cv": 0.5008949392901666,
+    "onset_rate_hz": 3.75
+   },
+   {
+    "n_onsets": 108,
+    "attack_slope": 0.87323257646369,
+    "peak_prominence": 0.8773689047475488,
+    "ioi_cv": 0.36288254826107474,
+    "onset_rate_hz": 5.4
+   },
+   {
+    "n_onsets": 91,
+    "attack_slope": 0.7155280896777565,
+    "peak_prominence": 0.6842274620980454,
+    "ioi_cv": 0.32252051388651576,
+    "onset_rate_hz": 4.55
+   },
+   {
+    "n_onsets": 107,
+    "attack_slope": 0.6140332527741835,
+    "peak_prominence": 0.6009965011675266,
+    "ioi_cv": 0.24249995803683685,
+    "onset_rate_hz": 5.35
+   },
+   {
+    "n_onsets": 104,
+    "attack_slope": 0.7265072165355659,
+    "peak_prominence": 0.7503888839519975,
+    "ioi_cv": 0.1689488218205023,
+    "onset_rate_hz": 5.2
+   },
+   {
+    "n_onsets": 100,
+    "attack_slope": 0.8509498945413108,
+    "peak_prominence": 0.8406393983286481,
+    "ioi_cv": 0.16803485473357002,
+    "onset_rate_hz": 5.0
+   }
+  ],
+  "smear25ms_drums": [
+   {
+    "n_onsets": 102,
+    "attack_slope": 0.7017986290073496,
+    "peak_prominence": 0.7132158901103601,
+    "ioi_cv": 0.3148334304145191,
+    "onset_rate_hz": 5.1
+   },
+   {
+    "n_onsets": 108,
+    "attack_slope": 0.7611118019700124,
+    "peak_prominence": 0.7626262435810403,
+    "ioi_cv": 0.2747084551621769,
+    "onset_rate_hz": 5.4
+   },
+   {
+    "n_onsets": 121,
+    "attack_slope": 0.743475362836971,
+    "peak_prominence": 0.7750571210725499,
+    "ioi_cv": 0.2609118803512013,
+    "onset_rate_hz": 6.05
+   },
+   {
+    "n_onsets": 72,
+    "attack_slope": 0.8435573487607747,
+    "peak_prominence": 0.8340726550382516,
+    "ioi_cv": 0.36125633225534826,
+    "onset_rate_hz": 3.6
+   },
+   {
+    "n_onsets": 107,
+    "attack_slope": 0.8861551059561078,
+    "peak_prominence": 0.9278245027346834,
+    "ioi_cv": 0.09538749868371776,
+    "onset_rate_hz": 5.35
+   },
+   {
+    "n_onsets": 92,
+    "attack_slope": 0.8008450686612845,
+    "peak_prominence": 0.7602204652451879,
+    "ioi_cv": 0.2471845982198618,
+    "onset_rate_hz": 4.6
+   },
+   {
+    "n_onsets": 56,
+    "attack_slope": 0.9345535948609472,
+    "peak_prominence": 0.945813020512448,
+    "ioi_cv": 0.22331634734910788,
+    "onset_rate_hz": 2.8
+   },
+   {
+    "n_onsets": 100,
+    "attack_slope": 0.6700508561407476,
+    "peak_prominence": 0.6324089963026993,
+    "ioi_cv": 0.2813422416097344,
+    "onset_rate_hz": 5.0
+   },
+   {
+    "n_onsets": 106,
+    "attack_slope": 0.6371496390304641,
+    "peak_prominence": 0.6264124892325253,
+    "ioi_cv": 0.22855144337971028,
+    "onset_rate_hz": 5.3
+   },
+   {
+    "n_onsets": 76,
+    "attack_slope": 0.7783847547092609,
+    "peak_prominence": 0.815567705537832,
+    "ioi_cv": 0.4010111955847469,
+    "onset_rate_hz": 3.8
+   },
+   {
+    "n_onsets": 93,
+    "attack_slope": 0.7895348298437113,
+    "peak_prominence": 0.757129794613301,
+    "ioi_cv": 0.32737048793693735,
+    "onset_rate_hz": 4.65
+   },
+   {
+    "n_onsets": 127,
+    "attack_slope": 0.7373986289372115,
+    "peak_prominence": 0.7647779636994081,
+    "ioi_cv": 0.13021775427970564,
+    "onset_rate_hz": 6.35
+   },
+   {
+    "n_onsets": 91,
+    "attack_slope": 0.8125977323714056,
+    "peak_prominence": 0.8237321648567556,
+    "ioi_cv": 0.22848803015299418,
+    "onset_rate_hz": 4.55
+   },
+   {
+    "n_onsets": 117,
+    "attack_slope": 0.8223776186714793,
+    "peak_prominence": 0.8340553840499979,
+    "ioi_cv": 0.1674557534715183,
+    "onset_rate_hz": 5.85
+   },
+   {
+    "n_onsets": 101,
+    "attack_slope": 0.8431241911233373,
+    "peak_prominence": 0.8931046210284822,
+    "ioi_cv": 0.6951360974338003,
+    "onset_rate_hz": 5.05
+   },
+   {
+    "n_onsets": 115,
+    "attack_slope": 0.686594179086898,
+    "peak_prominence": 0.6768072940260904,
+    "ioi_cv": 0.2777197645711944,
+    "onset_rate_hz": 5.75
+   },
+   {
+    "n_onsets": 105,
+    "attack_slope": 0.8607172710718618,
+    "peak_prominence": 0.8549861099555613,
+    "ioi_cv": 0.3047117247745175,
+    "onset_rate_hz": 5.25
+   },
+   {
+    "n_onsets": 90,
+    "attack_slope": 0.7689860155726055,
+    "peak_prominence": 0.7389805824214003,
+    "ioi_cv": 0.25503311992362365,
+    "onset_rate_hz": 4.5
+   },
+   {
+    "n_onsets": 104,
+    "attack_slope": 0.8527056422212129,
+    "peak_prominence": 0.8611507240949978,
+    "ioi_cv": 0.32145089735564303,
+    "onset_rate_hz": 5.2
+   },
+   {
+    "n_onsets": 108,
+    "attack_slope": 0.7870279133809706,
+    "peak_prominence": 0.7904302190837252,
+    "ioi_cv": 0.28019191266805216,
+    "onset_rate_hz": 5.4
+   },
+   {
+    "n_onsets": 94,
+    "attack_slope": 0.7700377484417071,
+    "peak_prominence": 0.7871755992496223,
+    "ioi_cv": 0.3713790395342312,
+    "onset_rate_hz": 4.7
+   },
+   {
+    "n_onsets": 86,
+    "attack_slope": 0.7487044822365152,
+    "peak_prominence": 0.7555759052501488,
+    "ioi_cv": 0.35509701248084,
+    "onset_rate_hz": 4.3
+   },
+   {
+    "n_onsets": 109,
+    "attack_slope": 0.8747243665578665,
+    "peak_prominence": 0.8985242265609741,
+    "ioi_cv": 0.18498304073354085,
+    "onset_rate_hz": 5.45
+   },
+   {
+    "n_onsets": 91,
+    "attack_slope": 0.6703652183355264,
+    "peak_prominence": 0.6591799459813522,
+    "ioi_cv": 0.329911692820566,
+    "onset_rate_hz": 4.55
+   },
+   {
+    "n_onsets": 73,
+    "attack_slope": 0.7785905034690422,
+    "peak_prominence": 0.7937123138522052,
+    "ioi_cv": 0.561573988329748,
+    "onset_rate_hz": 3.65
+   },
+   {
+    "n_onsets": 107,
+    "attack_slope": 0.7989064383369717,
+    "peak_prominence": 0.8588016926191179,
+    "ioi_cv": 0.34868599924258153,
+    "onset_rate_hz": 5.35
+   },
+   {
+    "n_onsets": 85,
+    "attack_slope": 0.788675611645723,
+    "peak_prominence": 0.820120620675348,
+    "ioi_cv": 0.2929182433484572,
+    "onset_rate_hz": 4.25
+   },
+   {
+    "n_onsets": 98,
+    "attack_slope": 0.6031510665598838,
+    "peak_prominence": 0.6387719513942788,
+    "ioi_cv": 0.23437666853839315,
+    "onset_rate_hz": 4.9
+   },
+   {
+    "n_onsets": 100,
+    "attack_slope": 0.750026080352702,
+    "peak_prominence": 0.8391417389193409,
+    "ioi_cv": 0.15071678099958868,
+    "onset_rate_hz": 5.0
+   },
+   {
+    "n_onsets": 102,
+    "attack_slope": 0.826693599963311,
+    "peak_prominence": 0.8416817738889855,
+    "ioi_cv": 0.16962485010176223,
+    "onset_rate_hz": 5.1
+   }
+  ],
+  "smear50ms_drums": [
+   {
+    "n_onsets": 99,
+    "attack_slope": 0.5422773287380103,
+    "peak_prominence": 0.6748498894975508,
+    "ioi_cv": 0.3354187846575175,
+    "onset_rate_hz": 4.95
+   },
+   {
+    "n_onsets": 104,
+    "attack_slope": 0.5308696378500847,
+    "peak_prominence": 0.720082723044022,
+    "ioi_cv": 0.27248393775534585,
+    "onset_rate_hz": 5.2
+   },
+   {
+    "n_onsets": 113,
+    "attack_slope": 0.5096626766836178,
+    "peak_prominence": 0.7344042976867455,
+    "ioi_cv": 0.3021978881064929,
+    "onset_rate_hz": 5.65
+   },
+   {
+    "n_onsets": 62,
+    "attack_slope": 0.8419963927806344,
+    "peak_prominence": 0.8808404904538177,
+    "ioi_cv": 0.3008276372564765,
+    "onset_rate_hz": 3.1
+   },
+   {
+    "n_onsets": 107,
+    "attack_slope": 0.6957663214964902,
+    "peak_prominence": 0.9153894564577596,
+    "ioi_cv": 0.10950817623210496,
+    "onset_rate_hz": 5.35
+   },
+   {
+    "n_onsets": 91,
+    "attack_slope": 0.6558161535442878,
+    "peak_prominence": 0.7085339304044671,
+    "ioi_cv": 0.29759332496267343,
+    "onset_rate_hz": 4.55
+   },
+   {
+    "n_onsets": 56,
+    "attack_slope": 0.8393994320276793,
+    "peak_prominence": 0.9200443900621568,
+    "ioi_cv": 0.22917471033851786,
+    "onset_rate_hz": 2.8
+   },
+   {
+    "n_onsets": 100,
+    "attack_slope": 0.5134123203937955,
+    "peak_prominence": 0.6019920577095964,
+    "ioi_cv": 0.3103924763003273,
+    "onset_rate_hz": 5.0
+   },
+   {
+    "n_onsets": 95,
+    "attack_slope": 0.43051388758258863,
+    "peak_prominence": 0.6279621867382102,
+    "ioi_cv": 0.3069099815922089,
+    "onset_rate_hz": 4.75
+   },
+   {
+    "n_onsets": 75,
+    "attack_slope": 0.725081910370511,
+    "peak_prominence": 0.800725219898171,
+    "ioi_cv": 0.3619927968374453,
+    "onset_rate_hz": 3.75
+   },
+   {
+    "n_onsets": 79,
+    "attack_slope": 0.6734027409247549,
+    "peak_prominence": 0.7713849035511423,
+    "ioi_cv": 0.3085718930397263,
+    "onset_rate_hz": 3.95
+   },
+   {
+    "n_onsets": 120,
+    "attack_slope": 0.4987060035404495,
+    "peak_prominence": 0.7352327871623916,
+    "ioi_cv": 0.2427985298589993,
+    "onset_rate_hz": 6.0
+   },
+   {
+    "n_onsets": 88,
+    "attack_slope": 0.7926060326818507,
+    "peak_prominence": 0.8557473232972318,
+    "ioi_cv": 0.2215261233503464,
+    "onset_rate_hz": 4.4
+   },
+   {
+    "n_onsets": 117,
+    "attack_slope": 0.61610790613725,
+    "peak_prominence": 0.8035695918657472,
+    "ioi_cv": 0.19352540299470422,
+    "onset_rate_hz": 5.85
+   },
+   {
+    "n_onsets": 99,
+    "attack_slope": 0.6264176710235814,
+    "peak_prominence": 0.8810915873956386,
+    "ioi_cv": 0.6963051316093627,
+    "onset_rate_hz": 4.95
+   },
+   {
+    "n_onsets": 112,
+    "attack_slope": 0.5179012404755438,
+    "peak_prominence": 0.6761470580330935,
+    "ioi_cv": 0.3314619901368566,
+    "onset_rate_hz": 5.6
+   },
+   {
+    "n_onsets": 97,
+    "attack_slope": 0.7578966581691174,
+    "peak_prominence": 0.8732586147063034,
+    "ioi_cv": 0.34284146404957017,
+    "onset_rate_hz": 4.85
+   },
+   {
+    "n_onsets": 92,
+    "attack_slope": 0.7690481150595245,
+    "peak_prominence": 0.8349713814072928,
+    "ioi_cv": 0.2679423543006285,
+    "onset_rate_hz": 4.6
+   },
+   {
+    "n_onsets": 100,
+    "attack_slope": 0.6555383922311769,
+    "peak_prominence": 0.8547220220316987,
+    "ioi_cv": 0.3473036693422247,
+    "onset_rate_hz": 5.0
+   },
+   {
+    "n_onsets": 94,
+    "attack_slope": 0.5947434181123135,
+    "peak_prominence": 0.8266552321396172,
+    "ioi_cv": 0.35792027013467065,
+    "onset_rate_hz": 4.7
+   },
+   {
+    "n_onsets": 91,
+    "attack_slope": 0.6129055601919255,
+    "peak_prominence": 0.7619303636547529,
+    "ioi_cv": 0.39367237833370344,
+    "onset_rate_hz": 4.55
+   },
+   {
+    "n_onsets": 83,
+    "attack_slope": 0.640287512758593,
+    "peak_prominence": 0.7328542658621185,
+    "ioi_cv": 0.3378260043279922,
+    "onset_rate_hz": 4.15
+   },
+   {
+    "n_onsets": 101,
+    "attack_slope": 0.6963903691946408,
+    "peak_prominence": 0.904269814458264,
+    "ioi_cv": 0.3228514271286032,
+    "onset_rate_hz": 5.05
+   },
+   {
+    "n_onsets": 93,
+    "attack_slope": 0.5829432876074223,
+    "peak_prominence": 0.6787767583810599,
+    "ioi_cv": 0.34943585301697994,
+    "onset_rate_hz": 4.65
+   },
+   {
+    "n_onsets": 68,
+    "attack_slope": 0.6711884487045491,
+    "peak_prominence": 0.8160872932788604,
+    "ioi_cv": 0.5033746593562024,
+    "onset_rate_hz": 3.4
+   },
+   {
+    "n_onsets": 101,
+    "attack_slope": 0.6170262088008625,
+    "peak_prominence": 0.8149180774319054,
+    "ioi_cv": 0.3815849721641227,
+    "onset_rate_hz": 5.05
+   },
+   {
+    "n_onsets": 85,
+    "attack_slope": 0.6676254120806377,
+    "peak_prominence": 0.7856391365693899,
+    "ioi_cv": 0.34323516664240783,
+    "onset_rate_hz": 4.25
+   },
+   {
+    "n_onsets": 97,
+    "attack_slope": 0.449237023717939,
+    "peak_prominence": 0.6333011666373334,
+    "ioi_cv": 0.24027484777425687,
+    "onset_rate_hz": 4.85
+   },
+   {
+    "n_onsets": 99,
+    "attack_slope": 0.5738430035570542,
+    "peak_prominence": 0.8094730533599722,
+    "ioi_cv": 0.1635028279248075,
+    "onset_rate_hz": 4.95
+   },
+   {
+    "n_onsets": 100,
+    "attack_slope": 0.672464756886969,
+    "peak_prominence": 0.7787383161783861,
+    "ioi_cv": 0.19445713684166066,
+    "onset_rate_hz": 5.0
+   }
+  ],
+  "smear100ms_drums": [
+   {
+    "n_onsets": 93,
+    "attack_slope": 0.4678700020933296,
+    "peak_prominence": 0.6026776222136809,
+    "ioi_cv": 0.3613580832469227,
+    "onset_rate_hz": 4.65
+   },
+   {
+    "n_onsets": 99,
+    "attack_slope": 0.3899887704443452,
+    "peak_prominence": 0.5658678320821205,
+    "ioi_cv": 0.3173196834108832,
+    "onset_rate_hz": 4.95
+   },
+   {
+    "n_onsets": 111,
+    "attack_slope": 0.3523864464501182,
+    "peak_prominence": 0.5497181693731902,
+    "ioi_cv": 0.31138295016089884,
+    "onset_rate_hz": 5.55
+   },
+   {
+    "n_onsets": 68,
+    "attack_slope": 0.690659409186179,
+    "peak_prominence": 0.8134096916875367,
+    "ioi_cv": 0.3574622653520219,
+    "onset_rate_hz": 3.4
+   },
+   {
+    "n_onsets": 106,
+    "attack_slope": 0.5240087575694782,
+    "peak_prominence": 0.7856576448032722,
+    "ioi_cv": 0.19274919536862326,
+    "onset_rate_hz": 5.3
+   },
+   {
+    "n_onsets": 89,
+    "attack_slope": 0.5404343289801709,
+    "peak_prominence": 0.7096084985203688,
+    "ioi_cv": 0.2836528685986372,
+    "onset_rate_hz": 4.45
+   },
+   {
+    "n_onsets": 63,
+    "attack_slope": 0.678064981986091,
+    "peak_prominence": 0.8300830618246494,
+    "ioi_cv": 0.29417158758959894,
+    "onset_rate_hz": 3.15
+   },
+   {
+    "n_onsets": 88,
+    "attack_slope": 0.3226363110701975,
+    "peak_prominence": 0.4583138832739151,
+    "ioi_cv": 0.352590697836466,
+    "onset_rate_hz": 4.4
+   },
+   {
+    "n_onsets": 87,
+    "attack_slope": 0.3485823848588768,
+    "peak_prominence": 0.5992610601149594,
+    "ioi_cv": 0.3459726651031141,
+    "onset_rate_hz": 4.35
+   },
+   {
+    "n_onsets": 70,
+    "attack_slope": 0.662060665177696,
+    "peak_prominence": 0.7667386203276725,
+    "ioi_cv": 0.4089733252459578,
+    "onset_rate_hz": 3.5
+   },
+   {
+    "n_onsets": 77,
+    "attack_slope": 0.6140568827784832,
+    "peak_prominence": 0.7631142419504446,
+    "ioi_cv": 0.27686261510805427,
+    "onset_rate_hz": 3.85
+   },
+   {
+    "n_onsets": 112,
+    "attack_slope": 0.34285167594528393,
+    "peak_prominence": 0.5533629260251721,
+    "ioi_cv": 0.28729918999994136,
+    "onset_rate_hz": 5.6
+   },
+   {
+    "n_onsets": 90,
+    "attack_slope": 0.6280623011638403,
+    "peak_prominence": 0.7459733286622735,
+    "ioi_cv": 0.2258389647306468,
+    "onset_rate_hz": 4.5
+   },
+   {
+    "n_onsets": 110,
+    "attack_slope": 0.41753917055245626,
+    "peak_prominence": 0.5764089119134753,
+    "ioi_cv": 0.2617887477516745,
+    "onset_rate_hz": 5.5
+   },
+   {
+    "n_onsets": 97,
+    "attack_slope": 0.44605594099168966,
+    "peak_prominence": 0.6871620123487592,
+    "ioi_cv": 0.6573714527016885,
+    "onset_rate_hz": 4.85
+   },
+   {
+    "n_onsets": 102,
+    "attack_slope": 0.36834436504062884,
+    "peak_prominence": 0.5506835916854973,
+    "ioi_cv": 0.35138464592994023,
+    "onset_rate_hz": 5.1
+   },
+   {
+    "n_onsets": 89,
+    "attack_slope": 0.587162972938071,
+    "peak_prominence": 0.7567808585716147,
+    "ioi_cv": 0.3913327419512482,
+    "onset_rate_hz": 4.45
+   },
+   {
+    "n_onsets": 89,
+    "attack_slope": 0.5884627065845307,
+    "peak_prominence": 0.7702968594266353,
+    "ioi_cv": 0.26251474507562345,
+    "onset_rate_hz": 4.45
+   },
+   {
+    "n_onsets": 99,
+    "attack_slope": 0.5306474599747797,
+    "peak_prominence": 0.7084157408396575,
+    "ioi_cv": 0.3156535970296925,
+    "onset_rate_hz": 4.95
+   },
+   {
+    "n_onsets": 101,
+    "attack_slope": 0.4192878248258156,
+    "peak_prominence": 0.7041583665682053,
+    "ioi_cv": 0.28336196985777296,
+    "onset_rate_hz": 5.05
+   },
+   {
+    "n_onsets": 88,
+    "attack_slope": 0.3938461391928621,
+    "peak_prominence": 0.6581267225941126,
+    "ioi_cv": 0.42102041750474717,
+    "onset_rate_hz": 4.4
+   },
+   {
+    "n_onsets": 83,
+    "attack_slope": 0.46078265390944023,
+    "peak_prominence": 0.6271039901848363,
+    "ioi_cv": 0.38382746026739795,
+    "onset_rate_hz": 4.15
+   },
+   {
+    "n_onsets": 97,
+    "attack_slope": 0.5434148061490192,
+    "peak_prominence": 0.8122963004063363,
+    "ioi_cv": 0.42391176643059136,
+    "onset_rate_hz": 4.85
+   },
+   {
+    "n_onsets": 89,
+    "attack_slope": 0.5364345929585717,
+    "peak_prominence": 0.6758939142222851,
+    "ioi_cv": 0.3474355252044659,
+    "onset_rate_hz": 4.45
+   },
+   {
+    "n_onsets": 68,
+    "attack_slope": 0.6660202699049195,
+    "peak_prominence": 0.7793133686527473,
+    "ioi_cv": 0.5212967941525035,
+    "onset_rate_hz": 3.4
+   },
+   {
+    "n_onsets": 91,
+    "attack_slope": 0.5041982673022369,
+    "peak_prominence": 0.6230265643777642,
+    "ioi_cv": 0.3856617031818219,
+    "onset_rate_hz": 4.55
+   },
+   {
+    "n_onsets": 77,
+    "attack_slope": 0.6174441946284991,
+    "peak_prominence": 0.7636897264274558,
+    "ioi_cv": 0.30394346474359785,
+    "onset_rate_hz": 3.85
+   },
+   {
+    "n_onsets": 95,
+    "attack_slope": 0.4004560174906603,
+    "peak_prominence": 0.5395082298630401,
+    "ioi_cv": 0.254650722248035,
+    "onset_rate_hz": 4.75
+   },
+   {
+    "n_onsets": 97,
+    "attack_slope": 0.45354784080245164,
+    "peak_prominence": 0.6012948979176626,
+    "ioi_cv": 0.23620097000123644,
+    "onset_rate_hz": 4.85
+   },
+   {
+    "n_onsets": 95,
+    "attack_slope": 0.5187615451141013,
+    "peak_prominence": 0.6781968894134462,
+    "ioi_cv": 0.35238433603768127,
+    "onset_rate_hz": 4.75
+   }
+  ],
+  "smear10ms_smc": [
+   {
+    "n_onsets": 114,
+    "attack_slope": 0.3529375101214111,
+    "peak_prominence": 0.2929585123678582,
+    "ioi_cv": 0.22616101165460883,
+    "onset_rate_hz": 5.7
+   },
+   {
+    "n_onsets": 119,
+    "attack_slope": 0.4231640866714938,
+    "peak_prominence": 0.3751962539352362,
+    "ioi_cv": 0.2240592394527264,
+    "onset_rate_hz": 5.95
+   },
+   {
+    "n_onsets": 111,
+    "attack_slope": 0.5314877842360681,
+    "peak_prominence": 0.46875413277945877,
+    "ioi_cv": 0.2591223090488584,
+    "onset_rate_hz": 5.55
+   },
+   {
+    "n_onsets": 97,
+    "attack_slope": 0.5892127156812885,
+    "peak_prominence": 0.5105167821665132,
+    "ioi_cv": 0.29966908768449735,
+    "onset_rate_hz": 4.85
+   },
+   {
+    "n_onsets": 116,
+    "attack_slope": 0.2907212119497375,
+    "peak_prominence": 0.2336960080721938,
+    "ioi_cv": 0.20967762955026792,
+    "onset_rate_hz": 5.8
+   },
+   {
+    "n_onsets": 107,
+    "attack_slope": 0.49321422371522167,
+    "peak_prominence": 0.4478011990437009,
+    "ioi_cv": 0.30325604207619944,
+    "onset_rate_hz": 5.35
+   },
+   {
+    "n_onsets": 121,
+    "attack_slope": 0.298389884425136,
+    "peak_prominence": 0.2452267105165656,
+    "ioi_cv": 0.19654124799836717,
+    "onset_rate_hz": 6.05
+   },
+   {
+    "n_onsets": 115,
+    "attack_slope": 0.3303076658749882,
+    "peak_prominence": 0.28362499957272086,
+    "ioi_cv": 0.23457427623910007,
+    "onset_rate_hz": 5.75
+   },
+   {
+    "n_onsets": 108,
+    "attack_slope": 0.5103271933183314,
+    "peak_prominence": 0.4841072412763634,
+    "ioi_cv": 0.2556418537899409,
+    "onset_rate_hz": 5.4
+   },
+   {
+    "n_onsets": 117,
+    "attack_slope": 0.3598307393768893,
+    "peak_prominence": 0.31495392089998514,
+    "ioi_cv": 0.24080888756495208,
+    "onset_rate_hz": 5.85
+   },
+   {
+    "n_onsets": 111,
+    "attack_slope": 0.662193908705978,
+    "peak_prominence": 0.623602094395695,
+    "ioi_cv": 0.27717706216306554,
+    "onset_rate_hz": 5.55
+   },
+   {
+    "n_onsets": 112,
+    "attack_slope": 0.5042595780289718,
+    "peak_prominence": 0.49082751462371615,
+    "ioi_cv": 0.27364536321754135,
+    "onset_rate_hz": 5.6
+   },
+   {
+    "n_onsets": 115,
+    "attack_slope": 0.3293561545196595,
+    "peak_prominence": 0.2688290484406393,
+    "ioi_cv": 0.22830426929053993,
+    "onset_rate_hz": 5.75
+   },
+   {
+    "n_onsets": 108,
+    "attack_slope": 0.46030690154632686,
+    "peak_prominence": 0.398931578206257,
+    "ioi_cv": 0.2988046573320546,
+    "onset_rate_hz": 5.4
+   },
+   {
+    "n_onsets": 104,
+    "attack_slope": 0.5987624755001961,
+    "peak_prominence": 0.5251577925041322,
+    "ioi_cv": 0.286287899802695,
+    "onset_rate_hz": 5.2
+   },
+   {
+    "n_onsets": 112,
+    "attack_slope": 0.4774572704084587,
+    "peak_prominence": 0.4358612989765387,
+    "ioi_cv": 0.22389888113354564,
+    "onset_rate_hz": 5.6
+   },
+   {
+    "n_onsets": 117,
+    "attack_slope": 0.39990157897123624,
+    "peak_prominence": 0.34483260376438046,
+    "ioi_cv": 0.22197766689749726,
+    "onset_rate_hz": 5.85
+   },
+   {
+    "n_onsets": 117,
+    "attack_slope": 0.587060950365549,
+    "peak_prominence": 0.5281968241278061,
+    "ioi_cv": 0.23923923195523153,
+    "onset_rate_hz": 5.85
+   },
+   {
+    "n_onsets": 116,
+    "attack_slope": 0.3551872088753008,
+    "peak_prominence": 0.27657442019482226,
+    "ioi_cv": 0.23104708389906312,
+    "onset_rate_hz": 5.8
+   },
+   {
+    "n_onsets": 114,
+    "attack_slope": 0.35554433387576706,
+    "peak_prominence": 0.32034036862336784,
+    "ioi_cv": 0.23112472847983698,
+    "onset_rate_hz": 5.7
+   },
+   {
+    "n_onsets": 106,
+    "attack_slope": 0.5998191652950796,
+    "peak_prominence": 0.5358631719421458,
+    "ioi_cv": 0.3365427370170525,
+    "onset_rate_hz": 5.3
+   },
+   {
+    "n_onsets": 93,
+    "attack_slope": 0.5702198778866382,
+    "peak_prominence": 0.5092404926014372,
+    "ioi_cv": 0.4791433229832524,
+    "onset_rate_hz": 4.65
+   },
+   {
+    "n_onsets": 106,
+    "attack_slope": 0.5241124827332104,
+    "peak_prominence": 0.4746165369203283,
+    "ioi_cv": 0.23975933370819705,
+    "onset_rate_hz": 5.3
+   },
+   {
+    "n_onsets": 116,
+    "attack_slope": 0.3031365939183305,
+    "peak_prominence": 0.26270926811152345,
+    "ioi_cv": 0.21931773665472593,
+    "onset_rate_hz": 5.8
+   },
+   {
+    "n_onsets": 106,
+    "attack_slope": 0.4792340920044908,
+    "peak_prominence": 0.4185521355092145,
+    "ioi_cv": 0.32762703979470276,
+    "onset_rate_hz": 5.3
+   },
+   {
+    "n_onsets": 102,
+    "attack_slope": 0.5739575281683496,
+    "peak_prominence": 0.49397689347970813,
+    "ioi_cv": 0.34563643825424517,
+    "onset_rate_hz": 5.1
+   },
+   {
+    "n_onsets": 118,
+    "attack_slope": 0.4299594453132982,
+    "peak_prominence": 0.36707560406863027,
+    "ioi_cv": 0.2608363406679992,
+    "onset_rate_hz": 5.9
+   },
+   {
+    "n_onsets": 114,
+    "attack_slope": 0.3646268887094526,
+    "peak_prominence": 0.31882508689940525,
+    "ioi_cv": 0.23195052891690005,
+    "onset_rate_hz": 5.7
+   },
+   {
+    "n_onsets": 100,
+    "attack_slope": 0.6356301144753234,
+    "peak_prominence": 0.568220232490794,
+    "ioi_cv": 0.3355289776422575,
+    "onset_rate_hz": 5.0
+   },
+   {
+    "n_onsets": 112,
+    "attack_slope": 0.34110507596243894,
+    "peak_prominence": 0.28901613056534153,
+    "ioi_cv": 0.23908612487679365,
+    "onset_rate_hz": 5.6
+   }
+  ],
+  "smear25ms_smc": [
+   {
+    "n_onsets": 113,
+    "attack_slope": 0.35724142769932465,
+    "peak_prominence": 0.30508204731189714,
+    "ioi_cv": 0.23853710068306175,
+    "onset_rate_hz": 5.65
+   },
+   {
+    "n_onsets": 117,
+    "attack_slope": 0.39613932406459196,
+    "peak_prominence": 0.3671938617998527,
+    "ioi_cv": 0.2594838190100511,
+    "onset_rate_hz": 5.85
+   },
+   {
+    "n_onsets": 110,
+    "attack_slope": 0.5554768968413182,
+    "peak_prominence": 0.4901632672867552,
+    "ioi_cv": 0.2600459644060896,
+    "onset_rate_hz": 5.5
+   },
+   {
+    "n_onsets": 83,
+    "attack_slope": 0.574301372447387,
+    "peak_prominence": 0.5386179029773643,
+    "ioi_cv": 0.5317209139948098,
+    "onset_rate_hz": 4.15
+   },
+   {
+    "n_onsets": 111,
+    "attack_slope": 0.28346987207314756,
+    "peak_prominence": 0.2370778500719624,
+    "ioi_cv": 0.24479096716894516,
+    "onset_rate_hz": 5.55
+   },
+   {
+    "n_onsets": 96,
+    "attack_slope": 0.44133740985602543,
+    "peak_prominence": 0.4363342026111143,
+    "ioi_cv": 0.39836642554597795,
+    "onset_rate_hz": 4.8
+   },
+   {
+    "n_onsets": 114,
+    "attack_slope": 0.2804697242173161,
+    "peak_prominence": 0.2512420185082751,
+    "ioi_cv": 0.21830642021506996,
+    "onset_rate_hz": 5.7
+   },
+   {
+    "n_onsets": 108,
+    "attack_slope": 0.33148248339539393,
+    "peak_prominence": 0.3066389213302575,
+    "ioi_cv": 0.2719577964031044,
+    "onset_rate_hz": 5.4
+   },
+   {
+    "n_onsets": 109,
+    "attack_slope": 0.5012097282203724,
+    "peak_prominence": 0.4872382939994859,
+    "ioi_cv": 0.2587721061566106,
+    "onset_rate_hz": 5.45
+   },
+   {
+    "n_onsets": 108,
+    "attack_slope": 0.32455023079262124,
+    "peak_prominence": 0.2992630467859701,
+    "ioi_cv": 0.32608747833373997,
+    "onset_rate_hz": 5.4
+   },
+   {
+    "n_onsets": 104,
+    "attack_slope": 0.6633346082542355,
+    "peak_prominence": 0.6421012926801637,
+    "ioi_cv": 0.31414591719129437,
+    "onset_rate_hz": 5.2
+   },
+   {
+    "n_onsets": 108,
+    "attack_slope": 0.4776750079841581,
+    "peak_prominence": 0.49934209911201494,
+    "ioi_cv": 0.26239706340747,
+    "onset_rate_hz": 5.4
+   },
+   {
+    "n_onsets": 109,
+    "attack_slope": 0.3229122528534919,
+    "peak_prominence": 0.2703436434487245,
+    "ioi_cv": 0.2636381189457657,
+    "onset_rate_hz": 5.45
+   },
+   {
+    "n_onsets": 106,
+    "attack_slope": 0.4475014705135614,
+    "peak_prominence": 0.4330019113284289,
+    "ioi_cv": 0.2859382587948076,
+    "onset_rate_hz": 5.3
+   },
+   {
+    "n_onsets": 97,
+    "attack_slope": 0.5870503875746855,
+    "peak_prominence": 0.5678604255491716,
+    "ioi_cv": 0.35902792633672503,
+    "onset_rate_hz": 4.85
+   },
+   {
+    "n_onsets": 106,
+    "attack_slope": 0.47614712644104185,
+    "peak_prominence": 0.4752464383877878,
+    "ioi_cv": 0.2930891690248651,
+    "onset_rate_hz": 5.3
+   },
+   {
+    "n_onsets": 111,
+    "attack_slope": 0.39010068020658584,
+    "peak_prominence": 0.3628717792474114,
+    "ioi_cv": 0.2377770092412837,
+    "onset_rate_hz": 5.55
+   },
+   {
+    "n_onsets": 113,
+    "attack_slope": 0.5514125696818386,
+    "peak_prominence": 0.5387052063456796,
+    "ioi_cv": 0.2778500251888491,
+    "onset_rate_hz": 5.65
+   },
+   {
+    "n_onsets": 112,
+    "attack_slope": 0.33955226884786016,
+    "peak_prominence": 0.2826534005566966,
+    "ioi_cv": 0.2513667903238329,
+    "onset_rate_hz": 5.6
+   },
+   {
+    "n_onsets": 113,
+    "attack_slope": 0.34732546370805617,
+    "peak_prominence": 0.3091083003589928,
+    "ioi_cv": 0.24223518144821063,
+    "onset_rate_hz": 5.65
+   },
+   {
+    "n_onsets": 99,
+    "attack_slope": 0.5767240842705517,
+    "peak_prominence": 0.5777203207676282,
+    "ioi_cv": 0.30069548468070606,
+    "onset_rate_hz": 4.95
+   },
+   {
+    "n_onsets": 85,
+    "attack_slope": 0.5367049136533536,
+    "peak_prominence": 0.5040498483047613,
+    "ioi_cv": 0.4680821715205732,
+    "onset_rate_hz": 4.25
+   },
+   {
+    "n_onsets": 100,
+    "attack_slope": 0.5085690548131627,
+    "peak_prominence": 0.4903137267640942,
+    "ioi_cv": 0.30665594015066494,
+    "onset_rate_hz": 5.0
+   },
+   {
+    "n_onsets": 109,
+    "attack_slope": 0.28987663657094,
+    "peak_prominence": 0.26337190155071166,
+    "ioi_cv": 0.278301136726099,
+    "onset_rate_hz": 5.45
+   },
+   {
+    "n_onsets": 103,
+    "attack_slope": 0.4321022768243566,
+    "peak_prominence": 0.4247100947472753,
+    "ioi_cv": 0.28612279214069997,
+    "onset_rate_hz": 5.15
+   },
+   {
+    "n_onsets": 93,
+    "attack_slope": 0.5462328324993935,
+    "peak_prominence": 0.5177605828856682,
+    "ioi_cv": 0.3815827881779926,
+    "onset_rate_hz": 4.65
+   },
+   {
+    "n_onsets": 110,
+    "attack_slope": 0.396365874536745,
+    "peak_prominence": 0.37387942262493457,
+    "ioi_cv": 0.22916995331769052,
+    "onset_rate_hz": 5.5
+   },
+   {
+    "n_onsets": 110,
+    "attack_slope": 0.3336581737507908,
+    "peak_prominence": 0.3144717129024537,
+    "ioi_cv": 0.27167535303305795,
+    "onset_rate_hz": 5.5
+   },
+   {
+    "n_onsets": 99,
+    "attack_slope": 0.5983581983121773,
+    "peak_prominence": 0.5345913691651727,
+    "ioi_cv": 0.4788540204626504,
+    "onset_rate_hz": 4.95
+   },
+   {
+    "n_onsets": 110,
+    "attack_slope": 0.3401529959633556,
+    "peak_prominence": 0.286071236130704,
+    "ioi_cv": 0.2470991630418672,
+    "onset_rate_hz": 5.5
+   }
+  ],
+  "smear50ms_smc": [
+   {
+    "n_onsets": 108,
+    "attack_slope": 0.31971371216479416,
+    "peak_prominence": 0.31785607821497497,
+    "ioi_cv": 0.3027137781052819,
+    "onset_rate_hz": 5.4
+   },
+   {
+    "n_onsets": 109,
+    "attack_slope": 0.34655498778687266,
+    "peak_prominence": 0.3706990175353909,
+    "ioi_cv": 0.2850462878416837,
+    "onset_rate_hz": 5.45
+   },
+   {
+    "n_onsets": 102,
+    "attack_slope": 0.4816374490330665,
+    "peak_prominence": 0.5039007144211158,
+    "ioi_cv": 0.2891074366025777,
+    "onset_rate_hz": 5.1
+   },
+   {
+    "n_onsets": 75,
+    "attack_slope": 0.48821298401262664,
+    "peak_prominence": 0.5352718439810823,
+    "ioi_cv": 0.5689567940932234,
+    "onset_rate_hz": 3.75
+   },
+   {
+    "n_onsets": 98,
+    "attack_slope": 0.28616538942486025,
+    "peak_prominence": 0.23907821698801351,
+    "ioi_cv": 0.4097799103650256,
+    "onset_rate_hz": 4.9
+   },
+   {
+    "n_onsets": 91,
+    "attack_slope": 0.3843968019863359,
+    "peak_prominence": 0.44892296100617113,
+    "ioi_cv": 0.4088864638889251,
+    "onset_rate_hz": 4.55
+   },
+   {
+    "n_onsets": 107,
+    "attack_slope": 0.28372906474657156,
+    "peak_prominence": 0.2481753415640459,
+    "ioi_cv": 0.23801618018092027,
+    "onset_rate_hz": 5.35
+   },
+   {
+    "n_onsets": 111,
+    "attack_slope": 0.31206109614808886,
+    "peak_prominence": 0.31386758560490186,
+    "ioi_cv": 0.2607272036446292,
+    "onset_rate_hz": 5.55
+   },
+   {
+    "n_onsets": 103,
+    "attack_slope": 0.3999553400769312,
+    "peak_prominence": 0.4755775495769689,
+    "ioi_cv": 0.30913966252242353,
+    "onset_rate_hz": 5.15
+   },
+   {
+    "n_onsets": 108,
+    "attack_slope": 0.32577114371282867,
+    "peak_prominence": 0.29433704981607695,
+    "ioi_cv": 0.3335879860099277,
+    "onset_rate_hz": 5.4
+   },
+   {
+    "n_onsets": 104,
+    "attack_slope": 0.4699141693384848,
+    "peak_prominence": 0.5878420690742664,
+    "ioi_cv": 0.3717902807180009,
+    "onset_rate_hz": 5.2
+   },
+   {
+    "n_onsets": 100,
+    "attack_slope": 0.339777276410697,
+    "peak_prominence": 0.449613931412465,
+    "ioi_cv": 0.3160116892285865,
+    "onset_rate_hz": 5.0
+   },
+   {
+    "n_onsets": 112,
+    "attack_slope": 0.296952414962344,
+    "peak_prominence": 0.27601243700735467,
+    "ioi_cv": 0.26775940538954407,
+    "onset_rate_hz": 5.6
+   },
+   {
+    "n_onsets": 96,
+    "attack_slope": 0.40326778985346573,
+    "peak_prominence": 0.40737646067542865,
+    "ioi_cv": 0.33978361374842714,
+    "onset_rate_hz": 4.8
+   },
+   {
+    "n_onsets": 92,
+    "attack_slope": 0.47608830294455695,
+    "peak_prominence": 0.5583162896654565,
+    "ioi_cv": 0.40707416813148073,
+    "onset_rate_hz": 4.6
+   },
+   {
+    "n_onsets": 101,
+    "attack_slope": 0.3999521719317545,
+    "peak_prominence": 0.4415180241885266,
+    "ioi_cv": 0.2963009447157484,
+    "onset_rate_hz": 5.05
+   },
+   {
+    "n_onsets": 105,
+    "attack_slope": 0.34931553704444823,
+    "peak_prominence": 0.3750877258191293,
+    "ioi_cv": 0.27183611397703933,
+    "onset_rate_hz": 5.25
+   },
+   {
+    "n_onsets": 107,
+    "attack_slope": 0.4109969917788957,
+    "peak_prominence": 0.5337264009540307,
+    "ioi_cv": 0.3319942651789036,
+    "onset_rate_hz": 5.35
+   },
+   {
+    "n_onsets": 101,
+    "attack_slope": 0.30624166659801966,
+    "peak_prominence": 0.26557247376905335,
+    "ioi_cv": 0.3430165943544883,
+    "onset_rate_hz": 5.05
+   },
+   {
+    "n_onsets": 110,
+    "attack_slope": 0.31733764844967827,
+    "peak_prominence": 0.28974658431048955,
+    "ioi_cv": 0.3256779680055345,
+    "onset_rate_hz": 5.5
+   },
+   {
+    "n_onsets": 97,
+    "attack_slope": 0.43908556972052715,
+    "peak_prominence": 0.5507779613995216,
+    "ioi_cv": 0.34238255203352785,
+    "onset_rate_hz": 4.85
+   },
+   {
+    "n_onsets": 81,
+    "attack_slope": 0.417609065279588,
+    "peak_prominence": 0.5723913893850643,
+    "ioi_cv": 0.5079298001047265,
+    "onset_rate_hz": 4.05
+   },
+   {
+    "n_onsets": 93,
+    "attack_slope": 0.40760235170396464,
+    "peak_prominence": 0.47108209811094287,
+    "ioi_cv": 0.37973774809554306,
+    "onset_rate_hz": 4.65
+   },
+   {
+    "n_onsets": 98,
+    "attack_slope": 0.27609362542306504,
+    "peak_prominence": 0.25416416058679536,
+    "ioi_cv": 0.3080357251396775,
+    "onset_rate_hz": 4.9
+   },
+   {
+    "n_onsets": 92,
+    "attack_slope": 0.3714269479310111,
+    "peak_prominence": 0.4283508168663278,
+    "ioi_cv": 0.36081658872327166,
+    "onset_rate_hz": 4.6
+   },
+   {
+    "n_onsets": 91,
+    "attack_slope": 0.45623249565203394,
+    "peak_prominence": 0.530966314751401,
+    "ioi_cv": 0.3598198818682344,
+    "onset_rate_hz": 4.55
+   },
+   {
+    "n_onsets": 110,
+    "attack_slope": 0.3171011592886497,
+    "peak_prominence": 0.3673434929292737,
+    "ioi_cv": 0.29690976894952176,
+    "onset_rate_hz": 5.5
+   },
+   {
+    "n_onsets": 98,
+    "attack_slope": 0.3060864263619343,
+    "peak_prominence": 0.3207834331485162,
+    "ioi_cv": 0.33371148272540696,
+    "onset_rate_hz": 4.9
+   },
+   {
+    "n_onsets": 88,
+    "attack_slope": 0.46263132875837754,
+    "peak_prominence": 0.5214252304423677,
+    "ioi_cv": 0.48146186298985666,
+    "onset_rate_hz": 4.4
+   },
+   {
+    "n_onsets": 102,
+    "attack_slope": 0.2940018457782592,
+    "peak_prominence": 0.31538626695683,
+    "ioi_cv": 0.34547303187614864,
+    "onset_rate_hz": 5.1
+   }
+  ],
+  "smear100ms_smc": [
+   {
+    "n_onsets": 97,
+    "attack_slope": 0.26040659577168684,
+    "peak_prominence": 0.31407085819301517,
+    "ioi_cv": 0.3535674357496628,
+    "onset_rate_hz": 4.85
+   },
+   {
+    "n_onsets": 95,
+    "attack_slope": 0.26344758658781087,
+    "peak_prominence": 0.35304606630694507,
+    "ioi_cv": 0.29836057103020647,
+    "onset_rate_hz": 4.75
+   },
+   {
+    "n_onsets": 102,
+    "attack_slope": 0.3524293293008753,
+    "peak_prominence": 0.44408643630826,
+    "ioi_cv": 0.2813977711349272,
+    "onset_rate_hz": 5.1
+   },
+   {
+    "n_onsets": 72,
+    "attack_slope": 0.4372382548885926,
+    "peak_prominence": 0.4565893957956675,
+    "ioi_cv": 0.5220040308193875,
+    "onset_rate_hz": 3.6
+   },
+   {
+    "n_onsets": 91,
+    "attack_slope": 0.2620421397129166,
+    "peak_prominence": 0.2346057944006913,
+    "ioi_cv": 0.36991291832961387,
+    "onset_rate_hz": 4.55
+   },
+   {
+    "n_onsets": 77,
+    "attack_slope": 0.34924326863851535,
+    "peak_prominence": 0.3959636134953993,
+    "ioi_cv": 0.5441138850918671,
+    "onset_rate_hz": 3.85
+   },
+   {
+    "n_onsets": 96,
+    "attack_slope": 0.25679466327914385,
+    "peak_prominence": 0.2480134826254742,
+    "ioi_cv": 0.34413547944591716,
+    "onset_rate_hz": 4.8
+   },
+   {
+    "n_onsets": 95,
+    "attack_slope": 0.2686180096306603,
+    "peak_prominence": 0.30415777721937853,
+    "ioi_cv": 0.31525024839811905,
+    "onset_rate_hz": 4.75
+   },
+   {
+    "n_onsets": 101,
+    "attack_slope": 0.3803646119199961,
+    "peak_prominence": 0.3924100117297424,
+    "ioi_cv": 0.3052945890863835,
+    "onset_rate_hz": 5.05
+   },
+   {
+    "n_onsets": 97,
+    "attack_slope": 0.29356798152705965,
+    "peak_prominence": 0.2782774384095393,
+    "ioi_cv": 0.4055446090975748,
+    "onset_rate_hz": 4.85
+   },
+   {
+    "n_onsets": 103,
+    "attack_slope": 0.34929769599809785,
+    "peak_prominence": 0.4547679448379622,
+    "ioi_cv": 0.38793042594371235,
+    "onset_rate_hz": 5.15
+   },
+   {
+    "n_onsets": 99,
+    "attack_slope": 0.30821952544800474,
+    "peak_prominence": 0.37364809443309266,
+    "ioi_cv": 0.3607820818819827,
+    "onset_rate_hz": 4.95
+   },
+   {
+    "n_onsets": 104,
+    "attack_slope": 0.26872141208545325,
+    "peak_prominence": 0.2584334714418911,
+    "ioi_cv": 0.3410824684378014,
+    "onset_rate_hz": 5.2
+   },
+   {
+    "n_onsets": 89,
+    "attack_slope": 0.3873185987562308,
+    "peak_prominence": 0.3970338350494807,
+    "ioi_cv": 0.45083724235159234,
+    "onset_rate_hz": 4.45
+   },
+   {
+    "n_onsets": 83,
+    "attack_slope": 0.38286897898456423,
+    "peak_prominence": 0.458216145853574,
+    "ioi_cv": 0.4192943888803181,
+    "onset_rate_hz": 4.15
+   },
+   {
+    "n_onsets": 98,
+    "attack_slope": 0.36257964760626543,
+    "peak_prominence": 0.3604357145198015,
+    "ioi_cv": 0.3496800678570459,
+    "onset_rate_hz": 4.9
+   },
+   {
+    "n_onsets": 104,
+    "attack_slope": 0.33468975752733515,
+    "peak_prominence": 0.3525456395755298,
+    "ioi_cv": 0.28373799662077404,
+    "onset_rate_hz": 5.2
+   },
+   {
+    "n_onsets": 100,
+    "attack_slope": 0.3230418665587292,
+    "peak_prominence": 0.36270476090026094,
+    "ioi_cv": 0.3346116889644955,
+    "onset_rate_hz": 5.0
+   },
+   {
+    "n_onsets": 91,
+    "attack_slope": 0.2852502262093619,
+    "peak_prominence": 0.2682852143954141,
+    "ioi_cv": 0.44707915173172014,
+    "onset_rate_hz": 4.55
+   },
+   {
+    "n_onsets": 98,
+    "attack_slope": 0.28566125346780197,
+    "peak_prominence": 0.28737623931001266,
+    "ioi_cv": 0.30308653087050225,
+    "onset_rate_hz": 4.9
+   },
+   {
+    "n_onsets": 91,
+    "attack_slope": 0.42142876200576174,
+    "peak_prominence": 0.4615191722688846,
+    "ioi_cv": 0.4421292968276533,
+    "onset_rate_hz": 4.55
+   },
+   {
+    "n_onsets": 77,
+    "attack_slope": 0.4639786544491809,
+    "peak_prominence": 0.43035008440434164,
+    "ioi_cv": 0.5480664793584861,
+    "onset_rate_hz": 3.85
+   },
+   {
+    "n_onsets": 92,
+    "attack_slope": 0.3987744735596742,
+    "peak_prominence": 0.36769562435435704,
+    "ioi_cv": 0.43143232545214155,
+    "onset_rate_hz": 4.6
+   },
+   {
+    "n_onsets": 92,
+    "attack_slope": 0.24515628647905094,
+    "peak_prominence": 0.2429563874332981,
+    "ioi_cv": 0.34374888181238306,
+    "onset_rate_hz": 4.6
+   },
+   {
+    "n_onsets": 90,
+    "attack_slope": 0.33618295060632875,
+    "peak_prominence": 0.40367843973411915,
+    "ioi_cv": 0.40653147457068023,
+    "onset_rate_hz": 4.5
+   },
+   {
+    "n_onsets": 91,
+    "attack_slope": 0.3795726832336759,
+    "peak_prominence": 0.4289111989489817,
+    "ioi_cv": 0.4270596256594717,
+    "onset_rate_hz": 4.55
+   },
+   {
+    "n_onsets": 104,
+    "attack_slope": 0.30439901685589504,
+    "peak_prominence": 0.31830274888976245,
+    "ioi_cv": 0.31177240877028,
+    "onset_rate_hz": 5.2
+   },
+   {
+    "n_onsets": 87,
+    "attack_slope": 0.2701061250955007,
+    "peak_prominence": 0.31561876869785677,
+    "ioi_cv": 0.32467215693235996,
+    "onset_rate_hz": 4.35
+   },
+   {
+    "n_onsets": 89,
+    "attack_slope": 0.425660746214374,
+    "peak_prominence": 0.40016788839618206,
+    "ioi_cv": 0.5740468947772004,
+    "onset_rate_hz": 4.45
+   },
+   {
+    "n_onsets": 90,
+    "attack_slope": 0.2629858470118065,
+    "peak_prominence": 0.29382742084153973,
+    "ioi_cv": 0.4394927355818153,
+    "onset_rate_hz": 4.5
+   }
+  ]
+ }
+}

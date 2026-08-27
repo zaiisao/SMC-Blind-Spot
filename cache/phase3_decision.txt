@@ -1,0 +1,46 @@
+Pre-registered 2026-08-25 21:20, BEFORE any arm-B checkpoint was evaluated.
+Arm A is already known (it is the baseline, not the test) and is quoted below so
+the comparison is fully specified in advance.
+
+WHAT IS BEING TESTED
+  Does widening the precomputed tempo-augmentation range from -20..+20 to
+  -60..+20 improve Beat This on SMC, and is the gain concentrated below 70 BPM
+  as the tempo-coverage account predicts?
+
+DESIGN
+  Both arms: from scratch, fold 0, 3 seeds, identical corpus (1,954 tracks),
+  identical hyperparameters. ONLY difference: tempo range (22 vs 32 precomputed
+  variants per track, drawn from ONE shared spectrogram store).
+  Neither arm saw ANY SMC track in training, so all 217 are honest test data and
+  no fold-honest bookkeeping is needed for the A-vs-B contrast.
+
+ARM A, MEASURED (3 seeds, n=217):
+    ALL      0.5818  (sd 0.0095)
+    <70      0.5167  (sd 0.0125)   n=103
+    70-100   0.6379  (sd 0.0031)   n=76
+    >100     0.6460  (sd 0.0186)   n=38
+
+PRIMARY READOUT
+  d70 = mean F(arm B) - mean F(arm A) on the 103 tracks below 70 BPM,
+  averaged over seeds, paired per track, Wilcoxon over tracks.
+
+DECISION RULE
+  PROCEED   d70 >= +0.03  AND  p < 0.01  AND  d70 > d100
+            -> the mechanism holds; scale up (folds 5 and 7, then the absolute
+               claim against 0.6449 via full-corpus training and/or TTA stacking)
+  KILL      d70 <= +0.02
+            -> tempo coverage does not fix slow-tempo tracking at this dose.
+               The tempo programme ends here. Do NOT re-slice by another band,
+               another metric, or another fold to find a win.
+  AMBIGUOUS otherwise -> run folds 5 and 7 before interpreting anything.
+
+MECHANISM CHECK (does not override the decision rule, but is reported)
+  Arm B's extra data is ENTIRELY slow; there is nothing new above 100 BPM.
+  So d70 > d100 is required. A uniform lift across all three bands indicates
+  generic regularisation, NOT tempo coverage, and must be reported as such even
+  if the headline F improves.
+
+WHAT THIS CANNOT CLAIM
+  Absolute performance. Both arms train on ~43% of upstream's data, so neither
+  can be compared to the released checkpoints or to the banked TTA 0.6449.
+  This experiment measures a DELTA and nothing else.

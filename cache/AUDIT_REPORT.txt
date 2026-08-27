@@ -1,0 +1,695 @@
+====================================================================================================
+AUDIT OF THE 2026-08-26 SESSION — FULL REPORT
+====================================================================================================
+
+19 findings survived adversarial verification (each re-run independently by a
+second agent instructed to refute it). 2 block the A/B test.
+
+====================================================================================================
+PART 1 — ALL VERIFIED FINDINGS
+====================================================================================================
+
+[ 1] loss-math   VERDICT: CONFIRMED
+      CLAIM: Session claim: "the structural minimum collar half-width is 2*tolerance, because the
+      prediction max-pool spreads a correct peak up to 2*tolerance frames."
+      CORRECTION: Claim stands as stated. Precise form: the reach of a peak at annotation+off is
+      [A+off-3, A+off+3]; the union over |off|<=3 is [A-6, A+6].
+
+[ 2] loss-math   VERDICT: CONFIRMED
+      CLAIM: TempoRelativeCollarBCELoss docstring: the collar is a pure tempo-normalisation of the
+      stock 'don't care' region; nothing about correct peaks being penalised. Code default
+      min_half=2.
+      CORRECTION: With the shipped default min_half=2, TempoRelativeCollarBCELoss actively pushes
+      DOWN a correctly-placed, confident peak for all tempi above ~76 bpm — the majority of any real
+      corpus. min_half must be >= 2*tolerance (6 at tolerance=3) for the loss to be sound; at
+      min_half=6 it is provably clean at every tempo and peak logit tested.
+
+[ 3] loss-math   VERDICT: REFUTED
+      CLAIM: TempoRelativeCollarBCELoss docstring: "k = 0.30 leaves 70 bpm unchanged (13 frames),
+      widens 40 bpm to ~22, narrows 180 bpm to ~5."
+      CORRECTION: It is k=0.14 (the shipped default) that leaves 70 bpm unchanged at 13 frames
+      total. The docstring's worked example describes a configuration the code does not use, and
+      mislabels half-widths as frame counts.
+
+[ 4] loss-math   VERDICT: REFUTED
+      CLAIM: PhaseWeightedShiftTolerantBCELoss docstring: "sigma = 0.06 puts the half-height at
+      +/-0.12 of an IBI".
+      CORRECTION: sigma=0.06 puts the half-height at +/-0.0706 IBI. The docstring overstates the
+      width of the subdivision bump by ~1.7x.
+
+[ 5] corpus-data   VERDICT: CONFIRMED
+      CLAIM: 'Training set: 4796' in logs vs 2349 items — reconcile
+
+[ 6] corpus-data   VERDICT: CONFIRMED
+      CLAIM: pos_weight at launch is {'beat': 32, 'downbeat': 112}; a hand calc suggested 30
+
+[ 7] corpus-data   VERDICT: CONFIRMED
+      CLAIM: Zero fold-0 leakage: no canonical SMC fold-0 stem appears in a training fold
+
+[ 8] corpus-data   VERDICT: CONFIRMED
+      CLAIM: The dataloader previously SKIPPED one-column tracks entirely rather than mis-
+      supervising them
+
+[ 9] comparability   VERDICT: CONFIRMED
+      CLAIM: collar14 vs ph13 is confounded because collar14 has no phase term
+      CORRECTION: collar14 vs ph13 differs in TWO variables: relative collar (k*IBI vs fixed ±6
+      frames) AND presence of the phase term. The −0.014 cannot be attributed to the collar.
+      Additional minor caveat: loss.py was last modified 19:00 on 08-26 and collar14's first ckpt is
+      19:08 (started ~19:02), so collar14 is the only phase5 arm on the post-19:00 loss.py; whether
+      that edit touched the shared ShiftTolerantBCELoss base is UNVERIFIED (no intermediate versions
+      on disk, file is uncommitted).
+
+[10] comparability   VERDICT: REFUTED
+      CLAIM: all arms ran with pos_weight 32, identical
+      CORRECTION: True for every OUR-arm except pw14 (beat=14, by design). It is false for the
+      released reference: 20/86, not 32/112. Any of our arms compared to the released number carries
+      a pos_weight difference on top of everything else.
+
+[11] comparability   VERDICT: CONFIRMED
+      CLAIM: ph13 0.6568 vs released 0.6510 confounds loss with corpus
+      CORRECTION: The comparison differs in at least FOUR variables: loss (phase vs stock),
+      pos_weight (32/112 vs 20/86), corpus composition, and training code. KNOWN from the
+      checkpoint: the released model's loss, pos_weights, and augmentation config. NOT KNOWN from
+      any artifact on this machine: the released model's exact training track list — the release
+      stores no dataset manifest, so 'different corpus' rests on the published dataset list, not on
+      measurement. It is ASSUMED, not verified, that it saw the same tracks as our 2678. Also note
+      the release's tempo range (-20..+20) matches our default arms, so tempo augmentation is NOT
+      one of the confounds.
+
+[12] comparability   VERDICT: CONFIRMED
+      CLAIM: the f0_wide stock trio is on the broken corpus so cannot baseline ph13
+      CORRECTION: Confirmed. All six phase3 arms (f0_shipped_s0-s2, f0_wide_s0-s2) and both phase4
+      peritem arms trained on 1954 tracks with zero SMC; ph13 trained on 2678 with 200 SMC. Note the
+      phase3 pair itself is still internally valid: f0_shipped vs f0_wide differ only in tempo_min
+      (-20 vs -60), same data_dir, same seed pairing (cache/run_phase3.sh). It is the cross-phase
+      use of them as a ph13 baseline that is invalid.
+
+[13] statistics   VERDICT: PARTIAL
+      CLAIM: "run-to-run noise floor is ~0.007 F" — used throughout the session as the threshold
+      below which differences are ignored.
+      CORRECTION: A single paired difference is not a legitimate noise estimate. Defensible figure
+      for a single-seed single-checkpoint fold-0 F: seed sd 0.028 (3 seeds, df=2; 95% CI [0.015,
+      0.176]) combined with checkpoint sd ~0.013 gives sd ~0.031. For a two-arm comparison run at
+      one seed each, the sd of the difference is sqrt(2)*0.031 = 0.044 and n=1 pair, so NO single-
+      seed arm comparison on fold 0 is significant. 0.007 understates the real floor by roughly 4-6x
+      and should be described as a lower bound covering GPU nondeterminism only. Every
+      "outside/inside the 0.007 noise floor" judgement in the session was made against the wrong
+      number.
+
+[14] statistics   VERDICT: CONFIRMED
+      CLAIM: "fold 0 is easier than the 8-fold average: released scores 0.6510 on fold 0 vs 0.6270
+      over 217 tracks"
+      CORRECTION: The +0.0240 gap is real as a fact about those 27 tracks, but it is NOT evidence
+      that fold 0 is intrinsically easy: Welch t=0.52, p=0.605 vs the other 190 tracks, and the
+      standard error of any 27-track fold mean is 0.0446, which is larger than the observed between-
+      fold sd of 0.0320 — i.e. the fold-to-fold variation is essentially all sampling noise. The
+      correct implication is stronger than "fold 0 is easy": any fold-0-only number carries ~0.045
+      of standard error relative to the corpus value, so a fold-0 gain of 0.01-0.03 (the size the
+      session was chasing) is uninformative about the 8-fold result. This applies to every fold-0
+      claim in the session, including all the ph13/gph13/sig10/bidir03/collar14/peritem/pw14
+      comparisons in all_scores.log, which are n=27 fold-0 only.
+
+[15] statistics   VERDICT: REFUTED
+      CLAIM: Per-tempo tercile conclusions on fold 0, e.g. "gated is at or below ungated on the
+      slowest third every time (-0.007, -0.006, -0.042)", "gated loses on the slowest third (-0.027)
+      and the fastest third (-0.022)", "no tempo group moves more than 0.007".
+      CORRECTION: NOT ONE of the session's per-tempo tercile conclusions exceeds its detection
+      threshold. The largest cited tercile gap, -0.042, sits at or below the 0.042-0.066 MDE for the
+      slow tercile; -0.027, -0.022, -0.007, -0.006, +0.005 are all far inside it. The session's own
+      remark that "a tempo group moves by 0.04 when a single track's F changes by 0.36" is right and
+      should have ended the analysis. No per-tempo tercile conclusion in this session is
+      statistically supportable at n=9.
+
+[16] statistics   VERDICT: CONFIRMED
+      CLAIM: Detectable effect size on F with 27 evaluation tracks; power of the paired test.
+      CORRECTION: The session was chasing 0.010-0.020 F. At n=27 with the BEST-case pairing (arms
+      sharing an initialisation) power at delta=0.010 is 39% — a coin flip that loses. Anything
+      below ~0.017 F is undetectable on 27 tracks. And this ignores seed variance entirely: with one
+      seed per arm, the config-level comparison has n=1 regardless of how many tracks are scored.
+      For 80% power at delta=0.010 you need either the full 217 tracks (MDE 0.0057 at sd_d=0.030) or
+      multiple seeds per arm.
+
+[17] drift   VERDICT: CONFIRMED
+      CLAIM: R4 warm-start decay attributed to corpus tempo mismatch: "The fine-tuning corpus sits
+      21 BPM faster than SMC and has only half its share of slow tracks... So the warm-start decay
+      you remember isn't the optimizer forgetting; it's the data pulling the model's preferred
+      metrical level upward" (atext.txt:9906), restated as an action item at 9928 ("The cause is the
+      corpus tempo mismatch above — 92.7 vs 71.4 BPM median... resample the fine-tuning corpus").
+      CORRECTION: The 0.028 first-epoch drop is not attributable to corpus tempo mismatch. Domain
+      forgetting (the fine-tuning corpus contained zero SMC tracks) is at least as good an
+      explanation and was never ruled out. Neither cause is established; the correct statement is
+      that the mechanism is unidentified, and the proposed tempo-resampling fix was not licensed.
+
+[18] drift   VERDICT: CONFIRMED
+      CLAIM: "The gate is done. 0 of 10 matched epochs ahead, mean −0.0157, and the deficit doesn't
+      shrink with training... I'd stop gph13 and free GPU 2." (atext.txt:11480)
+      CORRECTION: Both the original 'dead' and the reversal were over-read from aggregate means. The
+      evidence supports: the gate is net-negative in aggregate F, and its aggregate hides a slow-
+      track gain (+0.030) cancelled by fast-track damage concentrated in one 143 BPM track out of
+      nine. The kill decision was right; the reasoning that produced it (aggregate mean alone) was
+      not, and the reversal was driven by a 9-track-per-bin split that cannot resolve the effect.
+
+[19] drift   VERDICT: PARTIAL
+      CLAIM: "peritem is ahead in all three tempo groups at epoch 24, +0.0166 overall. That's the
+      first time any arm has beaten ph13 across the board today." (atext.txt:12117), repeated in the
+      ranking at 12130 as "Currently ahead".
+      CORRECTION: peritem is a wash on F (mean −0.0080, scatter twice the mean), not an arm that
+      beat ph13. The +0.0166 headline should never have been the lead; the running mean existed and
+      was not computed until challenged.
+
+====================================================================================================
+PART 2 — BLOCKERS
+====================================================================================================
+
+[B1] loss-math
+      CLAIM: TempoRelativeCollarBCELoss docstring: the collar is a pure tempo-normalisation of the
+      stock 'don't care' region; nothing about correct peaks being penalised. Code default
+      min_half=2.
+      CORRECTION: With the shipped default min_half=2, TempoRelativeCollarBCELoss actively pushes
+      DOWN a correctly-placed, confident peak for all tempi above ~76 bpm — the majority of any real
+      corpus. min_half must be >= 2*tolerance (6 at tolerance=3) for the loss to be sound; at
+      min_half=6 it is provably clean at every tempo and peak logit tested.
+
+[B2] statistics
+      CLAIM: Detectable effect size on F with 27 evaluation tracks; power of the paired test.
+      CORRECTION: The session was chasing 0.010-0.020 F. At n=27 with the BEST-case pairing (arms
+      sharing an initialisation) power at delta=0.010 is 39% — a coin flip that loses. Anything
+      below ~0.017 F is undetectable on 27 tracks. And this ignores seed variance entirely: with one
+      seed per arm, the config-level comparison has n=1 regardless of how many tracks are scored.
+      For 80% power at delta=0.010 you need either the full 217 tracks (MDE 0.0057 at sd_d=0.030) or
+      multiple seeds per arm.
+
+====================================================================================================
+PART 3 — LOSS SPECIFICATION
+====================================================================================================
+
+--- DESIGN_RATIONALE ---
+  The spec is built on the one thing that survived every challenge: the geometry of the stock loss,
+  which is fully determined by tau, pos_weight, and the max-pool, and which I re-derived by running
+  the code rather than reading it. The cost accounting 7N / 16N / 39N is the load-bearing argument
+  for the phase term and it checks out exactly (39 = 32 + 7), but it also exposes a coupling nobody
+  stated: gamma = pos_weight/14 - 1, so gamma=1.3 is a fact about pos_weight=32, not a universal. I
+  kept the phase term on mechanism and named its empirical support as weak, because the statistics
+  findings rule out every fold-0 comparison that was supposed to justify it. I kept the tempo-
+  relative collar only with the 2*tau floor -- the shipped min_half=2 is a live bug that penalises
+  correct peaks above 76 bpm, measured on the gradient at 1204 configurations -- and I flagged it
+  speculative because its one arm is confounded twice over. I refused the halving boost as shipped
+  because it is arithmetically incompatible with the gamma it would ship next to. Two docstring
+  numbers are simply wrong (k=0.30, sigma half-height 0.12) and I corrected both by execution. The
+  invariants are written so that a test file can assert them directly, including the two process
+  invariants (gamma/pos_weight coupling, evaluation power) that would have caught most of the
+  session's errors.
+
+--- EQUATIONS ---
+  ALL EQUATIONS VERIFIED AGAINST THE CODE AT /home/sogang/jaehoon/Analyze-SMC/third-
+  party/beat_this/beat_this/model/loss.py (mtime 2026-08-26 19:00, uncommitted) AND BY EXECUTION
+  (scripts in the session scratchpad: v.py, v2.py, v3.py, v4.py).
+
+  SYMBOLS (shared by all three forms)
+  t frame index, 0..T-1, frame rate 50 fps (1 frame = 20 ms)
+  z_t model output LOGIT for frame t (beat head; the downbeat head is identical with its own
+  pos_weight)
+  y_t binary target, 1 at an annotated beat frame, else 0
+  m_t mask, 0 for padded frames and (downbeat head) for tracks with no downbeat annotation
+  tau tolerance in frames, shipped value 3 (= +/-60 ms, mirrors mir_eval's +/-70 ms)
+  P_tau(x)_t = max_{|d|<=tau} x_{t+d} (F.max_pool1d, kernel 2*tau+1, stride 1)
+  w pos_weight (scalar in stock; 32 beat / 112 downbeat on our corpus, 20/86 in the release)
+  sigma(.) logistic function
+  BCE_w(z,y) = -[ w*y*log sigma(z) + (1-y)*log(1-sigma(z)) ]
+  A_i frame of the i-th annotated beat; IBI_i = A_{i+1} - A_i (frames)
+  phi_t phase of frame t in its enclosing annotated interval, (t - A_i)/IBI_i in [0,1), NaN outside
+  [A_0, A_last]
+  d(phi,psi) = min(|phi-psi|, 1-|phi-psi|) (circular distance on the phase ring)
+  Valid frame set V = frames surviving the 2*tau crop at both ends (edges get no gradient).
+
+  --------------------------------------------------------------------
+  1. STOCK BEAT THIS LOSS (class ShiftTolerantBCELoss, lines 38-92)
+
+  L_stock = (1/|V|) * sum_{t in V} u_t * BCE_w( P_tau(z)_t , y_t )
+
+  with the "look at" weight
+  u_t = y_t + (1 - P_{2tau}(y)_t) * m_t [code: look_at = targets + (1 - spread(targets,2)); look_at
+  *= mask]
+
+  Read: predictions are max-pooled by +/-tau, so a positive label's gradient goes to the LARGEST
+  logit within +/-tau of it (shift tolerance). Negative supervision is switched OFF inside +/-2tau
+  of any beat (the "collar" / don't-care region), because a peak placed anywhere in +/-tau is spread
+  by the pooling to +/-2tau. Everything else is an ordinary weighted BCE. NOTE: the denominator is
+  |V| (F.binary_cross_entropy_with_logits default reduction 'mean' divides by element count, NOT by
+  sum of weights), so the weights are relative, not a weighted average.
+
+  Structural fact (CONFIRMED, and re-derived here): a correct peak sitting at A+off with |off|<=tau
+  reaches frames [A+off-tau, A+off+tau]; the union over all admissible off is [A-2tau, A+2tau].
+  Hence any collar half-width < 2tau leaves part of a CORRECT peak exposed to the negative term.
+  Measured: with half-width 2 and tau=3, dL/dz at a correct confident peak is POSITIVE (loss pushes
+  it down) at 76, 80, 100, 120, 140, 180, 200 bpm; at half-width 6 it is negative (pushes up) at
+  every bpm 30..240, every off in -3..3, every logit in {2,4,8,12}. Zero violations in 7*4*43 = 1204
+  configurations.
+
+  --------------------------------------------------------------------
+  2. PHASE-WEIGHTED TERM (class PhaseWeightedShiftTolerantBCELoss, lines 369-476; arm ph13,
+  gamma=1.3, sigma=0.06)
+
+  c_t = 1 + gamma * exp( - d(phi_t, 1/2)^2 / (2 sigma^2) ), c_t := 1 where phi_t is NaN
+
+  L_phase = (1/|V|) * sum_{t in V} u_t * [ y_t + (1-y_t) * c_t ] * BCE_w( P_tau(z)_t , y_t )
+
+  i.e. exactly L_stock with the NEGATIVE-side weight multiplied by c_t; positives keep weight 1 so
+  the miss/false-alarm exchange rate (pos_weight) is untouched. Verified by execution: with gamma=0
+  the class is bit-identical to ShiftTolerantBCELoss (torch.allclose True).
+
+  WHY PHASE COORDINATES. Every other quantity in the stock loss is in absolute frames: the collar is
+  +/-2tau = +/-120 ms at all tempi, which is 8% of an IBI at 40 bpm and 36% at 180 bpm, so the
+  geometry of the objective is tempo-dependent while one scalar w must serve all tempi. phi is
+  tempo-invariant by construction: phi=1/2 is the subdivision midpoint whether the IBI is 1500 ms or
+  333 ms. The failure being priced (double-tempo tracking) is defined as "extra peaks at the
+  subdivision", which is a statement about phase, not about milliseconds. Measured behaviour of the
+  shipped weight: max c = 2.2297 at phi=0.480 for IBI=25 fr, 2.2920 at phi=0.493 for IBI=75 fr (<
+  1+gamma = 2.3 only because frames are discrete and no frame lands exactly on 0.5); min c = 1.0
+  everywhere; the bump's >1.01 support is phi in [0.313, 0.687], which for IBI>=32 fr (<94 bpm)
+  never reaches the +/-2tau collar, and above 94 bpm it does overlap the collar but has no effect
+  there because u_t=0 kills the negative term inside the collar regardless of c_t.
+
+  --------------------------------------------------------------------
+  3. PROPOSED FINAL LOSS
+
+  L_final = (1/|V|) * sum_{t in V} U_t * [ y_t + (1-y_t) * c_t ] * BCE_w( P_tau(z)_t , y_t )
+
+  U_t = y_t + (1 - C_t) * m_t, C_t = P_{H}(y)_t (per-item, padded max-pool, length preserved)
+  H = clip( round(k * median_i IBI_i), H_min, H_max ), H_min = 2*tau, H_max = 40, k = 0.14
+  c_t as in section 2, gamma = 1.3, sigma = 0.06.
+
+  Two departures from the shipped TempoRelativeCollarBCELoss, both forced by measurement:
+  (a) H_min = 2*tau = 6, NOT the shipped default 2. At min_half=2 the loss penalises correct peaks
+  above ~76 bpm (measured above).
+  (b) Consequence to state plainly: with k=0.14 and H_min=6, H = 6 for every IBI <= 46 fr (>= 65
+  bpm), so the term is a pure WIDENING of the collar below 65 bpm and a no-op above it. The
+  docstring's "narrows 180 bpm to ~5" is unreachable once the floor is sound. The collar term is
+  therefore only a slow-tempo intervention.
+
+  TERM STATUS:
+  - Shift-tolerant BCE core: KEEP. It is the verified baseline.
+  - Phase suppression c_t (gamma=1.3, sigma=0.06): KEEP as the primary term, but its empirical
+  support is WEAK, not established. ph13's fold-0 0.6568 vs released 0.6510 is n=27 fold-0 only,
+  differs in >=4 variables (loss, pos_weight 32/112 vs 20/86, corpus composition, training code),
+  and sits far inside the real noise floor (sd of a single-seed fold-0 F ~ 0.031; MDE at n=27 with
+  best-case pairing ~0.017 F). The term is retained on MECHANISM (the cost-parity argument, which is
+  arithmetically sound, and the tempo-invariance argument), not on a measured win. Say so in any
+  write-up.
+  - Tempo-relative collar with floor 2*tau: SPECULATIVE. The only arm that tested it (collar14) is
+  confounded in two variables at once (relative collar AND absence of the phase term), so its -0.014
+  attributes to neither; and collar14 is the sole phase5 arm on the post-19:00 loss.py, whose diff
+  is unrecoverable. Include it only behind a flag, default OFF, until a one-variable arm exists.
+  - Halving boost h_i: SPECULATIVE and, as calibrated, arithmetically incompatible with gamma=1.3
+  (see rejected/constants). Do NOT ship it together with gamma=1.3 unchanged.
+
+  If the halving boost were added, the only coherent form is:
+  h_i = a_{i-1} * a_{i+1} * (1 - a_i), a_i = sigma(P_tau(z)_{A_i}) (activation at the i-th annotated
+  beat)
+  positive-side weight y_t -> y_t * (1 + gamma_h * h_{i(t)})
+  and gamma must be RE-DERIVED jointly (section 4), not left at 1.3.
+
+  DEGENERATE-CASE CHECK (executed): with gamma=0 and H forced to 6, L_final is torch.allclose to
+  L_stock. The proposal is a strict superset of the baseline.
+
+--- CONSTANTS ---
+  EVERY CONSTANT, ITS VALUE, AND ITS DERIVATION. "MEASURED" = I ran it this session; "INHERITED" = a
+  session number I could not re-measure from an artifact.
+
+  tau = 3 frames (+/-60 ms at 50 fps)
+  Derivation: mirrors mir_eval's fixed +/-70 ms hit window. Deliberately NOT made tempo-relative: a
+  relative tolerance at 40 bpm would be +/-150 ms, training would call "close enough" what the
+  metric scores as a miss. Rule: normalise what the metric does not constrain, leave aligned what it
+  does.
+
+  collar half-width (stock) = 2*tau = 6 frames (13 frames total, +/-120 ms)
+  Derivation MEASURED: a correct peak at A+off, |off|<=tau, is max-pooled to [A+off-tau, A+off+tau];
+  union over |off|<=tau is [A-2tau, A+2tau]. So 2*tau is the STRUCTURAL MINIMUM, not a taste
+  parameter.
+
+  w (pos_weight) = 32 beat / 112 downbeat on our corpus (release: 20 / 86)
+  Derivation: w = (total_frames - beats*(2*tau+1)) / beats over the unaugmented training tracks.
+  w=32 implies ~39 frames per beat = 0.78 s = ~77 bpm, i.e. the objective carries an implicit
+  preferred beat rate. CONFIRMED at launch. NOTE the hand-calc that said 30 was wrong; 32 is the
+  launched value.
+
+  gamma = 1.3 (phase suppression strength)
+  Derivation MEASURED (cost parity, per N annotated beats, at tau=3, w=32):
+  doubling : all N beats hit, N spurious peaks. One confident spurious peak drives 2*tau+1 = 7
+  negative frames -> cost 7N.
+  halving : N/2 beats missed, each at positive weight w -> cost (N/2)*w = 16N.
+  offbeat : all N missed (wN = 32N) plus N spurious (7N) -> 39N.
+  So under the stock loss the coherent wrong metrical level is the CHEAPEST error available. Parity:
+  7N(1+gamma) = 16N -> gamma = 16/7 - 1 = 1.2857 -> 1.3. VERIFIED arithmetically; the 7N/16N/39N
+  accounting is internally consistent (39 = 32 + 7 exactly).
+  CRITICAL CAVEAT, newly derived here: gamma is a function of w, not a universal constant.
+  gamma*(w, tau) = w / (2*(2*tau+1)) - 1 = w/14 - 1 at tau=3.
+  w=32 -> 1.286; w=20 (the release) -> 0.429; w=14 (arm pw14) -> 0.0.
+  Any change to pos_weight invalidates gamma=1.3. At w=14 the parity gamma is exactly zero, i.e. the
+  phase term is unmotivated at that pos_weight. This coupling was not stated in the session and must
+  be in the spec.
+
+  sigma = 0.06 (phase bump width, in IBI units)
+  Derivation MEASURED: half-height at d = sigma*sqrt(2 ln 2) = 0.06*1.17741 = 0.07064 IBI, i.e.
+  +/-0.0706, NOT the +/-0.12 the docstring claims (overstated by 1.67x). The docstring is wrong; the
+  code is fine. Practical support (c > 1.01) is phi in [0.313, 0.687], half-extent 0.1872 IBI.
+  Constraint sigma must satisfy: the bump must not reach the beat itself. Beat frames sit at phase
+  distance 0.5 from the bump centre, and the collar occupies |phi| <= 2*tau/IBI. Non-interference
+  requires 0.5 - sigma*sqrt(2 ln(gamma/eps)) > 2*tau/IBI_min. At sigma=0.06 this holds down to IBI =
+  32 frames (94 bpm); above 94 bpm the supports overlap but the effect is nil because u_t = 0 inside
+  the collar. MEASURED.
+
+  k = 0.14 (tempo-relative collar fraction)
+  Derivation MEASURED: k*IBI(70 bpm) = 0.14*42.9 = 6.0 -> half 6 -> 13 frames total = exactly the
+  stock collar. So k=0.14 is the value that pins 70 bpm to the stock behaviour. The docstring's "k =
+  0.30 leaves 70 bpm unchanged (13 frames)" is REFUTED by execution: k=0.30 at 70 bpm gives half 13,
+  27 frames total. The docstring's worked example both uses a k the code does not ship and mislabels
+  half-widths as totals.
+  Measured k=0.14 table (frames, half / total): 40 bpm 11/23; 70 bpm 6/13; 120 bpm 4/9; 180 bpm 2/5
+  -- the last two are BELOW the structural floor and are clamped up to 6 by H_min.
+
+  H_min = 2*tau = 6 (NOT the shipped default 2)
+  Derivation MEASURED: at H_min=2, dL/dz at a correctly placed confident peak is positive (loss
+  pushes it down) at 76, 80, 100, 120, 140, 180, 200 bpm; the affected offsets widen with tempo
+  (+/-3 at 76 bpm, all of -3..+3 at 180 bpm) and the defect appears once the logit exceeds ~3 (at
+  logit 2 the peak is still pushed up; at logit 4, 8, 12 it is pushed down). At H_min=6: zero
+  violations across 43 tempi x 7 offsets x 4 logits = 1204 cases.
+
+  H_max = 40 frames
+  Purely a guard against a degenerate median IBI on a near-empty annotation. No derivation;
+  arbitrary. Flag it as such.
+
+  gamma_h ~ 0.295 (halving boost) -- RE-DERIVED, and the session's number is right but its use is
+  not
+  INHERITED input: mean h at missed beats on halved tracks = 0.3385 (session measurement; I could
+  not re-measure it, so treat as UNVERIFIED-by-me).
+  "10% parity" means the boost should raise the halving cost by 10%: gamma_h * 0.3385 = 0.10 ->
+  gamma_h = 0.2954 -> ~0.30. The session's 0.30 is arithmetically correct.
+  BUT the joint calibration is then inconsistent. With the boost active, halving costs 16N*(1 +
+  0.3385*gamma_h) = 17.6N while doubling still costs 7N*(1+gamma) = 16N at gamma=1.3. Parity
+  requires
+  gamma = (16/7)*(1 + 0.3385*gamma_h) - 1 = 1.514 at gamma_h = 0.2954.
+  So gamma=1.3 AND gamma_h=0.30 shipped together make halving 10% dearer than doubling -- a
+  deliberate over-correction of the exact error the phase term already fixed, in the opposite
+  direction. Either ship gamma=1.3 with gamma_h=0, or ship the pair (gamma=1.514, gamma_h=0.295). Do
+  not mix.
+
+  ref frames/beat = 39, min_w = 2, max_w = 128 (DensityWeighted), phase_gamma default 1.3 /
+  phase_sigma default 0.06 in code: recorded for completeness; the density arm is ruled out (see
+  rejected).
+
+--- REJECTED ---
+  WHAT THE VERIFIED EVIDENCE RULES OUT, WITH THE MEASURED REASON.
+
+  1. PER-ITEM pos_weight (PerItemShiftTolerantBCELoss, w_i = (valid_i - beats_i*(2tau+1))/beats_i)
+  RULED OUT. The sign is backwards. It gives a 40 bpm excerpt ~68 and a 180 bpm excerpt ~10, i.e. it
+  raises the pressure on exactly the excerpts already over-firing, and made doubling WORSE (0.511 ->
+  0.578 on the doubling rate, per the shipped docstring's own record). Independently, both phase4
+  peritem arms trained on the 1954-track corpus with zero SMC, so their fold-0 numbers cannot
+  baseline anything on the 2678-track corpus. And the "+0.0166 at epoch 24, ahead in all three tempo
+  groups" claim was a wash on the running mean (-0.0080, scatter twice the mean) once it was
+  actually computed.
+
+  2. GLOBAL pos_weight REDUCTION (arm pw14, beat=14)
+  RULED OUT as a substitute for the phase term, on arithmetic that is now explicit: the cost-parity
+  gamma is w/14 - 1 at tau=3, so w=14 sets the doubling/halving parity gamma to exactly 0. Lowering
+  w to 14 makes halving as cheap as doubling by construction rather than making doubling expensive;
+  it removes the asymmetry instead of correcting it, and it moves the implicit preferred beat rate
+  rather than deleting it. Separately, pw14 is the ONE arm where the "all arms ran at pos_weight 32"
+  claim is false, so it is not comparable to the rest of the sweep on any other axis either.
+
+  3. THE CONFIDENCE GATE (GatedPhaseShiftTolerantBCELoss, gph13)
+  RULED OUT. 0 of 10 matched epochs ahead of ungated ph13, mean -0.0157, and the deficit did not
+  shrink with training. The kill decision stands. Two honesty notes that must travel with it: (a)
+  the decision was made on an aggregate mean alone, which was not sufficient reasoning even though
+  the conclusion held; (b) the later "reversal" -- that the gate wins on slow tracks (+0.030) and
+  loses on fast ones -- rests on a 9-track-per-bin split whose MDE is 0.042-0.066, so it cannot
+  resolve an effect of that size and must not be reported as a finding. The gate is out; the tempo
+  story about it is unsupported.
+
+  4. sigma >= 0.15 for the phase bump
+  RULED OUT on geometry, measured: at sigma=0.15 the half-height is 0.15*1.17741 = 0.1766 IBI and
+  the >1.01 support extends to +/-0.468 IBI, which reaches phase 0.032 -- essentially the beat
+  itself. At any tempo the bump would then be pressing down the region the collar exists to protect,
+  and above ~94 bpm it overlaps the collar outright. sigma must stay small enough that 0.5 -
+  sigma*sqrt(2 ln(gamma/eps)) > 2*tau/IBI_min. sigma=0.06 satisfies this down to IBI=32 frames;
+  sigma=0.15 satisfies it for no realistic tempo.
+
+  5. SUB-FLOOR COLLARS (any collar half-width < 2*tolerance, including the shipped min_half=2)
+  RULED OUT, measured directly on the gradient. At min_half=2 the loss actively pushes DOWN a
+  correctly placed, confident peak at 76 bpm and above -- the majority of any real corpus -- because
+  the prediction max-pool spreads the peak to +/-2*tau while the don't-care region only covers +/-2.
+  Violations appear at logit >= ~4 and widen with tempo (offsets +/-3 at 76 bpm; the entire -3..+3
+  window at 180 bpm). At min_half=6 there are zero violations over 1204 tested (tempo, offset,
+  logit) combinations. Corollary: the tempo-relative collar can only ever WIDEN (below ~65 bpm at
+  k=0.14) once the floor is imposed; the "narrow fast tempi" half of its motivation is unreachable
+  and must be dropped from the docstring.
+
+  6. THE HALVING BOOST h_i AT gamma_h = 0.30 ALONGSIDE gamma = 1.3
+  RULED OUT AS A PAIR (the boost itself is merely unproven). gamma=1.3 ALREADY reaches
+  doubling/halving cost parity by construction; the 7N/16N/39N accounting is arithmetically sound
+  and self-consistent (39 = 32+7 exactly at w=32, tau=3). Any gamma_h > 0 therefore pushes the
+  halving cost ABOVE the doubling cost -- 17.6N vs 16.0N at gamma_h=0.295, hbar=0.3385 -- which
+  over-corrects into the opposite error. If the boost is wanted, gamma must rise to 1.514 to restore
+  parity. Note also that hbar=0.3385 is an inherited session measurement I did not re-measure, so
+  the whole gamma_h derivation rests on an unverified input.
+
+  7. ALL FOLD-0-ONLY EVIDENCE AS A BASIS FOR CHOOSING BETWEEN LOSSES
+  RULED OUT as decisive. Every ph13 / gph13 / sig10 / bidir03 / collar14 / peritem / pw14 comparison
+  in all_scores.log is n=27, one seed, one checkpoint. The standard error of a 27-track fold mean
+  relative to the 217-track corpus value is 0.0446, larger than the observed between-fold sd of
+  0.0320 -- fold-to-fold variation is essentially all sampling noise, and even "fold 0 is easier" is
+  not established (Welch t=0.52, p=0.605). At n=27 with best-case pairing, power at delta=0.010 is
+  39%; nothing below ~0.017 F is detectable. The session's 0.007 noise floor understates the real
+  figure by 4-6x. Consequences for this spec: collar14's -0.014 is uninformative (and doubly so,
+  being confounded in two variables plus an unrecoverable 19:00 loss.py edit); ph13's +0.0058 over
+  the release is uninformative (and confounded in at least four variables, of which the release's
+  actual training track list is ASSUMED, never measured); and the f0_wide/f0_shipped phase3 trio
+  cannot baseline ph13 at all (1954 tracks, zero SMC, vs 2678 with 200 SMC) though the phase3 pair
+  remains internally valid against each other.
+
+  8. R4 WARM-START DECAY ATTRIBUTED TO CORPUS TEMPO MISMATCH -> the proposed tempo-resampling fix
+  RULED OUT as licensed. The 0.028 first-epoch drop is equally well explained by domain forgetting
+  (the fine-tuning corpus contained zero SMC tracks), which was never ruled out. The mechanism is
+  unidentified; do not resample the corpus on this basis and do not let this reasoning into the loss
+  design.
+
+--- INVARIANTS ---
+  1. INV1 STRUCTURAL COLLAR FLOOR: for every tempo, every offset off in [-tau, tau], and every peak
+  logit in {2,4,8,12}, dL/dz at a correctly-placed peak must be <= 0 (loss pushes it UP, never
+  down). Executable: build y with beats every IBI frames, z = -8 everywhere except logit L at A+off;
+  assert loss(z,y).backward(); z.grad[A+off] <= 0 for IBI in round(3000/bpm) for bpm in
+  range(30,241,5). MEASURED: 0/1204 violations at collar half-width 6; 4xx violations at half-width
+  2 for bpm >= 76.
+  2. INV2 DEGENERATE REDUCTION: with phase_gamma=0 and the collar half-width forced to 2*tolerance,
+  the loss must be bit-identical to ShiftTolerantBCELoss. Executable: assert
+  torch.allclose(Final(pos_weight=32, phase_gamma=0., min_half=6)(z,y),
+  ShiftTolerantBCELoss(pos_weight=32)(z,y)). MEASURED True.
+  3. INV3 PHASE WEIGHT RANGE: 1.0 <= c_t <= 1 + phase_gamma for every frame, and c_t == 1.0 exactly
+  at every annotated beat frame and at every frame outside [A_0, A_last]. Executable: w =
+  loss._phase_weight(y); assert w.min() == 1.0 and w.max() <= 1 + gamma + 1e-6 and torch.all(w[y>0]
+  == 1.0). MEASURED min 1.0, max 2.2297 <= 2.3.
+  4. INV4 POSITIVE SIDE UNTOUCHED BY THE PHASE TERM: the effective weight on any frame with y_t == 1
+  must be independent of phase_gamma, so the miss/false-alarm exchange rate stays exactly
+  pos_weight. Executable: assert the total loss contribution of the positive frames is unchanged
+  when gamma is swept 0 -> 3 with z fixed.
+  5. INV5 COLLAR NON-INTERFERENCE: the phase bump must never change the loss inside the don't-care
+  collar. Executable: assert (look_at * (c - 1))[collar_mask].abs().max() == 0. Holds structurally
+  because look_at = 0 there; must be re-asserted after any refactor that reorders the
+  multiplications.
+  6. INV6 GAMMA/POS_WEIGHT COUPLING: whenever pos_weight is changed, phase_gamma must be recomputed
+  as pos_weight/(2*(2*tolerance+1)) - 1, or the change must be explicitly recorded as a deliberate
+  departure from cost parity. Executable: assert abs(phase_gamma - (pos_weight/(2*(2*tolerance+1)) -
+  1)) < 0.05 or config['parity_override'] is True. At pos_weight=14 the parity gamma is 0, i.e. the
+  term is unmotivated.
+  7. INV7 JOINT PARITY WITH THE HALVING BOOST: if gamma_h > 0, then phase_gamma must equal
+  ((2*pos_weight/(2*(2*tolerance+1)))/2)*(1 + hbar*gamma_h) - 1, i.e. (pos_weight/14)*(1 +
+  hbar*gamma_h) - 1 at tolerance=3, with hbar the measured mean gate value at missed beats.
+  Executable: assert gamma_h == 0 or abs(phase_gamma - ((pos_weight/14)*(1 + hbar*gamma_h) - 1)) <
+  0.05. At gamma_h=0.295, hbar=0.3385, pos_weight=32 this requires phase_gamma=1.514, not 1.3.
+  8. INV8 NO GRADIENT THROUGH THE WEIGHTS: c_t, the collar mask, and any h_i gate must be computed
+  under torch.no_grad or from targets only, so no gradient flows through the weighting. Executable:
+  assert not c.requires_grad and not collar.requires_grad. (c is targets-only in the current code;
+  an h_i gate built from activations WOULD carry gradient and must be detached explicitly.)
+  9. INV9 SHAPE AND LENGTH PRESERVATION: the per-item relative collar must return a tensor of the
+  same length as targets (padded max-pool), so the existing crop/spread arithmetic is unchanged.
+  Executable: assert loss._relative_collar(y).shape == y.shape for random beat layouts including
+  len(pos) in {0,1,2}.
+  10. INV10 ONE-COLUMN / MISSING-ANNOTATION SAFETY: items with fewer than 2 annotated beats must
+  fall back to the fixed 2*tau collar and c_t == 1 everywhere, never produce NaN, and never be
+  silently mis-supervised. Executable: assert torch.isfinite(loss(z, y_empty)) and
+  torch.isfinite(loss(z, y_single)). (The dataloader previously SKIPPED one-column tracks entirely
+  -- CONFIRMED -- so any change that starts admitting them must satisfy this.)
+  11. INV11 EVALUATION POWER GUARD (process invariant, not code): no configuration decision may be
+  taken from a single-seed fold-0 comparison. sd of a single-seed single-checkpoint fold-0 F is
+  ~0.031 (seed sd 0.028 over 3 seeds, checkpoint sd ~0.013); the sd of a two-arm one-seed difference
+  is ~0.044 at n=1 pair. Executable as a check on the reporting script: assert (n_tracks >= 217 and
+  observed_delta >= 0.0057) or n_seeds >= 3, else label the result UNDERPOWERED. Every 0.007-noise-
+  floor judgement in the session violated this.
+
+====================================================================================================
+PART 4 — IMPLEMENTATION
+====================================================================================================
+
+--- class_name ---
+  FinalPhaseCollarBCELoss
+
+--- tests_passed ---
+  42
+
+--- tests_failed ---
+  0
+
+--- equation_matches_code ---
+  True
+
+--- file_written ---
+  /home/sogang/jaehoon/Analyze-SMC/third-party/beat_this/beat_this/model/loss.py
+
+--- test_file ---
+  /home/sogang/jaehoon/Analyze-SMC/scripts/sa3/check_final_loss.py
+
+--- failures ---
+  Final run: 0 failures. Three tests failed on the first run and were resolved as follows (verbatim
+  first-run output): FAIL c == 1.0 EXACTLY at every annotated beat (phi = 0) max |c-1| at beats =
+  1.110e-15 -> IMPLEMENTATION FIXED (test not weakened). The inherited Gaussian is untruncated, so c
+  at an annotated beat is 1 + gamma*exp(-0.5^2/2sigma^2) = 1 + 1.11e-15, not 1. Added phase_cut=4.0:
+  the bump is zeroed beyond 4*sigma = 0.24 IBI. Largest discarded value gamma*exp(-8) = 4.4e-4; the
+  >1.01 support (|phi-0.5| <= 0.187) is well inside, so the shape is unchanged. Now exactly 0.0.
+  FAIL 1.0 <= c <= 1 + gamma everywhere min 1.000000 max 2.300000 -> MY TEST WAS WRONG: I asserted c
+  <= gamma (1.3) instead of c <= 1+gamma (2.3). The measured max 2.3000 is correct and is reached
+  exactly at 100 bpm (IBI=30, a frame lands exactly on phi=0.5). Bound corrected to 2.3. FAIL phase-
+  term pressure increase stays under 25% at every tempo max delta +49.5346% -> MY THRESHOLD WAS
+  INVENTED, not derived from the spec or the geometry. The real value is up to +49.53% at 180 bpm.
+  Replaced with the only bound the geometry implies (delta <= gamma = 130%, since every negative
+  weight lies in [1, 1+gamma]), and the tempo profile is now printed in full plus asserted to be
+  non-flat, so the confound is reported rather than asserted away. Also fixed during bring-up: the
+  inherited PhaseWeightedShiftTolerantBCELoss._phase hard-codes a float32 index vector and raises
+  "Index put requires the source and destination dtypes match, got Double for the destination and
+  Float for the source" on float64 targets (and silently down-casts otherwise). Overridden dtype-
+  correctly in the new class; the existing class was not modified.
+
+--- notes ---
+  IMPLEMENTATION - New class FinalPhaseCollarBCELoss appended to loss.py; pure addition (git diff
+  shows 0 deleted lines in loss.py). No existing class or arm modified. - Registered as loss_type
+  "final_phase_collar_bce" in beat_this/model/pl_module.py and launch_scripts/train.py, with new
+  flags --final-relative-collar, --final-halving-gamma, --parity-override. Defaults:
+  phase_gamma=1.3, phase_sigma=0.06, relative_collar=False, halving_gamma=0.0,
+  min_half=2*tolerance=6 (constructor REFUSES anything smaller), max_half=40. Downbeat head stays on
+  stock ShiftTolerantBCELoss because the parity gamma is a function of pos_weight (w/14 - 1), so 1.3
+  is a fact about the beat head's 32, not the downbeat's 112. - pl_module calls check_parity() at
+  construction: PLBeatThis(pos_weights={'beat':14,...}, loss_type='final_phase_collar_bce') raises.
+  Verified by execution. TWO DEPARTURES FROM THE SPEC AS WRITTEN 1. phase_cut=4.0 truncation added
+  so the penalty is EXACTLY zero at phi=0 (the spec demands zero mass on annotated beats; the
+  untruncated form leaves 8e-16). 2. _phase overridden for dtype correctness (inherited float32
+  bug). MEASURED NUMBERS - Reduction to stock: max |final - stock| = 0.0 exactly, both with collar
+  off and with relative_collar=True/k=0, over 40/55/70/100/143/180 bpm, batch 3, with padding and
+  fully-masked items. - No-downward-push: 0/168 violations per collar mode (6 tempi x 7 offsets x 4
+  logits). Adversarial control with min_half forced to 2: 17/42 violations, at 100/143/180 bpm -
+  confirms the test has teeth and the 2*tau floor is what prevents the collar14 defect. -
+  Detachment: gate/phase/collar all grad_fn None; dL/dz bit-identical (max diff 0.0) to a gate-
+  frozen reference. - NEGATIVE PRESSURE vs stock (sum of negative-side weights), phase term only:
+  40bpm +22.76%, 55 +24.20%, 70 +25.92%, 100 +30.18%, 143 +39.30%, 180 +49.53%. Tempo skew +26.8%
+  between 40 and 180 bpm. With the relative collar also on: 40bpm +6.56%, 55 +14.81%, identical to
+  phase-only at >=70 bpm. THIS IS A REAL CONFOUND inherent to the spec's un-normalised L_final:
+  extra negative pressure alone produces halving, and here it is tempo-dependent, so any tempo-split
+  reading of a phase-term arm is confounded unless the arm normalises or the confound is measured
+  out. Printed prominently by the test. - Relative collar is a bit-exact no-op at >=70 bpm (floor
+  binds at k=0.14), confirming the spec's statement that it is a slow-tempo widening only and cannot
+  "narrow 180 bpm to ~5". Per-beat collar frames at 40/100/180 bpm = 23/13/13. - Phase weight range
+  over 40-180 bpm: [1.0000, 2.3000]; 2.3000 is hit exactly at 100 bpm where a frame lands on
+  phi=0.5. c == 1.0 exactly at every beat and everywhere outside [A_0, A_last]. - Positive-side
+  contribution invariant under gamma sweep 0 -> 1.3 -> 3: identical to 0.0. - Degenerate (0, 1, 2,
+  adjacent IBI=1, all-frames beats): finite loss and grad in both collar modes. - Mixed batch: per-
+  item collar and phase weights differ; batched loss == mean of per-item losses to <1e-10. - Mask:
+  perturbing masked frames by +17 logits changes the loss by exactly 0.0; fully masked item gets
+  exactly zero gradient. Both collar modes. - Parity: parity_gamma = w/14 - 1 verified at w=32
+  (1.2857), 20 (0.4286), 14 (0.0). gamma=1.3 refused at w=14; joint parity with gamma_h=0.295,
+  hbar=0.3385 requires gamma=1.514, so 1.3 is refused there too. UNVERIFIED - hbar = 0.3385 (mean
+  gate value at missed beats) is an inherited session measurement I did not re-measure; the joint-
+  parity constant 1.514 rests on it. - H_max = 40 has no derivation; it is an arbitrary guard,
+  flagged as such in the docstring. - No training was launched, touched, or inspected. All work CPU-
+  only.
+
+====================================================================================================
+PART 5 — A/B PLAN
+====================================================================================================
+
+--- script_path ---
+  /home/sogang/jaehoon/Analyze-SMC/cache/run_ab_verified.sh (written, NOT executed; bash -n syntax
+  check only)
+
+--- arms ---
+  Three from-scratch 100-epoch runs, all --fold 0 --data-dir /disk1/jaehoon/bt_wide/data --max-
+  epochs 100, no augmentation overrides, no --pos-weight-override. stock_s0 (GPU 2, seed 0, --loss
+  shift_tolerant_weighted_bce) — the missing baseline on the fixed corpus. ph13_s1 (GPU 3, seed 1,
+  --loss phase_shift_tolerant_weighted_bce --phase-gamma 1.3 --phase-sigma 0.06) — second seed of
+  the only full-length phase result. final_s0 (GPU 2, QUEUED behind stock_s0 by polling `ps -p`,
+  seed 0, --loss final_phase_collar_bce --phase-gamma 1.3 --phase-sigma 0.06, both speculative
+  options off). Pairwise, one variable each: - stock_s0 vs existing
+  /disk1/jaehoon/bt_wide/phase5/ph13 (S0): loss only (shift_tolerant_weighted_bce vs
+  phase_shift_tolerant_weighted_bce), seed 0 both. - ph13_s1 vs existing phase5/ph13 (S0): seed only
+  (1 vs 0), identical loss and flags. - final_s0 vs stock_s0: loss only; measured Namespace diff is
+  exactly {loss, name, checkpoint_dir}. - final_s0 vs ph13_s1 is deliberately NOT treated as a pair
+  (differs in loss AND seed); the header says so.
+
+--- matched_variables ---
+  Held identical across arms and confirmed by argparse Namespace comparison: fold=0, max_epochs=100,
+  data_dir=/disk1/jaehoon/bt_wide/data, lr=0.0008, batch_size=8, accumulate_grad_batches=8,
+  val_frequency=5, train_length=1500, transformer_dim=512, n_layers=6, dropout 0.1/0.2,
+  warmup_steps=1000, length_based_oversampling_factor=0.65, eval_trim_beats=5, tempo aug -20/20/4
+  with pitch and mask aug all True (argparse defaults, no overrides), sum_head/partial_transformers
+  True, dbn off, logger none. pos_weight source: identical for all three —
+  datamodule.get_train_positive_weights(widen_target_mask=3); --pos-weight-override is None in all
+  three (verified in the parsed Namespaces). The pw14 arm already in phase5/ is the one that
+  overrode it; nothing here does. Seed is matched within each comparison: 0 vs 0 for both loss
+  contrasts; the 1-vs-0 contrast is the deliberate seed arm.
+
+--- dry_validation ---
+  Ran /home/sogang/.tmp/.../scratchpad/dryval.py under /disk1/jaehoon/sa3env/bin/python with
+  CUDA_VISIBLE_DEVICES="" (CPU only, no data loaded, no training): 1. Parsed all three exact
+  commands through train.py's REAL argparse via runpy.run_path(run_name="__main__") with
+  argparse.ArgumentParser.parse_args monkeypatched to capture the Namespace and raise before main().
+  All three parsed clean; printed
+  loss/seed/fold/gpu/epochs/pos_weight_override/tempo/aug/lr/bs/val_freq/collar fields. 2. Read the
+  --loss choices list out of the train.py source AST. Present: shift_tolerant_weighted_bce,
+  per_item_..., count_..., density_..., phase_..., gated_phase_..., bidirectional_phase_...,
+  tempo_relative_collar_bce, final_phase_collar_bce, fast_..., weighted_bce, bce. All three arm
+  losses -> True. 3. Namespace diffs: stock_s0 vs final_s0 = {name, loss, checkpoint_dir} only.
+  stock_s0 vs ph13_s1 = {name, gpu, loss, checkpoint_dir, seed} (expected; not a pair). 4.
+  os.path.exists on each checkpoint dir: /disk1/jaehoon/bt_wide/phase5/stock_s0 False, ph13_s1
+  False, final_s0 False. phase5/ph13 True (the S0 reference, 100 epochs of checkpoints present, last
+  written Aug 26 17:20). 5. Constructed PLBeatThis (tiny, CPU) for each loss to read the actual
+  class: shift_tolerant_weighted_bce -> beat ShiftTolerantBCELoss / downbeat ShiftTolerantBCELoss;
+  phase_shift_tolerant_weighted_bce -> beat PhaseWeightedShiftTolerantBCELoss / downbeat
+  ShiftTolerantBCELoss; final_phase_collar_bce -> beat FinalPhaseCollarBCELoss / downbeat
+  ShiftTolerantBCELoss. FinalPhaseCollarBCELoss.check_parity() ran at construction and passed with
+  phase_gamma=1.3 and no --parity-override. 6.
+  inspect.signature(TempoRelativeCollarBCELoss.__init__) = (self, pos_weight=1, tolerance=3,
+  collar_k=0.14, min_half=2, max_half=40) — min_half=2 confirmed in code. 7. bash -n on the script:
+  syntax OK. The script itself was NOT executed.
+
+--- gpu_assignment ---
+  stock_s0 -> GPU 2; ph13_s1 -> GPU 3; final_s0 -> GPU 2, queued behind stock_s0 by polling `ps -p
+  $pid` every 300s (never kills). GPU 0 and GPU 1 are never referenced by the script. Measured
+  nvidia-smi at write time, which does NOT match the brief: GPU 0 was idle (11 MiB, 0%) and no pw14
+  process was found running. The busy device was GPU 1 (11998 MiB, 48%), pid 3693317, belonging to
+  ANOTHER user (/home/taegum/... train.py --gpu 1). GPU 2 (11 MiB) and GPU 3 (142 MiB) were free. I
+  assigned 2 and 3 as instructed regardless and killed/started nothing. Recorded in the script
+  header.
+
+--- blockers_remaining ---
+  Both stated blockers are reproduced in the script header and remain unresolved: 1.
+  TempoRelativeCollarBCELoss docstring describes the collar as a pure tempo-normalisation of the
+  stock "don't care" region, with nothing about correct peaks being penalised; code default
+  min_half=2 (verified in the signature, and note 2 != 2*tolerance = 6). The "collar narrower than
+  2*tolerance penalises correct peaks" justification appears only in the final_phase_collar_bce
+  comment in pl_module.py, not in the collar class's own docstring. This is why final_s0 runs with
+  --final-relative-collar OFF. 2. Detectable effect size on F with 27 evaluation tracks and the
+  power of the paired test have NOT been computed. Against a measured stock seed spread of 0.056 in
+  F, the minimum resolvable difference for this design is UNVERIFIED. Additional unverified item: I
+  could not recover the exact original launch command for phase5/ph13 from the transcript with its
+  --checkpoint-dir intact, only the flag pattern (--loss phase_shift_tolerant_weighted_bce --phase-
+  gamma 1.3 --data-dir /disk1/jaehoon/bt_wide/data). ph13_s1 matches that pattern (--phase-sigma
+  0.06 is the default, so stating it explicitly is value-identical), but that the existing ph13 run
+  used no other non-default flag is UNVERIFIED.
