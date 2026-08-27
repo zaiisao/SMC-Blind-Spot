@@ -1,0 +1,13 @@
+{
+  "dataset_type": "pre_encoded",
+  "datasets": [
+    {
+      "id": "fold0_rubatocorpora",
+      "path": "/disk1/jaehoon/sa3_beat_cache",
+      "filelist_path": "/disk1/jaehoon/sa3_beat_cache/train_excl_fold0_rubatocorpora.txt",
+      "custom_metadata_module": "/home/sogang/jaehoon/Analyze-SMC/sa3_beat/metadata.py"
+    }
+  ],
+  "latent_crop_length": 215,
+  "random_crop": true
+}
