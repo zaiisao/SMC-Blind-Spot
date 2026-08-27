@@ -1,0 +1,29 @@
+{
+  "base_model_config": "/disk1/jaehoon/sa3_small_music/model_config.json",
+  "ckpt_path": "/disk1/jaehoon/sa3_small_music/model.safetensors",
+  "include_downbeat": true,
+  "_comment": "The base config is read and patched in memory with modular_local_cond_configs; it is never copied, so it cannot drift from the published checkpoint.",
+  "training_overrides": {
+    "arc": null,
+    "use_ema": false,
+    "demo": null,
+    "optimizer_configs": {
+      "discriminator": null,
+      "diffusion": {
+        "__replace__": true,
+        "optimizer": {
+          "type": "AdamW",
+          "config": {
+            "lr": 0.0001,
+            "weight_decay": 0.01,
+            "betas": [
+              0.9,
+              0.95
+            ]
+          }
+        }
+      }
+    },
+    "_comment": "The published training block is ARC distillation (adversarial discriminator + MuonAdamW, with a placeholder ckpt path). Adapter training is a plain diffusion fine-tune, so arc/discriminator/EMA are removed and the optimizer is plain AdamW over the ~21M unfrozen beat projections."
+  }
+}
