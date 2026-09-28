@@ -23,7 +23,18 @@ import soundfile as sf
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from sa3_listen_set import add_ticks
+def add_ticks(y, sr, beats, downbeats=None):
+    out = y.copy()
+    n = len(out)
+    for i, b in enumerate(beats):
+        s = int(b * sr)
+        if not (0 <= s < n):
+            continue
+        dur = int(0.030 * sr)
+        t = np.arange(min(dur, n - s)) / sr
+        freq = 1800.0 if (downbeats is not None and i in downbeats) else 1100.0
+        out[s:s + len(t)] += 0.35 * np.exp(-t * 90.0) * np.sin(2 * np.pi * freq * t)
+    return np.clip(out, -1.0, 1.0)
 
 
 def main():
